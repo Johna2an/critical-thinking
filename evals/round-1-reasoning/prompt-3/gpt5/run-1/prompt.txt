@@ -1,0 +1,4 @@
+Reason through the following problem and give your best answer. Think it through carefully: state your assumptions, quantify where you can, weigh the evidence, flag what is uncertain, and end with a concise verdict or recommendation. Aim for a thorough but focused response of roughly 400 to 700 words.
+
+PROBLEM:
+A hospital emergency department keeps running over capacity despite hiring more nurses every year. Each new hire relieves the pressure for a few months, then wait times climb back to where they were. Leadership blames 'lazy staff' and 'a bad flu season.' Diagnose what is really going on, and propose the highest-leverage fix.

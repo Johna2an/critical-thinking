@@ -1,0 +1,6 @@
+{
+  "id": 1,
+  "name": "forecast-fermi",
+  "tests": "calibration",
+  "prompt": "Estimate two things, showing your reasoning and giving a calibrated number with a confidence range for each. (a) How many piano tuners work in Chicago today? (b) What is the probability that a randomly chosen current Fortune 500 CEO holds an undergraduate degree in engineering or a hard science rather than business or economics?"
+}

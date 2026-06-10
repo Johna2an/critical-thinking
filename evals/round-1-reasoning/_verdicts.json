@@ -1,0 +1,310 @@
+{
+  "configs": [
+    "claude_base",
+    "claude_skill",
+    "gpt5"
+  ],
+  "dims": [
+    "rigor",
+    "calibration",
+    "bias_awareness",
+    "depth",
+    "usefulness"
+  ],
+  "summary": {
+    "claude_base": {
+      "dims": {
+        "rigor": 8.22,
+        "calibration": 7.44,
+        "bias_awareness": 7.72,
+        "depth": 7.72,
+        "usefulness": 8.5
+      },
+      "overall": 7.92,
+      "wins": 0,
+      "avg_rank": 2.28,
+      "n_scores": 18
+    },
+    "claude_skill": {
+      "dims": {
+        "rigor": 8.94,
+        "calibration": 9.17,
+        "bias_awareness": 9.06,
+        "depth": 9.06,
+        "usefulness": 8.72
+      },
+      "overall": 8.99,
+      "wins": 18,
+      "avg_rank": 1.0,
+      "n_scores": 18
+    },
+    "gpt5": {
+      "dims": {
+        "rigor": 7.56,
+        "calibration": 6.94,
+        "bias_awareness": 6.61,
+        "depth": 7.44,
+        "usefulness": 7.94
+      },
+      "overall": 7.3,
+      "wins": 0,
+      "avg_rank": 2.72,
+      "n_scores": 18
+    }
+  },
+  "per_problem": {
+    "0": {
+      "claude_base": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 7.67,
+          "bias_awareness": 8.33,
+          "depth": 8.0,
+          "usefulness": 9.0
+        },
+        "overall": 8.4,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 10.0,
+          "bias_awareness": 9.33,
+          "depth": 10.0,
+          "usefulness": 9.0
+        },
+        "overall": 9.47,
+        "bests": 3,
+        "reasonings": [
+          "All three nail the core reasoning: observational design, confounding, reverse causation, relative-vs-absolute denominator, and the whole-coffee-vs-extract substitution leap, with no causal overclaiming. B wins decisively on calibration and depth: it assigns explicit posterior probabilities (20-25% causal, <10% supplement, 75-80% the headline is overstated), invokes an outside-view base rate grounded in the vitamin E / beta-carotene / HRT replication graveyard, raises multiple comparisons, and names Mendelian randomization as discriminating evidence. C is strong and uniquely grounds itself in real cited literature (the 2023 review's ~4% per cup vs the brand's 20%, plus FDA disease-claim rules), which adds real-world usefulness, but it never quantifies its belief and its citations are unverifiable in a blind setting. A is clean, well-structured, and rhetorically sharp ('precise estimate of a biased number') but stays qualitative and offers the least beyond the standard checklist, so it ranks third.",
+          "All three correctly diagnose the observational design, separate the relative-vs-absolute risk problem (naming concrete base-rate scenarios), surface confounding and reverse causation, and flag the unjustified drink-to-extract leap plus the seller's conflict of interest. B is strongest: it is the only one to anchor an explicit numerical prior (15-25% via the vitamin-E/beta-carotene/HRT graveyard outside view), update it to a stated 20-25% posterior, separately price the supplement under 10%, raise multiple-comparisons, and propose Mendelian randomization as a discriminating test, giving the best calibration and depth. A is tight, well-structured, and fully correct but stays qualitative with no probability estimates or base-rate history. C adds real external evidence (the 2023 meta-analysis showing ~4% per cup, far below the brand's 20%, and FDA disease-claim guidance) which is concrete and useful, but its cited specifics are unverifiable here and it offers less explicit uncertainty quantification than B, placing it third by a narrow margin.",
+          "B is strongest: it separates the causal claim from the product claim, enumerates five rival causes including multiple-comparisons, and uniquely supplies an outside-view base rate (the vitamin E / beta-carotene / HRT reversal graveyard) with explicit probabilities (~20-25% causal, <10% supplement, 75-80% claim overstated) plus a Mendelian-randomization falsifier, giving it the best calibration and depth. A is nearly as rigorous and very clean (the 'precise estimate of a biased number' point, relative-vs-absolute math, reverse causation, ingredient-substitution leap, conflict of interest) but stays qualitative on uncertainty. C reasons well and grounds itself in named external sources and FDA guidance, but leans on specific cited statistics I cannot verify (confident specificity risk), gives less quantified uncertainty, and omits the multiple-comparisons angle."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 8.33,
+          "calibration": 7.67,
+          "bias_awareness": 8.0,
+          "depth": 8.33,
+          "usefulness": 8.67
+        },
+        "overall": 8.2,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "1": {
+      "claude_base": {
+        "dims": {
+          "rigor": 7.67,
+          "calibration": 7.67,
+          "bias_awareness": 7.0,
+          "depth": 7.0,
+          "usefulness": 8.0
+        },
+        "overall": 7.47,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "rigor": 8.67,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 8.0,
+          "usefulness": 9.0
+        },
+        "overall": 8.73,
+        "bests": 3,
+        "reasonings": [
+          "A has the sharpest epistemics: it explicitly catches the substitution trap on (b) (answering unconditional P(STEM), not P(STEM|STEM-or-business)), separates undergraduate from graduate degrees, names the load-bearing inputs in (a) with a clean sensitivity table, and even flags and rejects potential circularity in its outside-view check. B is the most empirically grounded (real BLS OEWS Chicago-metro figure and the Crist|Kolder 2025 report with the economics-under-liberal-arts nuance), but it leaves an internal contradiction unreconciled: it cites a BLS metro count of 360 for the broader repairer/tuner category yet concludes 250-450 metro piano tuners, a subset exceeding its own cited superset. C is a competent two-path Fermi with appropriate ranges and good undergrad-vs-highest-degree handling, but its BLS cross-check is hand-wavy and it surfaces fewer cognitive traps than A. All three correctly identify business/econ as the larger CEO category and converge on ~30-33% STEM, which is well-calibrated.",
+          "A is the strongest reasoning artifact: it explicitly catches the substitution trap in (b) (P(STEM) unconditional vs P(STEM | STEM-or-business), and that the third bucket means it is not a two-way split), separates epistemic from input uncertainty, runs both city/metro readings, and ties its tightest 80% range (24-36%) to a stricter undergraduate-only definition it names as the load-bearing source of uncertainty. B is the most empirically grounded, citing Crist|Kolder 2025 (29% eng + 7% science) and BLS OEWS numbers, which is a real strength, but it leans on those figures with less scrutiny of definitional risk and surfaces fewer cognitive traps; its 34%/28-40% sits on a mixed F500/S&P sample it only lightly haircuts. C reasons cleanly with two independent paths in (a) but its BLS cross-check is loose (5,000-8,000 national, then arbitrary halving), it offers no concrete data for (b), and its STEM central (~33%) drifts upward without anchoring the way A does. A wins on trap-awareness and calibration discipline; B edges C on evidence quality.",
+          "A has the cleanest reasoning: it explicitly catches the question-substitution trap (P(STEM) unconditional vs the two-way conditional split), names the load-bearing inputs in a sensitivity table, and uses an outside-view check without circularity, with the tightest yet honest ranges. B brings the strongest empirical grounding (BLS OEWS 6,170 national/360 Chicago metro; named Crist|Kolder 2025 figures), but it has an internal inconsistency in (a) where a city-proper headline of 100 and a metro range of 250-450 sit awkwardly against its own cited metro anchor of 360, and it surfaces fewer cognitive traps. C is well-structured with the most defensible wide range (60-250) and good sector-mix reasoning, but adds the least novel evidence and stays closest to generic Fermi, so it ranks third."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 7.33,
+          "calibration": 7.0,
+          "bias_awareness": 6.33,
+          "depth": 8.0,
+          "usefulness": 8.0
+        },
+        "overall": 7.33,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "2": {
+      "claude_base": {
+        "dims": {
+          "rigor": 8.67,
+          "calibration": 7.67,
+          "bias_awareness": 8.67,
+          "depth": 8.33,
+          "usefulness": 8.67
+        },
+        "overall": 8.4,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.33,
+          "usefulness": 9.0
+        },
+        "overall": 9.07,
+        "bests": 3,
+        "reasonings": [
+          "All three nail the load-bearing errors: post-hoc causation, revenue-per-employee as an invalid productivity proxy (with the headcount arithmetic), cherry-picked competitors, and the unjustified leap to a full five-day mandate. C edges ahead by being the most rigorous and best-calibrated: it explicitly enumerates the five causal stories a correlation permits (including reverse causation and the firm going remote BECAUSE it was struggling), names the headcount denominator effect concretely, flags the hard-to-vary/unfalsifiable structure, and ends with an explicit probability (5 to 10%) plus a concrete action plan and 2019-vs-2020 baseline correction. B is nearly as strong, with crisp fallacy labels (begging the question on 'clearly', false dichotomy, single-cause) and a good cost-benefit section, but lacks the explicit calibration C provides. A is solid and clear, opens well by flagging the cumulative-vs-annual ambiguity (~2% per year) and stresses the counterfactual, but it is less structured, names fewer fallacies explicitly, and never surfaces reverse causation or selection-denominator framing as sharply, so it lands third.",
+          "All three correctly nail the load-bearing flaws (post hoc causation, revenue-per-employee as a broken productivity proxy that moves with headcount arithmetic, selection/survivorship bias in the competitor claim, false dilemma in the five-day remedy). C edges ahead by explicitly enumerating the five causal stories a correlation permits, naming the reverse-causation and hard-to-vary tests, anchoring the baseline correction to 2019 not 2020, and giving an actual calibrated confidence (roughly 5 to 10 percent) plus a concrete decompose-and-pilot path. B matches C on structure and is the cleanest write-up, naming each fallacy crisply and flagging the unstated denominator and time window, but stops just short of C's quantified confidence and reverse-causation depth. A is solid and correctly flags the cumulative-vs-annual ambiguity (2 percent per year, a nice catch none other made) and the counterfactual framing, but is less systematic, lighter on selection bias and base rates, and offers no calibrated probability, leaving it third.",
+          "C is strongest: it explicitly maps the argument's hidden premises, enumerates the full five-causal-stories space for the correlation, names the headcount-arithmetic mechanism, demands a 2019 (not 2020) baseline, and gives a quantified confidence (5-10%) plus a falsifiability/hard-to-vary test, which is the most disciplined calibration of the three. B is very close and arguably equal on rigor, hitting post hoc, the revenue-per-head/headcount conflation, survivorship bias, false dichotomy, reverse causation, and a clean cost-benefit and verdict, but it stops short of C's explicit confidence quantification and 2019-vs-2020 baseline precision. A is solid and covers causal overreach, metric weakness, confounding, the counterfactual, remedy non-sequitur, and heterogeneity, but it is less structured, names fewer fallacies by mechanism, never flags survivorship/cherry-pick as sharply, and offers no calibrated confidence, leaving it third."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 7.33,
+          "bias_awareness": 7.0,
+          "depth": 7.0,
+          "usefulness": 8.0
+        },
+        "overall": 7.47,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "3": {
+      "claude_base": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 7.33,
+          "bias_awareness": 8.0,
+          "depth": 8.0,
+          "usefulness": 9.0
+        },
+        "overall": 8.07,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 8.33
+        },
+        "overall": 8.87,
+        "bests": 3,
+        "reasonings": [
+          "All three correctly reject the 'lazy staff'/flu narrative and identify downstream boarding plus induced demand as the binding constraint, but they differ in rigor and calibration. C is strongest: it grounds the mechanism in Little's Law (correctly stated as L=lambda*W) and Meadows' leverage hierarchy, applies a falsifiability/hard-to-vary test to the blame story, and is the only one to attach explicit, well-separated confidence levels (85% structural cause, 65% boarding dominant) plus a cheap disconfirming diagnostic. A is nearly as good with a clean pattern-signature argument, a concrete leverage-ordered fix, and an honest caveat, but it omits formal quantitative tools and explicit probabilities. B reaches the same conclusion and adds a sharp queueing-theory point about nonlinear waits near 85-90% utilization, but it overclaims slightly ('almost certainly'), hedges less rigorously, and reads as a less disciplined draft with weaker structure and no quantified confidence.",
+          "All three correctly reject the blame narrative and converge on downstream inpatient boarding as the binding constraint, with induced demand and a balancing-loop refill. C is strongest: it grounds the mechanism in Little's Law and Meadows' leverage hierarchy, gives explicit numeric confidence splits (85% structural, 65% boarding-dominant) and a falsifiable cheap diagnostic, making its calibration and bias-awareness clearly best. A is close behind with a tight Theory-of-Constraints argument, a quantified capacity-recovery estimate, and an explicit attrition loop B and C underweight, plus a clean falsification caveat; its usefulness edges C with sharper sequenced actions. B is sound and covers utilization nonlinearity well but is more list-like, offers vaguer uncertainty handling, and reaches for confident phrasing ('almost certainly') without C's calibrated ranges.",
+          "All three reach the correct flow/boarding diagnosis, but they differ in how rigorously they earn it. C is strongest: it grounds the mechanism in Little's Law (L=lambda*W) correctly applied, names the queueing nonlinearity, gives explicit numeric confidence (85% structural, 65% boarding dominant) with a falsifiable diagnostic, and applies hard-to-vary and bounded-rationality tests to steelman/dismiss the 'lazy staff' frame. A is close behind with the cleanest pattern-rules-out-blame argument, the Theory-of-Constraints framing, and a concrete quantified leverage estimate (25-35% of bed-hours), but it states ranges without attaching probabilities and is slightly less explicit about confidence. B has the same core insight and correctly invokes the 85-90% utilization queue-explosion point, but it is the loosest: it hedges with vague 'almost certainly' language, offers no numeric calibration, and its alternative-bottleneck list reads as a checklist rather than a weighed analysis. All three appropriately end with the 'measure boarding first' verdict, which is the decisive actionable move."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 7.0,
+          "calibration": 6.0,
+          "bias_awareness": 6.0,
+          "depth": 7.0,
+          "usefulness": 7.0
+        },
+        "overall": 6.6,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "4": {
+      "claude_base": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 7.0,
+          "bias_awareness": 7.0,
+          "depth": 7.33,
+          "usefulness": 8.0
+        },
+        "overall": 7.47,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 9.0
+        },
+        "overall": 9.0,
+        "bests": 3,
+        "reasonings": [
+          "A is the strongest: it names the actual decision (attribute substitution tell), runs an explicit outside-view base rate with a competing reference class, isolates the true hinge (does the work generalize), does a concrete premortem, generates option C, and uniquely attaches a calibrated 65% confidence plus the three numbers that would change the answer. B covers nearly the same ground (steelmanned case-for, dev-shop path dependency, milestone counter) with solid burn math but states no probability and surfaces fewer cognitive traps explicitly. C is competent and gives the cleanest decline-versus-advance-product comparison and a tight term sheet, but it asserts more than it interrogates: thinner on counter-arguments, no premortem or base-rate framing, and the least bias-awareness work of the three.",
+          "A is strongest: it names the actual decision-analytic traps (attribute substitution, escalation of commitment, false dilemma), runs an explicit outside-view base rate with a competing reference class, builds a premortem, and lands a calibrated verdict (65% confidence) tied to three named facts it would verify first. B covers the same terrain well with a clean case-for/case-against structure and a concrete counter-offer, but it states burn and runway figures more flatly and surfaces fewer named biases and less explicit uncertainty quantification. C reaches the correct verdict with a usable term sheet and correctly flags the single-customer red flag, but its reasoning is thinner: it asserts the runway math without much stress-testing, does little steelmanning of the take-it case, and names no cognitive traps. All three correctly identify that the runway-vs-frozen-roadmap trade is near break-even and that reusability is the hinge; A handles that denominator-and-opportunity-cost logic most rigorously.",
+          "All three reach the same verdict (decline as offered, counter with a scoped/roadmap-aligned deal), so depth of reasoning decides it. A is strongest: it names the attribute-substitution trap, explicitly invokes two competing reference classes and identifies generalizability as the hinge, runs a premortem, flags escalation-of-commitment to a services model, attaches an explicit 65% confidence, and lists the three specific numbers it would verify. B is close and well-structured (clean burn math, explicit case-for/case-against, concrete counter-proposal) but does not quantify its confidence or surface its own cognitive traps as deliberately. C does the core math and reaches a sound restructured-terms list, but is the thinnest on bias-awareness and alternative reference classes and offers the least calibrated framing of its uncertainty."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 7.0,
+          "calibration": 7.0,
+          "bias_awareness": 5.67,
+          "depth": 6.33,
+          "usefulness": 7.67
+        },
+        "overall": 6.73,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "5": {
+      "claude_base": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 7.33,
+          "bias_awareness": 7.33,
+          "depth": 7.67,
+          "usefulness": 8.33
+        },
+        "overall": 7.73,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 8.0
+        },
+        "overall": 8.8,
+        "bests": 3,
+        "reasonings": [
+          "B is the most rigorous and best-calibrated: it names the question-substitution trap up front, applies Meadows' leverage hierarchy consistently, surfaces the landlord bounded-rationality equilibrium as the real lever, attaches an explicit ~80% confidence to the diagnosis vs. lower confidence on remedies, red-teams Option B, and lists the specific unknowns (ownership concentration, fiscal room) that determine which lever works. C shares B's residency reframe and adds genuinely non-obvious 'measurement artifact' and 'coordination failure' framings with control-block test designs, but quantifies uncertainty less and probes incentives less deeply. A has the most vivid reframings (habit problem, frictionless life, vacancy-as-asset) and concrete trip-count test designs, but its Fermi numbers are presented without flagging them as rough estimates and it engages least with its own cognitive traps and alternative explanations.",
+          "All three correctly reframe downtown as a residency/dwell-time problem rather than retail, but B is the most rigorous: it explicitly names the substitution bias ('what easier question my mind wants to answer'), uses Meadows' leverage hierarchy to explain WHY the failed fixes were predictable rather than just asserting it, attaches an explicit ~80% confidence to its diagnosis while flagging lower certainty on remedies, and red-teams its own vacancy-tax option (landlords passing cost to weak tenants). C is close behind: tight assumptions (population range, pre-1960 stock), the sharp 'measurement artifact' reframe, and the cleanest actionable verdict (run A+B in parallel, C as generator, scale on data), though it red-teams its own options less. A is solid and concrete with useful trip-count estimates, but those numbers (80 workers to 200-400 trips; 1,000 members to $240k) are asserted without sourcing or sensitivity, it surfaces fewer cognitive traps, and its 'uncertainty' notes are thinner than B's and C's calibrated confidence statements.",
+          "All three reach the same sound diagnosis (a residency/presence problem misdiagnosed as retail) and similar remedies, so differentiation is in reasoning quality. B wins on explicit metacognition (names the substitution heuristic, Meadows leverage points, broken-windows and success-to-the-successful loops, bounded-rationality equilibrium), the best calibration (~80% on diagnosis, lower on remedies, names what the brief cannot resolve like ownership concentration determining which lever works), and red-teaming its own Option B. A edges C with concrete quantified reasoning (worker-trip multipliers and membership math, each flagged as illustrative) and crisp instrumented test designs with clear metrics. C is clean and actionable with a sharp coordination-failure reframe, but it surfaces fewer cognitive traps and expresses uncertainty more thinly than B."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 7.67,
+          "calibration": 6.67,
+          "bias_awareness": 6.67,
+          "depth": 8.0,
+          "usefulness": 8.33
+        },
+        "overall": 7.47,
+        "bests": 0,
+        "reasonings": []
+      }
+    }
+  },
+  "n_judge_files": 18
+}

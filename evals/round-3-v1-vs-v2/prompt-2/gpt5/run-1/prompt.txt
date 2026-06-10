@@ -1,0 +1,4 @@
+Reason through the following problem and give your best answer. Think it through carefully: state your assumptions, quantify where you can, weigh the evidence, flag what is uncertain, and end with a concise verdict or recommendation. Aim for a thorough but focused response of roughly 400 to 700 words.
+
+PROBLEM:
+Critique this argument and find every flaw: 'Remote work is clearly destroying our productivity. Ever since the company went fully remote in 2020, our revenue per employee has fallen 12%. Competitors who stayed in-office grew. Therefore we must mandate a full five-day return to office to restore productivity.'

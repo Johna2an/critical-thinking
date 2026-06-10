@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this skill or its eval harness in your work, please cite it."
+title: "critical-thinking: a reasoning skill for Claude, distilled from 51 books, with a blind LLM-judged eval harness"
+type: software
+authors:
+  - name: "critical-thinking contributors"
+repository-code: "https://github.com/OWNER/critical-thinking"
+license: MIT
+keywords:
+  - claude
+  - claude-code
+  - agent-skills
+  - critical-thinking
+  - llm-evaluation
+  - prompt-engineering
+abstract: >-
+  A Claude Code skill that operationalizes the working tools of 51 books on
+  judgment, reasoning, creativity, systems, uncertainty, models, and the
+  philosophy of science. Ships with a three-round blind evaluation harness
+  and full transcripts, including a documented negative result on scaling
+  reference material from 21 to 51 books.

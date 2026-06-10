@@ -1,0 +1,6 @@
+{
+  "id": 4,
+  "name": "tail-risk-decision",
+  "tests": "uncertainty and risk",
+  "prompt": "A trading desk has made money in 19 of the last 20 quarters using a strategy that sells deep out-of-the-money options for steady premium income. Leadership wants to triple the allocation given the track record. As the risk officer, reason through whether to approve it and what you would require first."
+}

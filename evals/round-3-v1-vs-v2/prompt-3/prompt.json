@@ -1,0 +1,6 @@
+{
+  "id": 3,
+  "name": "diagnose-the-system",
+  "tests": "systems and complexity",
+  "prompt": "A city keeps widening its main highway to fix congestion. Each expansion eases traffic for a year or two, then congestion returns worse than before, and leadership blames population growth. Diagnose what is really going on, and propose the highest-leverage intervention."
+}

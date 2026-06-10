@@ -1,0 +1,21 @@
+Assumptions: “productivity” means economically valuable output per worker, not merely time in office; the 12% revenue-per-employee decline is real; competitors are meaningfully comparable unless shown otherwise.
+
+The argument is weak. It observes a correlation and treats it as a complete causal explanation.
+
+First, **revenue per employee is an imperfect productivity measure**. It is affected by pricing, demand, product mix, sales cycles, accounting recognition, exchange rates, hiring ahead of growth, layoffs, contractor use, customer churn, and macro conditions. A 12% decline could mean lower productivity, but it could also mean the company hired many junior people, invested in long-cycle R&D, cut prices, entered a weaker market, or saw one major customer leave. Without decomposing revenue and headcount, the metric is too coarse.
+
+Second, **the timing is confounded**. “Ever since 2020” bundles remote work with the pandemic, supply shocks, inflation, interest-rate changes, changed customer behavior, labor-market churn, and possible company-specific strategic decisions. If revenue per employee fell after 2020, remote work is only one of many plausible causes.
+
+Third, **the competitor comparison is under-specified**. “Competitors who stayed in-office grew” could be cherry-picked. Which competitors? Same market segment? Same starting size? Same product maturity? Same geography? Same customer base? Same capital access? If in-office competitors were already stronger, in faster-growing niches, or less exposed to demand shocks, their growth tells us little about office policy. The argument also ignores competitors that went remote and grew, or stayed in-office and struggled.
+
+Fourth, **it lacks a counterfactual**. The right question is not “did revenue per employee fall after remote work?” but “would revenue per employee have fallen more, less, or the same if we had stayed in-office?” Without that, the conclusion is not identified. A proper test would compare similar teams, functions, regions, or companies over time, ideally with a difference-in-differences design or a controlled hybrid/RTO pilot.
+
+Fifth, **the proposed remedy is much stronger than the evidence**. Even if remote work caused some productivity loss, it does not follow that a five-day mandate is optimal. The productivity issue might come from weak management practices, poor onboarding, bad async norms, tool fragmentation, meeting overload, unclear goals, or loss of informal learning. The right solution might be better operating cadence, selective in-person days, role-specific policies, manager training, better documentation, or periodic team offsites.
+
+Sixth, **it ignores costs and second-order effects**. Five-day RTO can increase attrition, shrink the talent pool, raise compensation pressure, reduce employee satisfaction, increase commute fatigue, and add office costs. If high performers leave, revenue per employee could fall further. Any productivity gain must be weighed against these costs.
+
+Seventh, **it treats the workforce as homogeneous**. Sales, engineering, support, finance, and early-career employees may respond differently to remote work. Some tasks benefit from co-location; others benefit from uninterrupted focus and broader hiring access. A blanket mandate may solve one problem while damaging another.
+
+Eighth, **the 12% figure needs context**. Over six years, 12% is about a 2.1% annual compounded decline. That may be serious, but it is not automatically proof of “destroying productivity.” We need variance, trend shape, industry benchmark, confidence, and whether the decline happened immediately, gradually, or in one abnormal year.
+
+Verdict: the argument identifies a legitimate signal worth investigating, but it does not prove remote work caused the productivity decline, and it does not justify a full five-day return mandate. Recommendation: decompose revenue per employee, compare by team and role, benchmark against comparable firms, run a time-limited RTO or hybrid pilot with predefined metrics, then choose the least disruptive policy that measurably improves output.

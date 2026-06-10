@@ -1,0 +1,32 @@
+{
+  "0": {
+    "A": "claude_base",
+    "B": "claude_skill",
+    "C": "gpt5"
+  },
+  "1": {
+    "A": "claude_skill",
+    "B": "gpt5",
+    "C": "claude_base"
+  },
+  "2": {
+    "A": "gpt5",
+    "B": "claude_base",
+    "C": "claude_skill"
+  },
+  "3": {
+    "A": "claude_base",
+    "B": "gpt5",
+    "C": "claude_skill"
+  },
+  "4": {
+    "A": "claude_skill",
+    "B": "claude_base",
+    "C": "gpt5"
+  },
+  "5": {
+    "A": "gpt5",
+    "B": "claude_skill",
+    "C": "claude_base"
+  }
+}

@@ -1,0 +1,4 @@
+Reason through the following problem and give your best answer. Think it through carefully: state your assumptions, quantify where you can, weigh the evidence, flag what is uncertain, and end with a concise verdict or recommendation. Aim for a thorough but focused response of roughly 400 to 700 words.
+
+PROBLEM:
+A mid-sized city's downtown is dying: shops are closing, foot traffic has collapsed, and the obvious fixes (more parking, lower rents, a summer festival) have all been tried and failed. Generate genuinely non-obvious reframings of the problem and propose three unconventional options worth testing, with the reasoning behind each.

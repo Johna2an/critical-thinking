@@ -1,0 +1,17 @@
+Assumption: the highway is the dominant peak-hour corridor, and expansions mostly add general-purpose lanes without pricing, land-use reform, or high-quality alternatives.
+
+What is really going on is **induced demand**, not just population growth. Highway capacity temporarily lowers the “cost” of driving: trips become faster, more reliable, and less painful. People respond rationally. Some shift from transit or local roads back to the highway. Some make trips at peak times they previously avoided. Some choose farther destinations, longer commutes, or move farther out. Developers then build around the newly accessible land, locking in more car-dependent travel. Within a few years, the new capacity is consumed.
+
+Population growth may contribute, but leadership is likely mistaking a partial cause for the mechanism. If population were the main driver, widening should at least produce durable per-capita relief. Instead, the pattern described is classic: relief for 1-2 years, then worse congestion. That timing suggests the system is equilibrating around the same tolerated level of delay, with added lanes converted into added vehicle miles traveled.
+
+A useful rule of thumb from transportation research is that, over the medium to long run, highway vehicle travel often rises roughly in proportion to added lane capacity. Not perfectly everywhere, but enough that “build out of congestion” usually fails in growing metro areas. A 20% capacity increase can plausibly attract something like 10-20% more vehicle travel over time through route shifts, mode shifts, trip generation, and land-use changes. The exact number depends on tolling, transit quality, job distribution, fuel prices, remote work, and zoning.
+
+The highest-leverage intervention is **congestion pricing paired with credible alternatives**, not another widening. More specifically: charge a variable peak-period price for scarce highway space, calibrated to maintain free-flow or near-free-flow speeds, and dedicate the revenue to fast express buses/BRT, park-and-ride links, low-income travel credits, and safer local access.
+
+Why pricing is highest leverage: congestion is a queue caused by underpriced peak capacity. At rush hour, each additional driver imposes delay on everyone else but does not pay for that delay. Widening lowers the price of driving in time terms and invites more demand. Congestion pricing does the opposite: it makes the peak-hour road cost visible, shifts discretionary trips to other times/routes/modes, and preserves reliability for trips that truly need the highway.
+
+Transit or density reform alone can help, but if the highway remains free and repeatedly widened, the system keeps subsidizing peak solo driving. Pricing directly targets the binding constraint: peak-period road space.
+
+Uncertainties: if the city has no viable alternatives, pricing can be inequitable unless revenue is recycled carefully. If freight, emergency access, or regional through-traffic dominate, the design must account for them. If bottlenecks are caused by crashes, ramps, or poor signal coordination, operational fixes may also matter. But those are refinements, not a reason to keep widening.
+
+Verdict: the city is trapped in an induced-demand loop. Stop treating congestion as a capacity shortage alone. Price peak highway use, stop automatic widening, and use the revenue to give people practical ways to avoid peak solo driving.

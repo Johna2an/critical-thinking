@@ -1,0 +1,311 @@
+{
+  "configs": [
+    "claude_base",
+    "claude_skill",
+    "gpt5"
+  ],
+  "dims": [
+    "originality",
+    "diversity",
+    "boldness",
+    "craft",
+    "generativity"
+  ],
+  "summary": {
+    "claude_base": {
+      "dims": {
+        "originality": 7.89,
+        "diversity": 7.72,
+        "boldness": 7.78,
+        "craft": 8.56,
+        "generativity": 7.72
+      },
+      "overall": 7.93,
+      "wins": 7,
+      "avg_rank": 1.67,
+      "n_scores": 18
+    },
+    "claude_skill": {
+      "dims": {
+        "originality": 8.28,
+        "diversity": 8.56,
+        "boldness": 8.28,
+        "craft": 8.78,
+        "generativity": 8.5
+      },
+      "overall": 8.48,
+      "wins": 11,
+      "avg_rank": 1.39,
+      "n_scores": 18
+    },
+    "gpt5": {
+      "dims": {
+        "originality": 6.28,
+        "diversity": 6.22,
+        "boldness": 5.83,
+        "craft": 5.61,
+        "generativity": 5.83
+      },
+      "overall": 5.96,
+      "wins": 0,
+      "avg_rank": 2.94,
+      "n_scores": 18
+    }
+  },
+  "per_problem": {
+    "0": {
+      "claude_base": {
+        "dims": {
+          "originality": 8.33,
+          "diversity": 9.0,
+          "boldness": 8.0,
+          "craft": 9.0,
+          "generativity": 8.0
+        },
+        "overall": 8.47,
+        "bests": 3,
+        "reasonings": [
+          "A wins on the central test: its five versions occupy genuinely separate conceptual spaces (metabolic creditor, two-body pivot negotiation, grown mycelial organism, standing exo-cradle sleep, and phase-change gel that archives every past sitter), and the Inherited Posture idea (sitting as inheritance/haunting of the dead) is a surprise no other response reaches, all developed with concrete mechanism. B is nearly as well-crafted but several entries cluster on common reinvention tropes that overlap A's moves (its Debt, Loam, and Quorum mirror A's Debt, Chair That Eats, and Negotiation Seat); its Tide and Understudy are its only truly distinct escapes. C has a respectable spread and a clean conceptual exit in the Absence Chair, but its versions are thin one-line sketches with little developed mechanism, and the Temporary Skeleton plus metabolic chair overlap each other, dragging down craft and generativity.",
+          "A had the most genuinely distinct set: the Debt creditor, the two-body Negotiation Seat, the mycelium chair that grows into a cast of your habits, the Vertical Rest that abandons lowering your center of gravity entirely, and the Inherited Posture that makes sitting an archive of dead strangers' bodies. That last idea is the single strangest swing across all three responses and still coheres. B is close and equally crafted, with The Understudy (chair as a temporary tutor that hands off a posture profile and disappears) being the freshest single concept, but it overlaps with A on the Debt, grown-chair, and multi-body social-physics moves while landing them slightly less viscerally. C is the most compressed and least developed; its Absence Chair and Conversational Chair echo A's and B's stronger versions in thinner, less vivid form, so its craft and originality lag.",
+          "A had the most genuinely distinct five, each inhabiting a separate conceptual space and developed with real mechanism: the metabolic creditor 'Debt Chair', the two-body pivot 'Negotiation Seat', the use-authored organism 'Chair That Eats', the platformless standing-sleep 'Vertical Rest', and the standout 'Inherited Posture' that turns sitting into a bodily archive of the dead. B is strong and explicitly names its broken assumptions, and Tide (acoustic-pressure) and The Understudy are inventive, but its Debt/Loam/Quorum overlap conceptually with A's Debt/Eats/Negotiation and two of its five (Tide, Understudy) both resolve to 'the object disappears', tightening its spread. C ranges across good spaces (Absence Chair, Borrowed Gravity) but each version is a thin one-paragraph sketch with little internal mechanism, costing it on craft and generativity."
+        ]
+      },
+      "claude_skill": {
+        "dims": {
+          "originality": 7.33,
+          "diversity": 7.33,
+          "boldness": 7.33,
+          "craft": 8.67,
+          "generativity": 7.67
+        },
+        "overall": 7.67,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "originality": 6.67,
+          "diversity": 7.0,
+          "boldness": 7.0,
+          "craft": 5.0,
+          "generativity": 6.0
+        },
+        "overall": 6.33,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "1": {
+      "claude_base": {
+        "dims": {
+          "originality": 7.67,
+          "diversity": 7.0,
+          "boldness": 7.33,
+          "craft": 8.67,
+          "generativity": 7.67
+        },
+        "overall": 7.67,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "originality": 9.0,
+          "diversity": 9.0,
+          "boldness": 9.0,
+          "craft": 9.0,
+          "generativity": 8.33
+        },
+        "overall": 8.87,
+        "bests": 3,
+        "reasonings": [
+          "Response A has the most genuinely distinct set of five: Candlewake (tending a zero-g combustion sphere) and Slosh (herding a water blob held only by surface tension) both abandon the ball/body/trajectory frame entirely, while Tetherball Cascade, The Long Drift, and Spinwright each occupy a separate conceptual space (recoil-web, single perpetual trajectory, angular-momentum matching) with vivid, internally coherent mechanics. C is well-crafted and bold where it counts (Centrifuge restoring weight via spin plus Coriolis, Passant making balance a passable team resource), but it clusters: Tetherball Deep and Holdfast both hinge on footing/momentum and its Long Arc duplicates B's Broken Parabola. B maps cleanly to five mechanics but stays inside the modify-a-ball-game frame and is thinly developed, so it ranks last despite reasonable spread.",
+          "A has the most genuinely distinct set: Slosh (a fluid blob as the ball, surface tension as the rules), Candlewake (the sport is tending a zero-g flame, no body or ball at all), and Spinwright (angular momentum and matching tumble) each live in a different conceptual space, and Candlewake especially escapes the body-ball-trajectory frame entirely. C is close and beautifully crafted, with Centrifuge (restoring fake gravity via spin and the Coriolis slant) and Passant (balance as a resource teammates literally pass each other) standing out, but its Tetherball and Long Arc overlap A's tether and straight-line-puck ideas. B is the weakest: its five are sketchy one-liners and several cluster around the same body-pushing/contact-and-mass motif (No-Floor Siege, Collapse Choir, Mass Court), with thin development and little to build on.",
+          "A has the most genuinely distinct five: Slosh turns the ball itself into a fluid-dynamics blob and Candlewake abandons moving bodies entirely for tending a zero-g flame, two ideas that escape the obvious 'push-off sport' frame in completely different conceptual spaces. C is close behind on craft and surprise, with Centrifuge (spin-restored gravity plus Coriolis-slanted jumps and a weightless axis) and Passant ('lending a teammate an up') as standouts, but its set sits in more conventional sport shapes than A's. B's five are competent but terse and partly clustered around the no-floor/push-off idea (No-Floor Siege, Collapse Choir), with sketch-level development rather than fully realized worlds, so it ranks last."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "originality": 5.67,
+          "diversity": 6.0,
+          "boldness": 4.67,
+          "craft": 5.0,
+          "generativity": 5.0
+        },
+        "overall": 5.27,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "2": {
+      "claude_base": {
+        "dims": {
+          "originality": 7.0,
+          "diversity": 6.33,
+          "boldness": 7.0,
+          "craft": 8.33,
+          "generativity": 7.33
+        },
+        "overall": 7.2,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "originality": 8.0,
+          "diversity": 9.0,
+          "boldness": 8.0,
+          "craft": 9.0,
+          "generativity": 9.0
+        },
+        "overall": 8.6,
+        "bests": 3,
+        "reasonings": [
+          "C has the most genuinely distinct set of five, each living in a clearly separated conceptual space and explicitly breaking a different assumption: legal title (Quiet Easement), refusal-to-reply (Confession Bandwidth), cross-firm coordination infrastructure (Silent Hour Exchange), authored copyrighted artwork (Negative Music), and actuarial secrecy underwriting (Omerta Underwriter), with the strongest craft and clearest build-on directions. A is close behind with real internal spread (prestige sponsorship, social excuse layer, environmental credits, undelivered-message archive, non-output auction) but slightly less developed per item. B is the most polished prose yet clusters: the Negative Easement and Quiet Index both treat silence as a scarce tradable real asset, costing it diversity points and dropping it to last.",
+          "C has the most genuinely distinct set: it explicitly names and breaks a different governing assumption per version, and its Silent Hour Exchange (cross-firm synchronized quiet as enforced infrastructure that only works at scale) and Omerta Underwriter (secrecy reinsured like catastrophe risk, priced in basis points) are the freshest, least-cliche ideas in the whole field. B is close and best-crafted prose, but its Negative Easement and Quiet Index both land in the same property/asset conceptual space, costing it internal spread. A is solidly diverse (Blank Sponsor, Absence Insurance, Quiet Credits, Unsaid Archive, Silence Exchange) but each entry is compressed to a single paragraph with less development, and its silence-credits idea overlaps the financialization space that B and C both render more vividly.",
+          "C had the most genuinely distinct set: it explicitly broke a different governing assumption per version and the assumptions held under scrutiny, with the Silent Hour Exchange (coordinated quiet as cross-firm infrastructure that only works at scale) and the Omert\u00e0 Underwriter (secrecy reinsured and priced in basis points like catastrophe risk) being the freshest non-adjacent frames, plus Negative Music as authored, copyrighted, royalty-metered silence. B is the most vivid prose with its named human needs, but it clusters: the Negative Easement and the Quiet Index are both silence-as-tradable-property, costing diversity. A has real spread across five concepts (Quiet Credits, Absence Insurance, Silence Exchange) but is the most compressed and least developed of the three, and shares the easement/credits and confession-vault ideas with C without pushing them as far."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "originality": 7.33,
+          "diversity": 8.0,
+          "boldness": 7.33,
+          "craft": 6.33,
+          "generativity": 7.0
+        },
+        "overall": 7.2,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "3": {
+      "claude_base": {
+        "dims": {
+          "originality": 7.67,
+          "diversity": 8.33,
+          "boldness": 7.67,
+          "craft": 8.67,
+          "generativity": 7.67
+        },
+        "overall": 8.0,
+        "bests": 1,
+        "reasonings": [
+          "A had the most genuinely distinct set of five: ingested sourdough arc (taste), contingent sand-floor topography where a lazy day physically moves less than a frantic one, thermal-lag walls, day-speed social audio read by crowd density, and an emergent crowd-motion pendulum outsourcing timekeeping to an uncoordinated swarm. The floor-remembers-feet and crowd-pendulum ideas escape the obvious frame while staying coherent. C is a near-equal: salt-garden day-as-solid-object read after the fact, a reversed decaying loaf, a draining-cistern wire that sings a rising glissando, and a species-relay biological clock are bold and well-built, though its distributed water-vessel idea overlaps conceptually with A's thermal touch idea. B ranks last because its five collapse into roughly two clusters (smell/taste arc in the aging bread and tasting menu, and run-your-hand-along-a-changing-surface in the texture wall and thermal handrail), and each is a single vivid sentence with little development."
+        ]
+      },
+      "claude_skill": {
+        "dims": {
+          "originality": 8.33,
+          "diversity": 8.67,
+          "boldness": 8.33,
+          "craft": 8.0,
+          "generativity": 8.33
+        },
+        "overall": 8.33,
+        "bests": 2,
+        "reasonings": [
+          "C had the most genuinely distinct five: each version names and attacks a different base assumption (day-as-span vs the Salt Garden's solid readable residue, single perceiver vs the Shared Pulse's distributed street-wide temperature field, the Tide Score's draining cistern raising a wire's pitch, the Animal Almanac's species-to-species biological relay), so the set spans separate conceptual spaces rather than restyling one idea. A is vivid and well-crafted but versions 4 (collective human sound) and 5 (crowd-motion clock) cluster on the same social-aggregate engine, narrowing its spread. B reads as five thin sketches: the Thermal River and Tasting Menu overlap, and the Tasting Menu never actually mechanizes a day's passage, leaving it the least developed and least bold.",
+          "C and A both deliver five genuinely distinct conceptual spaces, but C edges ahead by attacking a different deep given of the brief in each version: the salt garden turns the day into a solid object read by touch after the fact, the Shared Pulse relocates the day into a distributed temperature field across many people's water vessels (refusing the single-perceiver assumption), and the Tide Score makes a draining cistern tension a wire into a continuous rising pitch. A is nearly as strong and more polished, with the crowd-motion blob over a plaza and the content-dependent sand floor as standouts, but its five spaces overlap slightly less sharply on the assumption axis. B trails badly on diversity and craft: its texture wall, tasting menu, and thermal handrail are three restylings of one move (advance along a staged gradient), and the entries are thin one-line sketches rather than developed mechanisms."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "originality": 5.0,
+          "diversity": 4.33,
+          "boldness": 4.0,
+          "craft": 4.67,
+          "generativity": 4.33
+        },
+        "overall": 4.47,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "4": {
+      "claude_base": {
+        "dims": {
+          "originality": 7.67,
+          "diversity": 6.67,
+          "boldness": 7.67,
+          "craft": 8.67,
+          "generativity": 7.67
+        },
+        "overall": 7.67,
+        "bests": 0,
+        "reasonings": []
+      },
+      "claude_skill": {
+        "dims": {
+          "originality": 9.0,
+          "diversity": 9.0,
+          "boldness": 9.0,
+          "craft": 9.0,
+          "generativity": 9.0
+        },
+        "overall": 9.0,
+        "bests": 3,
+        "reasonings": [
+          "A has the most genuinely distinct five: it explicitly snaps a different assumption per concept (The Recursion exhibits the institution's own live failures via autophagy; The Wet Lab makes the visitor the recorded data; Things That Almost Were exhibits counterfactual absence with empty plinths; The Half-Life Wing puts a reclassification timer on each piece; The Confessional Exchange makes a failure the price of admission), so no two share a conceptual space. B is vivid and emotionally well-rendered but clusters: Vault of Withheld Verdicts, Participation Floor, and Erosion Garden retread the late-verdict, you-are-the-exhibit, and slow-decay ideas that overlap each other and A's stronger versions. C is the thinnest and most compressed, with Hall of Almosts and Broken Rehearsal echoing near-miss and participation tropes; its one standout, Museum of Successful Failures (moral failure as flawless execution), is not enough to lift the set above A or B.",
+          "Response A had the most genuinely distinct set: it explicitly breaks a different load-bearing assumption per concept (container-becomes-specimen in The Recursion, spectator-becomes-data in The Wet Lab, absence-as-collection in Things That Almost Were, time-as-variable in The Half-Life Wing, visitor-pays-with-own-failure in The Confessional Exchange), each living in a separate conceptual space rather than restyling one idea. Response B matches A on craft and sensory vividness (the Autopsy Theater and House That Survived are excellent) but clusters internally: the Vault of Withheld Verdicts, Participation Floor, and Erosion Garden cover the same verdict/rigged-task/decay axes A also uses, slightly compressing its range. Response C lands two sharp ideas (Successful Failures as flawless execution of the wrong objective, the Apology Factory organized by victims) but its entries are thinner and less developed, and the Hall of Almosts plus Broken Rehearsal recycle the near-miss and rigged-repetition tropes the other two handle with more depth.",
+          "A has the most genuinely orthogonal five: each concept names and snaps a distinct load-bearing assumption (institution exhibits its own live failures in The Recursion; visitor becomes the recorded data in The Wet Lab; counterfactuals on empty plinths in Things That Almost Were; published reclassification timers in The Half-Life Wing; an admission economy where you pay with a failure in The Confessional Exchange), and each is built out into a vivid working world. B is close and finely crafted, with The House That Survived and The Erosion Garden as its freshest ideas, but the Vault of Withheld Verdicts and Participation Floor occupy nearly the same axes as A's Half-Life and Wet Lab. C is compact and lands two strong distinct concepts (Successful Failures as flawless execution of the wrong objective, and the Apology Factory organized by who paid the price), but several entries are a single paragraph of premise rather than a developed space, and Hall of Almosts and Broken Rehearsal echo common near-miss and participation tropes, so it ranks third on craft and boldness."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "originality": 6.33,
+          "diversity": 6.33,
+          "boldness": 6.0,
+          "craft": 5.33,
+          "generativity": 6.0
+        },
+        "overall": 6.0,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "5": {
+      "claude_base": {
+        "dims": {
+          "originality": 9.0,
+          "diversity": 9.0,
+          "boldness": 9.0,
+          "craft": 8.0,
+          "generativity": 8.0
+        },
+        "overall": 8.6,
+        "bests": 3,
+        "reasonings": [
+          "C wins on the central test of internal spread: its five forms break different assumptions AND live in different mediums (double-entry ledger, climate almanac, school-grades-itself folded card, a paper-free box of physical objects with a voice memo, and a map of only what was deliberately NOT taught), with the Reciprocal Card and Artifact Reliquary being the freshest swings. B is the most rigorously developed and explicitly names each load-bearing assumption it snaps (author, success, individual-as-unit, backward-clock, contemporary reader), and the Forward Contract and Hundred-Year Card are genuinely bold, but it edges just behind C on surprise. A trails because its five cluster (Question Museum, Unofficial Biography, and Contribution Ledger reuse the future-self/personhood/community frames) and stay closer to the predictable, each carrying only a sentence or two of development.",
+          "C had the most genuinely distinct set: it broke a different axis each time \u2014 direction of assessment (Reciprocal Card grades the school back), medium (Artifact Reliquary is a physical box with no paper and a voice memo), and absence itself (Negative Space Map reports only what was deliberately NOT taught) \u2014 escaping the document-form entirely twice. B is close and craftier per-line, with the strongest single ideas (Forward Contract written only in future tense, Hundred-Year Card for a reader who does not exist yet), but its Logbook and Failure Dossier both cluster around child-authored process narrative. A is well-built and humane, but stays mostly within the booklet/ledger frame and its Question Museum and Friction Map sit adjacent to its other entries, giving it the least internal spread.",
+          "C had the most genuinely distinct five because two forms escape the document frame entirely: the Artifact Reliquary replaces paper with a physical box of objects (failed prototype, erased page, the rock), and the Negative Space Map reports only what the school deliberately did NOT teach, while the Reciprocal Card flips who assesses whom. B is nearly as strong and the most systematically spread, naming a different broken assumption per version, with the Forward Contract (a report in no past tense, a negotiated wager) and the Hundred-Year Card (a different measurement clock) being conceptually rigorous standouts. A is crafted and vivid (Question Museum, Unofficial Biography) but clusters slightly, since Friction Map and Contribution Ledger occupy adjacent territory and all five stay safely within written-document-about-the-child, taking the least format-level risk."
+        ]
+      },
+      "claude_skill": {
+        "dims": {
+          "originality": 8.0,
+          "diversity": 8.33,
+          "boldness": 8.0,
+          "craft": 9.0,
+          "generativity": 8.67
+        },
+        "overall": 8.4,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "originality": 6.67,
+          "diversity": 5.67,
+          "boldness": 6.0,
+          "craft": 7.33,
+          "generativity": 6.67
+        },
+        "overall": 6.47,
+        "bests": 0,
+        "reasonings": []
+      }
+    }
+  },
+  "n_judge_files": 18
+}

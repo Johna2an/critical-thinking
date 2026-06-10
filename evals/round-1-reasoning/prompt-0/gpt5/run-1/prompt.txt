@@ -1,0 +1,4 @@
+Reason through the following problem and give your best answer. Think it through carefully: state your assumptions, quantify where you can, weigh the evidence, flag what is uncertain, and end with a concise verdict or recommendation. Aim for a thorough but focused response of roughly 400 to 700 words.
+
+PROBLEM:
+A new observational study (n=8,000) reports that people who drink two cups of coffee a day have a 20% lower rate of depression than non-coffee-drinkers (p<0.01). A wellness brand is citing it to sell a coffee-extract supplement. Should you believe that coffee reduces depression? Reason it through and give a verdict.

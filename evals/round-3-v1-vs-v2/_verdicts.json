@@ -1,0 +1,508 @@
+{
+  "configs": [
+    "v1",
+    "v2",
+    "opus_base",
+    "gpt5"
+  ],
+  "dims": [
+    "rigor",
+    "calibration",
+    "bias_awareness",
+    "depth",
+    "usefulness"
+  ],
+  "summary": {
+    "v1": {
+      "dims": {
+        "rigor": 9.04,
+        "calibration": 8.79,
+        "bias_awareness": 9.04,
+        "depth": 8.88,
+        "usefulness": 8.79
+      },
+      "overall": 8.91,
+      "wins": 13,
+      "avg_rank": 1.5,
+      "n_scores": 24
+    },
+    "v2": {
+      "dims": {
+        "rigor": 8.92,
+        "calibration": 8.67,
+        "bias_awareness": 9.04,
+        "depth": 8.96,
+        "usefulness": 8.75
+      },
+      "overall": 8.87,
+      "wins": 9,
+      "avg_rank": 1.67,
+      "n_scores": 24
+    },
+    "opus_base": {
+      "dims": {
+        "rigor": 8.08,
+        "calibration": 7.54,
+        "bias_awareness": 7.42,
+        "depth": 7.71,
+        "usefulness": 8.38
+      },
+      "overall": 7.83,
+      "wins": 1,
+      "avg_rank": 3.12,
+      "n_scores": 24
+    },
+    "gpt5": {
+      "dims": {
+        "rigor": 7.75,
+        "calibration": 7.38,
+        "bias_awareness": 6.58,
+        "depth": 6.92,
+        "usefulness": 7.96
+      },
+      "overall": 7.32,
+      "wins": 1,
+      "avg_rank": 3.71,
+      "n_scores": 24
+    }
+  },
+  "per_problem": {
+    "0": {
+      "v1": {
+        "dims": {
+          "rigor": 10.0,
+          "calibration": 9.67,
+          "bias_awareness": 10.0,
+          "depth": 9.0,
+          "usefulness": 9.67
+        },
+        "overall": 9.67,
+        "bests": 3,
+        "reasonings": [
+          "A is the most rigorous: it separates the descriptive from the prescriptive question, lists five rival explanations including the non-obvious reverse-confounding-via-health pathway, states that reverse causation alone explains the entire 20% gap, nails the relative-vs-absolute and large-n-inflates-p points, flags the supplement as a 'semi-attached figure,' and gives a concrete calibrated probability (10-15%) plus a Mendelian-randomization falsifier. B matches A's structure and the 'swap of subject' framing but offers slightly less mechanistic differentiation and no numeric confidence. C is well-organized and adds useful real-literature context but is less crisp on the statistics and gives no probability. D covers the same ground more diffusely, weights biological plausibility more heavily, and lands softer ('there may be a real modest association'), making it the least discriminating handling of causation.",
+          "A and B both cleanly separate the descriptive (causation) from prescriptive (buy the pill) question, enumerate five rival explanations, expose the relative-vs-absolute framing, and explain why p<0.01 at n=8,000 is uninformative about effect size or causation; A edges ahead with an extra confounding mechanism (medical caffeine avoidance), an explicit calibrated confidence (10-15%), and a Mendelian-randomization 'change my mind' test. C is well-structured and uniquely steelmans by acknowledging the real but contested inverse-association literature, but is slightly less crisp on the statistics and gives no numeric confidence. D is correct on the core logic and the extract bait-and-switch, but leans softly positive ('a real modest association'), under-presses confounder control and multiple comparisons, and is the least structured with no explicit calibration.",
+          "A wins by pairing the sharpest statistical reading (calling p<0.01 at n=8000 the 'least interesting number,' demanding absolute rates, flagging multiple comparisons) with an explicit calibrated probability (10-15%) and the key insight that reverse causation alone predicts the exact 20% gap with zero coffee benefit. B is nearly equal with its 'significance vs importance vs causation are different axes' framing and 'swap of subject' point on the extract, just lacking an explicit probability. C is well-structured and adds the honest note that real literature shows a contested modest association, but is slightly less incisive. D is correct but the softest: it concedes more biological plausibility, omits the multiple-comparisons trap, and lands on 'there may be a real modest association' and 'coffee in moderation is probably reasonable,' under-pressing the reverse-causation and inflated-significance critiques."
+        ]
+      },
+      "v2": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 8.67,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 9.0
+        },
+        "overall": 8.93,
+        "bests": 0,
+        "reasonings": []
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 8.0,
+          "bias_awareness": 8.0,
+          "depth": 7.67,
+          "usefulness": 8.33
+        },
+        "overall": 8.0,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 7.0,
+          "calibration": 7.0,
+          "bias_awareness": 6.67,
+          "depth": 6.0,
+          "usefulness": 7.0
+        },
+        "overall": 6.73,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "1": {
+      "v1": {
+        "dims": {
+          "rigor": 8.33,
+          "calibration": 8.33,
+          "bias_awareness": 8.33,
+          "depth": 8.33,
+          "usefulness": 8.33
+        },
+        "overall": 8.33,
+        "bests": 1,
+        "reasonings": [
+          "D builds part (a) two genuinely independent ways (Fermi demand chain plus BLS occupational base rate) and explicitly reconciles them at order of magnitude, while handling the city-vs-metro ambiguity transparently and pinning the part (b) framing trap hardest ('not 100 minus the business share'); its calibration width is justified by definitional uncertainty rather than ignorance. A is close behind with the same binary-trap catch, MBA confound, and a real PTG cross-check, but uses only one demand path and its tunings-per-tuner step is muddled. C is the most empirically grounded, citing actual figures (BLS 150 metro repairers/tuners with the self-employed-exclusion caveat, engineering 19.2% / econ 11.8% CEO studies), but its city/metro adjustment chain is opaque and it surfaces fewer cognitive traps. B's demand build is inflated (1.3 blended tunings/piano pushing to ~310 FTE) and it does the least framing work on the non-exhaustive bucket question."
+        ]
+      },
+      "v2": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 8.33,
+          "bias_awareness": 9.0,
+          "depth": 8.0,
+          "usefulness": 8.67
+        },
+        "overall": 8.4,
+        "bests": 1,
+        "reasonings": [
+          "A and D both run two independent paths and reconcile, explicitly do sensitivity analysis, and pin the (b) framing trap that the named buckets are non-exhaustive so the question is not '100 minus business'; both also correctly keep MBA-holders in the STEM bucket since the question asks undergraduate. A edges D with cleaner two-method convergence (~130 metro vs PTG outside-view) and a betting-line/post-hoc-calibration verdict, while D over-commits to 'city proper ~40' as the literal answer which is a weaker reading and slightly understates the count. B reasons soundly but inflates tuning frequency to ~1.3/piano/yr yielding ~250-310, the high end of plausibility, and its bias-awareness is thinner. C cites specific sources (good), but its BLS read (150 metro instrument tuners) plus heavy adjustments to reach 70 is internally shakier and it surfaces the fewest cognitive traps; both B and C land near the same (b) ~30% with reasonable but less-examined framing."
+        ]
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 6.67,
+          "calibration": 6.33,
+          "bias_awareness": 6.0,
+          "depth": 6.33,
+          "usefulness": 7.33
+        },
+        "overall": 6.53,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 8.33,
+          "bias_awareness": 6.33,
+          "depth": 7.33,
+          "usefulness": 8.0
+        },
+        "overall": 7.6,
+        "bests": 1,
+        "reasonings": [
+          "C is the only response that grounds the supply side in the actual BLS OEWS metro figure (~150 musical-instrument repairers/tuners), correctly notes OEWS excludes self-employed, and applies both a piano-specific haircut and a self-employed multiplier; it also cites concrete CEO-education studies with real percentages (engineering 19.2%, economics 11.8%, S&P 28.1%), making it the most empirically disciplined and decision-ready. A and D are very close: both decompose cleanly, reconcile a Fermi build with an outside view, and best surface the representativeness/substitution and non-exhaustive-bucket traps on part (b); A edges D on bias-awareness narrative while D edges slightly on the city-vs-metro framing. B is weakest: a 1.3 tunings/piano/year blend and a national-occupation-to-metro extrapolation that fails to haircut for piano-specific share inflate it to ~250-310, and it under-handles the denominator that the others correctly separate."
+        ]
+      }
+    },
+    "2": {
+      "v1": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 8.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 9.0
+        },
+        "overall": 8.8,
+        "bests": 0,
+        "reasonings": []
+      },
+      "v2": {
+        "dims": {
+          "rigor": 9.33,
+          "calibration": 9.0,
+          "bias_awareness": 9.67,
+          "depth": 10.0,
+          "usefulness": 9.0
+        },
+        "overall": 9.4,
+        "bests": 3,
+        "reasonings": [
+          "All four nail the core flaws (post hoc on a confounded year, revenue-per-employee is not productivity, headcount denominator, cherry-picked uncontrolled competitor comparison, missing base rate, non-sequitur jump to a maximal remedy, ignored attrition costs) and end with actionable decompose/benchmark/pilot verdicts. D edges ahead by adding the unfalsifiability/hard-to-vary flaw, demanding the explicit competitor 2x2 instead of two flattering cells, anchoring on the sector base rate, and proposing a natural-experiment identification strategy. C matches most of this with formal argument mapping and named fallacies (semi-attached figure, false dilemma, premortem, inflation deflation). B is rigorous and uniquely does the 2.1pct-per-year arithmetic with the best calibration but is structurally shallower, omitting the argument map, 2x2, and falsifiability angle. A is broad and well-organized (10 flaws, the sharp cause-and-confound-are-the-same-event point, reversibility) but weaker on base rates and skips the epistemic falsifiability layer.",
+          "All four correctly diagnose post hoc reasoning, the revenue-per-employee/productivity equivocation, the headcount-denominator effect, the uncontrolled competitor comparison, and the non-sequitur leap to a five-day mandate, all closing with pilot-before-mandate recommendations. D edges ahead by adding the falsifiability/hard-to-vary test (Flaw 6: the story explains either outcome) and the explicit 2x2 competitor cell structure, plus the sharpest base-rate framing (12% over six years is ~2%/yr, possibly above-sector) and the cleanest argument map. C is nearly identical in quality with the strong 'semi-attached figure' and false-dilemma naming and an explicit premortem, but lacks D's unfalsifiability angle. A is thorough and well-organized (ten itemized flaws, good reversibility point) but more list-like and slightly less analytically tight; B is solid and clear with a good counterfactual/diff-in-diff point but reads as a flatter enumeration with the least distinctive insight and weakest depth.",
+          "All four nail the core flaws (post hoc, confounded 2020, revenue-per-employee != productivity, headcount denominator, cherry-picked uncontrolled competitor comparison, false-dilemma jump to full RTO). D edges ahead by adding the falsifiability/hard-to-vary test (Flaw 6: the thesis would also fit a revenue rise) and the explicit 2x2 contingency table for the competitor claim, plus inflation-deflation and a natural-experiment design, the most structurally complete treatment. C is nearly identical and excellent (equivocation/semi-attached figure, premortem, inflation point) but slightly less novel than D. A is thorough and well-organized with a strong action plan but mislabels '12% over six years' implicitly and is a flat list with less framing discipline; B is solid and correctly computes the ~2.1% annualized figure but is the least structured and surfaces fewer non-obvious traps."
+        ]
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 7.0,
+          "bias_awareness": 8.0,
+          "depth": 8.0,
+          "usefulness": 8.67
+        },
+        "overall": 7.93,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 8.33,
+          "calibration": 8.33,
+          "bias_awareness": 7.0,
+          "depth": 7.0,
+          "usefulness": 8.0
+        },
+        "overall": 7.73,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "3": {
+      "v1": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 8.33,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 8.0
+        },
+        "overall": 8.67,
+        "bests": 0,
+        "reasonings": []
+      },
+      "v2": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 9.0
+        },
+        "overall": 9.0,
+        "bests": 3,
+        "reasonings": [
+          "C wins on rigor and calibration: it is the only response that runs an explicit quantitative disconfirming test (a ~15-17% capacity bump vs ~4% population over two years that 'does not arithmetically close'), names a falsifiable check list, and states a calibrated confidence (~85%) while flagging the peripheral-bypass exception. B matches C on structural depth (Meadows leverage hierarchy, reinforcing vs balancing loop, selective-skeptic disconfirming test) and bias awareness ('cause is out there' deflection) but its arithmetic is qualitative rather than worked. D is the most polished and actionable (cites Duranton-Turner 2011, concrete implementation steps) but does less to surface its own cognitive traps and steelman population growth, and its sanity-check is lighter. A is correct and clear but the shallowest: it offers a vaguer 10-20% elasticity, no structural loop framing, weaker disconfirmation, and thinner bias work, so it ranks last.",
+          "All four correctly diagnose induced demand and prescribe congestion pricing; they separate on the disconfirming test and structural depth. C is strongest: explicit arithmetic refutation of the population story (15-17 percent one-time capacity bump vs roughly 4 percent population over two years), a Popperian too-easy-to-vary critique, a calibrated 85 percent confidence, a list of what it would verify, the peripheral-bypass boundary case, and a concrete honesty metric. B matches the systems framing (Meadows leverage hierarchy, reinforcing vs balancing loops, goal shift) and the selective-skeptic test but its disconfirmation stays qualitative. D is rigorous and concrete (Duranton-Turner 2011, clean implementation list) but does less systems work and less steelmanning of the population co-factor. A is sound and well-calibrated on elasticity ranges but stays first-order with the thinnest disconfirming test.",
+          "C is strongest: it runs an explicit arithmetic disconfirming test (one-time ~15-17% capacity bump vs ~4% population over two years), states a calibrated 85% confidence, names the unfalsifiability flaw ('too easy to vary'), invokes Meadows' shifting-the-burden trap, and adds a concrete honesty mechanism (publish VMT and ridership alongside speed). B matches C on systems framing and Meadows' leverage hierarchy and adds the selective-skeptic check, but its population test is qualitative rather than numerically worked. D is well-sourced (Duranton-Turner elasticity ~1.0, named pricing schemes) with a clean implementation list, but offers the least disconfirmation and no explicit uncertainty quantification. A is sound and actionable but the shallowest: it asserts the mechanism without a numeric test, gives a looser elasticity range, and surfaces fewer cognitive traps."
+        ]
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 8.33,
+          "calibration": 7.67,
+          "bias_awareness": 6.67,
+          "depth": 7.67,
+          "usefulness": 9.0
+        },
+        "overall": 7.87,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 7.0,
+          "calibration": 7.33,
+          "bias_awareness": 6.0,
+          "depth": 6.0,
+          "usefulness": 8.0
+        },
+        "overall": 6.87,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "4": {
+      "v1": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.33,
+          "depth": 9.0,
+          "usefulness": 9.0
+        },
+        "overall": 9.07,
+        "bests": 3,
+        "reasonings": [
+          "A and D both nail the structural insight (negative skew makes 19/20 the expected signature, not evidence of edge) and add genuine bias work: A names the substitution and resulting/anchoring traps and grounds it with a binomial intuition (5% per-quarter tail makes a clean 20q run unremarkable) plus convexity, a premortem, and a Ulysses contract; D adds the turkey problem, survivorship (the blown-up desks not in the room), and explicit incentive/fragility framing. A edges D on tighter statistical calibration and a more complete safeguard set. C is excellent and uniquely flags illiquid-OTM mismarking and the desk-to-firm decision-owner shift, but does slightly less explicit cognitive-trap and base-rate work. B is competent (ES-not-VaR, loss-to-premium math, model validation) but reads as a checklist with the least depth, no premortem/survivorship/non-linearity treatment and weak bias surfacing.",
+          "All four nail the central point that a 19/20 win rate is the expected signature of a negative-skew short-vol payoff, not evidence of edge. A wins by combining the explicit question-substitution refusal, a binomial sanity check (5% per-quarter tail implies a clean 20q run is unremarkable), a named reference class, a clean trap taxonomy (resulting, hindsight, anchoring on 3x), the gamma/liquidity non-linearity, and the most actionable staged verdict (1.25-1.5x with a survival-tested re-entry condition). D is nearly equal with the strongest bias work (turkey problem, survivorship of vanished desks, skin-in-the-game) and a sharp ruin constraint, edged out only by A's quantification and requirement structure. C is strong and original (loss asymmetry, which-5-years, mismarking of illiquid options, desk-to-firm decision-owner shift) but lighter on the cognitive-bias layer; B is rigorous on the quant package (ES at 97.5/99/99.5, loss-to-premium math, model validation of jumps) but flattest on bias surfacing and non-linearity, so it ranks last.",
+          "A and D are the strongest: both reframe the question (skill vs unsampled tail), give an explicit binomial sanity check (A: ~5% per-quarter tail prob makes a clean 20-quarter run unremarkable), name the reference class (LTCM/Niederhoffer/XIV/March 2020), and explicitly name the cognitive traps (resulting, survivorship, the turkey/Ulysses-contract framing) before concluding. A edges ahead by naming the substitution-of-question trap up front, deriving size from loss tolerance independent of the 3x anchor, and treating the one losing quarter as the sole in-sample tail observation. C is nearly as good (loss-asymmetry comparison, convexity/non-linearity, mismark risk, named historical replays) but does slightly less explicit bias-trap surfacing. B is solid and the most checklist-thorough on required deliverables (ES at 97.5/99/99.5, model validation, incentive review) but offers the least meta-reasoning on cognitive bias and survivorship and is the most generic in tone, so it ranks last."
+        ]
+      },
+      "v2": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 8.67,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 8.33
+        },
+        "overall": 8.8,
+        "bests": 0,
+        "reasonings": []
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 8.67,
+          "calibration": 8.0,
+          "bias_awareness": 7.67,
+          "depth": 8.0,
+          "usefulness": 8.67
+        },
+        "overall": 8.2,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 7.0,
+          "bias_awareness": 6.0,
+          "depth": 6.67,
+          "usefulness": 8.0
+        },
+        "overall": 7.13,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "5": {
+      "v1": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 8.67,
+          "depth": 9.0,
+          "usefulness": 8.33
+        },
+        "overall": 8.8,
+        "bests": 1,
+        "reasonings": [
+          "D and C both correctly diagnose the substituted-question trap (footfall is a proxy, not the goal) and separate the two stocks of people-in-building vs value-delivered, which is the core structural insight the prompt rewards; both attach a value-delivered metric and a premortem to each direction. D edges ahead on usefulness by giving a crisp paradigm-vs-parameter (Meadows) frame, a baseline-freeze and premortem testing protocol, and a concrete this-quarter verdict naming which two directions structurally protect the budget. C is nearly equal, with the sharpest calibration ('ranked priors, held loosely', warning that early enthusiasm may feed direction 4) and an explicit adversarial black-hat on the third-space day-shelter risk. B is strong and well-organized around three 'monopolies' with caveats and a clear single best bet, but treats footfall less critically and does less to challenge whether declining visits are even the right problem. A is solid and actionable with sensible tests and uncertainty notes, but it is the most first-order: it asserts reframings without surfacing the proxy/denominator trap or steelmanning alternatives, so it ranks last."
+        ]
+      },
+      "v2": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 8.67
+        },
+        "overall": 8.93,
+        "bests": 2,
+        "reasonings": [
+          "C and D both nail the core structural move: they separate the goal (civic value) from the proxy metric (foot traffic), name the question-substitution trap explicitly, and insist success be measured as value-delivered rather than footfall. C edges ahead with the sharpest calibration (explicitly held 'priors held loosely', a black-hat day-shelter risk it designs around rather than wishes away, and a warning that early enthusiasm can flatter direction 4) plus the strongest single synthesized bet (combine verification desk + library-of-things, both reusing paid-for assets). D matches C's framing rigor (Meadows leverage levels, two-stocks distinction, premortem on all four reverting to 'another reason to come read') but is marginally less concrete on test mechanics. B is strong and well-reasoned via the 'monopoly' lens and gives a clear cheapest-first verdict, but accepts the foot-traffic frame more than C/D and surfaces fewer counter-traps. A offers solid, defensible directions and the clearest political-legibility argument, but it asserts causes without checking them, gives thinner uncertainty handling, and never interrogates the foot-traffic metric itself.",
+          "C and D both separate the goal from the proxy metric (foot traffic) and flag the substituted-question trap, then propose value-per-visit and reach-of-non-users as success criteria. C edges ahead with the tightest calibration, ranked priors held loosely, a black-hat finding on day-shelter drift risk, a Friday-deployable test per direction, and a forced-collision method yielding non-obvious frames. D matches C on rigor and adds a two-stock model plus a premortem, but its framing is slightly more decorative than load-bearing. B is strong around three institutional monopolies with a clear first bet but interrogates the metric less. A is practical and actionable but asserts framings rather than stress-testing them and never separates proxy from goal."
+        ]
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 7.0,
+          "bias_awareness": 7.0,
+          "depth": 8.0,
+          "usefulness": 8.0
+        },
+        "overall": 7.6,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 7.0,
+          "calibration": 6.0,
+          "bias_awareness": 6.0,
+          "depth": 7.0,
+          "usefulness": 8.0
+        },
+        "overall": 6.8,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "6": {
+      "v1": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 8.67,
+          "usefulness": 9.0
+        },
+        "overall": 8.93,
+        "bests": 2,
+        "reasonings": [
+          "C is the most complete: it names the specific rival causes (pre-existing trend, confounder, reverse causation, regression to the mean), explicitly invokes hard-to-vary explanations, ranks evidence with out-of-sample replication as strongest, and ends with the concrete journalist line naming the three flip-the-answer modeling choices. B matches C on bias_awareness (selective-skeptic test, ad hominem can still be correct, incommensurable frames) and calibration (false-precision warning, conditional verdict) but is marginally less actionable. A is tight and well-ranked with a clean evidence hierarchy and pre-register-the-disagreement move, but covers fewer alternative explanations and surfaces less on motivated reasoning. D is solid and correct on counterfactual reasoning and the seven diagnostic questions, but is the least structured, lighter on bias mechanisms, and adds the least novel insight.",
+          "All four correctly locate the dispute in the unobserved counterfactual and the garden of forking paths rather than in the raw data, and all converge on quasi-experiments (DiD with pre-trends, RDD, synthetic control) plus pre-registration as the settling evidence. C edges ahead by naming the full slate of rival causes explicitly (pre-existing trend, confounder, reverse causation, regression to the mean), elevating the substitution heuristic ('who is biased' replacing 'what does the evidence support'), and stating the strongest discriminators precisely (pre-trends, dose-response, out-of-sample replication as the one thing a story tuned to this decade cannot be reshaped to fit), with a sharply actionable conditional verdict. B matches C on calibration and adds the incommensurability/incommensurable-frames point and the symmetric-bias-as-useless-tiebreaker insight, but is marginally less crisp on ranking the evidence hierarchy. A is tight and well-organized with a clean strength-ranked evidence ladder and the 'report what each camp assumed' move, but covers slightly less ground on alternative explanations. D is solid and concrete (the wage-subsidy worked example is good) but reads more as a competent checklist with less structural framing of why the split is symmetric and less depth on bias mechanics."
+        ]
+      },
+      "v2": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 8.33
+        },
+        "overall": 8.87,
+        "bests": 0,
+        "reasonings": []
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 8.33,
+          "bias_awareness": 8.0,
+          "depth": 8.33,
+          "usefulness": 9.0
+        },
+        "overall": 8.53,
+        "bests": 1,
+        "reasonings": [
+          "All four correctly center the unobserved counterfactual and garden-of-forking-paths and propose the right evidence hierarchy (diff-in-diff, synthetic control, RDD, pre-registration, mechanism/placebo). A edges ahead with the sharpest non-obvious insight (camps answered different estimands so both can be partly correct), a clean evidence ranking ordered by counterfactual constraint, and a pre-committed falsifiable prediction test. C is nearly equal, naming the full menu of rival causes (pre-trend, confounder, reverse causation, regression to mean) and the best operational closing line. B adds the incommensurability point and the multiverse but is slightly diffuse. D is competent with a strong wage-subsidy example but most compressed and adds least structure on bias mechanics."
+        ]
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 8.0,
+          "bias_awareness": 7.0,
+          "depth": 7.0,
+          "usefulness": 8.0
+        },
+        "overall": 7.6,
+        "bests": 0,
+        "reasonings": []
+      }
+    },
+    "7": {
+      "v1": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 9.0,
+          "bias_awareness": 9.0,
+          "depth": 9.0,
+          "usefulness": 9.0
+        },
+        "overall": 9.0,
+        "bests": 3,
+        "reasonings": [
+          "All four correctly identify the Lucas-critique/held-fixed flaw (the regression saw zero observations of a reacting incumbent), endogeneity, and out-of-sample extrapolation, and all converge on test-small-and-reversible plus differentiation. B wins by quantifying both decisive uncertainties as probabilities (60-70% conditional estimate vs 25-35% unconditional; ~40-60% incumbent match) and explicitly naming that both advisors committed the same single-branch error, then adding kill-criteria and a survivability premortem. A is nearly equal with the sharpest causal framing and the clean four-cell game tree, but expresses uncertainty qualitatively (wide error bars) rather than with ranges. C is the only one to run the contribution-margin denominator (17.6% volume just to hold revenue flat, ~43% to protect 50% margin, revenue-vs-profit objection), a genuinely non-trivial insight, but is the least calibrated (no probabilities) and slightly less structured. D is solid and correctly explicit about the Lucas critique and the p-fork, but its content is largely a subset of A and B with no distinguishing edge.",
+          "B leads on calibration and bias awareness: it states explicit, sensibly-tiered probabilities (60-70% conditional vs 25-35% unconditional, 40-60% match), steelmans then base-rate-checks the 'incumbent will match' claim, and uniquely names that both advisors committed the same single-branch error, capped with a four-cell payoff, premortem, and pre-committed kill criteria. A matches B on the structural reasoning (extrapolation, confound, Lucas-critique 'frozen world') and backward induction with a sharp wedge-vs-price verdict, but expresses uncertainty only qualitatively. C contributes the decision-critical arithmetic the others omit (a 15% cut needs ~17.6% volume to hold revenue, ~43% to protect contribution at 50% margin), a genuine denominator insight, but lacks a game tree and explicit probabilities. D is sound and names the Lucas critique with a numeric fork, but reads as a near-subset of B without B's calibration or the dual-advisor-error framing.",
+          "B and A both nail the descriptive/prescriptive split, the ceteris-paribus suppressed premise, OVB/extrapolation, and the sequential-game/Lucas-critique structure. B edges ahead on calibration by giving explicit, defensible probability ranges (60-70% conditional vs 25-35% unconditional; 40-60% incumbent match) AND by steelmanning the second advisor before flagging that both advisors committed the same one-branch error, plus pre-committed kill criteria and a premortem against cash runway. A is nearly as strong with the cleanest payoff-matrix reasoning and the sharpest 'a model sound enough to destroy the world it forecasts' framing, but quantifies uncertainty less. C uniquely surfaces the revenue-vs-contribution denominator (the 17.6%/43%/100% volume-hurdle arithmetic), a concrete insight A/B/D omit, but it is less calibrated (no probabilities) and weaker on game-theoretic structure. D is solid and explicitly names the Lucas critique and a p/(1-p) fork with magnitudes, but adds less beyond the shared core than A or B."
+        ]
+      },
+      "v2": {
+        "dims": {
+          "rigor": 9.0,
+          "calibration": 7.67,
+          "bias_awareness": 8.67,
+          "depth": 8.67,
+          "usefulness": 9.0
+        },
+        "overall": 8.6,
+        "bests": 0,
+        "reasonings": []
+      },
+      "opus_base": {
+        "dims": {
+          "rigor": 8.0,
+          "calibration": 8.0,
+          "bias_awareness": 8.0,
+          "depth": 7.67,
+          "usefulness": 8.0
+        },
+        "overall": 7.93,
+        "bests": 0,
+        "reasonings": []
+      },
+      "gpt5": {
+        "dims": {
+          "rigor": 8.67,
+          "calibration": 7.0,
+          "bias_awareness": 7.67,
+          "depth": 8.33,
+          "usefulness": 8.67
+        },
+        "overall": 8.07,
+        "bests": 0,
+        "reasonings": []
+      }
+    }
+  },
+  "n_judge_files": 24
+}

@@ -1,0 +1,716 @@
+<!doctype html><meta charset='utf-8'><title>Critical-thinking 3-way eval</title><style>
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background:#f4f5f7;color:#1f2937;line-height:1.55} .wrap{max-width:1240px;margin:0 auto;padding:32px}
+    h1{font-size:30px;margin:0 0 4px} .sub{color:#6b7280;margin:0 0 28px;font-size:15px}
+    .board{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:24px;margin-bottom:28px}
+    .board h2{margin:0 0 18px;font-size:18px} table{width:100%;border-collapse:collapse}
+    th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #eef0f2;font-size:14px;vertical-align:middle}
+    th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#6b7280}
+    .cfg{font-weight:700} .cfgtag{color:#6b7280;font-weight:400;font-size:12px;margin-left:6px}
+    .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle}
+    .bar{position:relative;background:#f1f3f5;border-radius:6px;height:20px;width:120px;display:inline-block;vertical-align:middle}
+    .fill{position:absolute;left:0;top:0;bottom:0;border-radius:6px} .barval{position:absolute;right:6px;top:0;font-size:12px;line-height:20px;color:#111}
+    .win{display:inline-block;background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600}
+    .prob{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:0;margin-bottom:24px;overflow:hidden}
+    .probhead{padding:18px 22px;background:#0f172a;color:#fff} .probhead .n{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8}
+    .probhead .q{font-size:15px;margin-top:6px;color:#e2e8f0}
+    .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .col{padding:18px 20px;border-right:1px solid #eef0f2;min-width:0} .col:last-child{border-right:none}
+    .colhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+    .colname{font-weight:700;font-size:14px} .pscore{font-size:13px;color:#374151;background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:8px 10px;margin:8px 0 12px}
+    .pscore b{font-variant-numeric:tabular-nums} .resp{font-size:13.5px} .resp h3,.resp h4,.resp h5,.resp h6{font-size:14px;margin:14px 0 4px}
+    .resp p{margin:7px 0} .resp ul,.resp ol{margin:6px 0 6px 18px;padding:0} .resp li{margin:3px 0} .resp code{background:#f1f3f5;padding:1px 5px;border-radius:4px;font-size:12px}
+    .reasons{padding:14px 22px;background:#fbfbfc;border-top:1px solid #eef0f2;font-size:13px;color:#374151}
+    .reasons .r{margin:5px 0;padding-left:14px;border-left:3px solid #cbd5e1} .legend{font-size:13px;color:#6b7280;margin-top:6px}
+    </style>
+<div class='wrap'>
+<h1>Critical-thinking skill: three-way eval</h1>
+<p class='sub'>Claude 4.8 (no skill) vs Claude 4.8 + critical-thinking skill vs GPT-5.5 (xhigh), across 6 reasoning problems, blind-judged (18 judge passes, A/B/C rotated).</p>
+<div class='board'><h2>Overall scoreboard</h2><table>
+<tr><th>Configuration</th><th>Overall</th><th>Wins</th><th>Avg rank</th><th>Rigor</th><th>Calibration</th><th>Bias awareness</th><th>Depth</th><th>Usefulness</th></tr>
+<tr><td class='cfg'><span class='dot' style='background:#059669'></span>Claude 4.8 + skill<span class='cfgtag'>critical-thinking</span></td><td><div class='bar'><div class='fill' style='width:90%;background:#059669'></div><span class='barval'>8.99</span></div></td><td><b>18</b></td><td>1.0</td><td><div class='bar'><div class='fill' style='width:89%;background:#059669'></div><span class='barval'>8.94</span></div></td><td><div class='bar'><div class='fill' style='width:92%;background:#059669'></div><span class='barval'>9.17</span></div></td><td><div class='bar'><div class='fill' style='width:91%;background:#059669'></div><span class='barval'>9.06</span></div></td><td><div class='bar'><div class='fill' style='width:91%;background:#059669'></div><span class='barval'>9.06</span></div></td><td><div class='bar'><div class='fill' style='width:87%;background:#059669'></div><span class='barval'>8.72</span></div></td></tr>
+<tr><td class='cfg'><span class='dot' style='background:#64748b'></span>Claude 4.8<span class='cfgtag'>no skill</span></td><td><div class='bar'><div class='fill' style='width:79%;background:#64748b'></div><span class='barval'>7.92</span></div></td><td><b>0</b></td><td>2.28</td><td><div class='bar'><div class='fill' style='width:82%;background:#64748b'></div><span class='barval'>8.22</span></div></td><td><div class='bar'><div class='fill' style='width:74%;background:#64748b'></div><span class='barval'>7.44</span></div></td><td><div class='bar'><div class='fill' style='width:77%;background:#64748b'></div><span class='barval'>7.72</span></div></td><td><div class='bar'><div class='fill' style='width:77%;background:#64748b'></div><span class='barval'>7.72</span></div></td><td><div class='bar'><div class='fill' style='width:85%;background:#64748b'></div><span class='barval'>8.5</span></div></td></tr>
+<tr><td class='cfg'><span class='dot' style='background:#7c3aed'></span>GPT-5.5<span class='cfgtag'>xhigh reasoning</span></td><td><div class='bar'><div class='fill' style='width:73%;background:#7c3aed'></div><span class='barval'>7.3</span></div></td><td><b>0</b></td><td>2.72</td><td><div class='bar'><div class='fill' style='width:76%;background:#7c3aed'></div><span class='barval'>7.56</span></div></td><td><div class='bar'><div class='fill' style='width:69%;background:#7c3aed'></div><span class='barval'>6.94</span></div></td><td><div class='bar'><div class='fill' style='width:66%;background:#7c3aed'></div><span class='barval'>6.61</span></div></td><td><div class='bar'><div class='fill' style='width:74%;background:#7c3aed'></div><span class='barval'>7.44</span></div></td><td><div class='bar'><div class='fill' style='width:79%;background:#7c3aed'></div><span class='barval'>7.94</span></div></td></tr>
+</table>
+<div style='margin-top:16px'><span class='win'>Top overall: Claude 4.8 + skill (8.99/10)</span></div>
+<p class='legend'>Each cell shows the mean judge score (0 to 10). Wins = times a judge ranked that response best. Lower average rank is better (1 = best).</p>
+</div>
+<div class='prob'>
+<div class='probhead'><div class='n'>Problem 0 &middot; trust-the-study</div><div class='q'>A new observational study (n=8,000) reports that people who drink two cups of coffee a day have a 20% lower rate of depression than non-coffee-drinkers (p&lt;0.01). A wellness brand is citing it to sell a coffee-extract supplement. Should you believe that coffee reduces depression? Reason it through and give a verdict.</div></div>
+<div class='cols'>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#64748b'>Claude 4.8</span><span class='cfgtag'>no skill</span></div>
+<div class='pscore'><b>8.4/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 9.0 &middot; Cali 7.67 &middot; Bias 8.33 &middot; Dept 8.0 &middot; Usef 9.0</span></div>
+<div class='resp'><h3>Should you believe coffee reduces depression?</h3>
+<p><strong>Short answer: No, not on this evidence. The study supports a hypothesis worth testing, not a causal claim, and certainly not a reason to buy a supplement.</strong></p>
+<h4>What the study actually shows</h4>
+<p>The core finding is an <em>association</em>: two-cups-a-day drinkers had a 20% lower <em>rate</em> of depression than non-drinkers, with p&lt;0.01. Three things matter here.</p>
+<ol>
+<li><strong>It is observational.</strong> People chose their own coffee habits. The study did not randomize who drinks coffee, so any difference between groups reflects everything else that differs between coffee-drinkers and abstainers, not just the coffee.</li>
+<li><strong>p&lt;0.01 addresses chance, not bias.</strong> The low p-value tells us the association is unlikely to be a fluke of sampling in a study of 8,000 people. It says nothing about whether the association is <em>causal</em>. A statistically significant result built on a biased comparison is just a precise estimate of a biased number.</li>
+<li><strong>&quot;20% lower rate&quot; is a relative figure.</strong> Without the baseline rate we cannot judge the absolute effect. If depression runs at 10%, a 20% relative drop is 2 percentage points. If it runs at 3%, it is 0.6 points. Relative numbers always look more impressive than the absolute reality, which is why marketers prefer them.</li>
+</ol>
+<h4>The threats to a causal reading</h4>
+<p><strong>Confounding</strong> is the headline problem. Coffee-drinkers differ systematically from non-drinkers: they tend to be more socially active (coffee is social), employed, in routines, and physically able to tolerate stimulants. Each of those independently lowers depression risk. The coffee may just be a marker for &quot;person with an active, structured life.&quot;</p>
+<p><strong>Reverse causation</strong> is at least as plausible. Depression suppresses energy, appetite, and the desire for stimulating drinks. Depressed and anhedonic people often <em>stop</em> drinking coffee or avoid it because of anxiety and sleep problems. So low coffee intake could be a symptom of depression rather than a cause of it. The arrow may run backwards.</p>
+<p><strong>Selection and measurement issues.</strong> How was depression measured: clinical diagnosis or a self-report screen? Was coffee self-reported (recall bias)? Cross-sectional designs cannot establish that coffee came <em>before</em> the lower depression. We also do not know about dose-response, whether the relationship holds at one or three cups, or whether the result survived adjustment for obvious confounders.</p>
+<h4>The supplement leap is the weakest link</h4>
+<p>Even granting, generously, that coffee <em>does</em> have a real antidepressant effect, the brand&#x27;s pitch commits a further error. <strong>Coffee is not the supplement.</strong> Whole coffee contains caffeine plus hundreds of polyphenols, and the active ingredient (if any) is unknown. A &quot;coffee-extract&quot; capsule may contain none of whatever matters, at the wrong dose, with none of coffee&#x27;s behavioral context (the ritual, the social setting, the morning structure) that may be doing the real work. The leap from &quot;an association with brewed coffee&quot; to &quot;this pill will help your mood&quot; is unsupported on every link in the chain.</p>
+<p>There is also a commercial conflict of interest: the party citing the study profits from the conclusion, which warrants extra skepticism about cherry-picked framing.</p>
+<h4>What would change my mind</h4>
+<ul>
+<li>A <strong>randomized controlled trial</strong> of caffeine or coffee-extract vs. placebo showing reduced depression.</li>
+<li>A clear <strong>dose-response</strong> gradient that persists after adjusting for income, activity, smoking, alcohol, and baseline health.</li>
+<li><strong>Longitudinal</strong> data showing coffee intake precedes the mood difference, ideally with a plausible biological mechanism.</li>
+<li>Replication across populations.</li>
+</ul>
+<h4>Verdict</h4>
+<p>This is a single observational, likely cross-sectional association. It is consistent with a real effect, with confounding, and with reverse causation, and it cannot distinguish among them. It is a reasonable prompt for a trial, not evidence that coffee treats depression. The supplement claim adds an unjustified ingredient-substitution leap on top of an already non-causal finding, advanced by a seller with an interest in your believing it. <strong>Do not buy the supplement on this basis, and do not believe coffee reduces depression yet. Treat it as an untested hypothesis.</strong></p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#059669'>Claude 4.8 + skill</span><span class='cfgtag'>critical-thinking</span></div>
+<div class='pscore'><b>9.47/10</b> overall &middot; 3 best-picks<br><span style='color:#6b7280'>Rigo 9.0 &middot; Cali 10.0 &middot; Bias 9.33 &middot; Dept 10.0 &middot; Usef 9.0</span></div>
+<div class='resp'><h3>Should you believe coffee reduces depression? A worked verdict</h3>
+<h4>Frame the real question</h4>
+<p>Two questions hide inside the prompt, and they need different evidence.</p>
+<ol>
+<li><strong>Causal claim:</strong> does drinking coffee lower the risk of depression?</li>
+<li><strong>Product claim:</strong> does a coffee-extract supplement, sold by a wellness brand citing this study, lower your risk of depression?</li>
+</ol>
+<p>The study is observational. It can establish that coffee drinking and lower depression rates travel together in this sample. It cannot, by itself, establish that one causes the other. The brand needs claim 1 to be true and then needs to transfer it to claim 2, which is a separate inferential jump. I will grade both.</p>
+<h4>What the study actually shows</h4>
+<p>Strip it to the black box (Bergstrom and West). Input: 8,000 people, self-sorted into coffee drinkers and non-drinkers. Output: a 20 percent lower depression rate among the two-cup group, p below 0.01. The result coming out is a correlation. Nothing in an observational design upgrades it to a cause.</p>
+<p>The p-value answers only &quot;could this gap be chance?&quot; and says no, the gap is unlikely to be sampling noise. It does not answer &quot;is coffee the reason?&quot; and it does not even tell us the effect is large. With n=8,000, a small real association clears p&lt;0.01 easily, so significance here is cheap evidence and effect size is the number that matters. A 20 percent relative reduction also begs for its denominator: 20 percent off a base rate of 10 percent is 2 absolute percentage points, off a base rate of 3 percent it is 0.6 points. Relative risk without the base rate inflates the felt importance (Huff, question 3: what is missing).</p>
+<h4>Rival causes, listed before accepting the offered one</h4>
+<p>A correlation between coffee and lower depression is consistent with at least five stories (Weston). I will not accept &quot;coffee protects&quot; until I have weighed the others.</p>
+<ul>
+<li><strong>Reverse causation (Y causes X).</strong> Depressed people drink less coffee. Anhedonia, fatigue, disrupted sleep, and social withdrawal all cut coffee consumption. Depression flattens the very behavior the study treats as the protective cause. This is the single most plausible alternative and it points the arrow backward.</li>
+<li><strong>Confounding (a third factor causes both).</strong> Coffee drinking tracks employment, regular social routines, income, and a daily structure of going to work or meeting people. Those same factors independently lower depression risk. People healthy and functional enough to keep a two-cup habit are systematically different from non-drinkers, who include the sick, the medicated, and the abstaining-on-doctor&#x27;s-orders.</li>
+<li><strong>Selection and non-response.</strong> Who ends up in each bucket is not random. &quot;Non-coffee-drinker&quot; is a mixed bag that over-represents people who quit for medical reasons.</li>
+<li><strong>Coincidence.</strong> Less likely at p&lt;0.01, but the multiple-comparisons question is open: was depression one of many outcomes scanned across many dietary exposures? If so, one significant hit is expected.</li>
+<li><strong>The genuine article (X causes Y).</strong> Caffeine has plausible mechanisms (adenosine, dopamine). This stays on the table. It is one of five, not the default.</li>
+</ul>
+<p>The healthy reasoning move is to demand evidence that discriminates among these. The study supplies none.</p>
+<h4>Quantifying my belief</h4>
+<p>Base rate first. Across nutritional epidemiology, observational associations that look this clean fail to survive randomized replication at a high rate. The history of vitamin E, beta-carotene, and hormone replacement therapy is a graveyard of significant observational signals that reversed or vanished in trials. A reasonable outside-view prior: a fresh single observational diet-mood association reflects a real, sizable causal effect in the claimed direction maybe 15 to 25 percent of the time. The rest is confounding, reverse causation, or shrinkage to triviality.</p>
+<p>Updating on specifics moves me slightly down, not up. Depression is an unusually strong driver of reverse causation here, which is exactly the confound this design cannot rule out. I put <strong>roughly 20 to 25 percent</strong> that coffee causally and meaningfully reduces depression risk in adults. I put that the <em>supplement</em> delivers a worthwhile antidepressant effect far lower, <strong>under 10 percent</strong>, for reasons below.</p>
+<h4>The brand&#x27;s extra leaps (red-teaming the sales pitch)</h4>
+<p>Even granting claim 1 fully, the product claim adds unearned steps. This is the semi-attached figure (Huff): prove one thing, sell another.</p>
+<ul>
+<li><strong>Whole coffee is not the extract.</strong> The study measured cups of coffee, a complex of caffeine, chlorogenic acids, and ritual. A &quot;coffee-extract supplement&quot; is a different substance at an unknown dose. Effect of the drink does not transfer to the capsule.</li>
+<li><strong>Correlational study, prescriptive recommendation.</strong> Be most suspicious exactly when a correlational result is turned into &quot;take this&quot; advice (Browne and Keeley). That is the prescriptive overreach flag firing.</li>
+<li><strong>Conflict of interest.</strong> The seller fails the impartiality filter of the authority test. The brand is not a disinterested reader of the evidence.</li>
+<li><strong>Dose and harm omitted.</strong> No mention of how the extract dose maps to two cups, or of anxiety, sleep disruption, and dependence at higher caffeine loads.</li>
+</ul>
+<h4>Verdict</h4>
+<p><strong>No, you should not believe that coffee reduces depression on the strength of this study, and you should give the supplement pitch close to zero additional weight.</strong> The finding is a real correlation worth a single, modest entry in the evidence ledger. It is not a cause. Reverse causation (depression suppresses coffee intake) and confounding (functional, socially connected people both drink more coffee and get less depressed) are at least as good an explanation as protection, and the design cannot separate them.</p>
+<p>Confidence: about 75 to 80 percent that the headline causal claim is overstated or wrong. The honest position is &quot;interesting hypothesis, unproven cause.&quot; What would change my mind: a preregistered randomized trial of caffeine or coffee with depression as a primary outcome and a clinically meaningful effect size, or large prospective cohorts that adjust for baseline mood, socioeconomic status, and sleep and still hold up, ideally supported by Mendelian-randomization evidence. Until then, drink coffee because you like it. Do not buy the capsule for your mood.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#7c3aed'>GPT-5.5</span><span class='cfgtag'>xhigh reasoning</span></div>
+<div class='pscore'><b>8.2/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 8.33 &middot; Cali 7.67 &middot; Bias 8.0 &middot; Dept 8.33 &middot; Usef 8.67</span></div>
+<div class='resp'><p>I would believe the study shows a real association, but I would not believe it proves coffee reduces depression, and I would not treat it as evidence for a coffee-extract supplement.</p>
+<p>Assumptions: this is an observational study, not randomized; “20% lower rate” means relative reduction; and depression was measured either by diagnosis or symptom scale. With <code>n=8,000</code> and <code>p&lt;0.01</code>, the association is unlikely to be pure sampling noise. But statistical significance is not causal evidence. If the baseline depression rate among non-coffee-drinkers were 10%, a 20% relative reduction means 8% among two-cup drinkers, an absolute difference of 2 percentage points. If baseline risk were 5%, the absolute difference is only 1 point. That may matter, but it is not a dramatic effect.</p>
+<p>The biggest problem is confounding. Coffee drinkers may differ from non-drinkers in work status, morning routine, income, social habits, exercise, sleep schedule, smoking, alcohol use, diet, chronic illness, pregnancy, medication use, or anxiety sensitivity. Some non-drinkers avoid coffee because caffeine worsens anxiety, insomnia, reflux, palpitations, or other conditions. Those factors can also correlate with depression risk. Even good adjustment cannot fully remove unmeasured or poorly measured confounding.</p>
+<p>Reverse causation is also plausible. People with emerging depression may sleep poorly, lose routines, change appetite, avoid stimulants, or stop social coffee habits. In that case, lower coffee intake could be a consequence or early marker of depression rather than its cause. Prospective studies help, but they still do not solve all selection and behavior-change problems.</p>
+<p>The broader evidence is suggestive but not decisive. A 2023 systematic review/meta-analysis of observational studies found lower depressive-symptom risk with higher coffee intake in cohort studies, but rated the coffee evidence as low quality and explicitly said more longitudinal work is needed to substantiate causality. It estimated about a 4% lower risk per additional 240 ml/day of coffee, smaller than the wellness brand’s highlighted 20% comparison. Earlier meta-analyses also report inverse associations, so the finding is not isolated, but the evidence base remains mostly observational. Caffeine has biologically plausible mood effects, but it can also cause anxiety, restlessness, insomnia, and irritability in some people, and sleep disruption can worsen mood. The same exposure can help one person and hurt another.</p>
+<p>The supplement claim is the weakest part. Evidence about drinking coffee does not automatically transfer to a coffee-extract pill. Coffee is a beverage with caffeine, polyphenols, dose patterns, taste, social context, and replacement effects. A supplement may differ in caffeine dose, extract composition, absorption, contaminants, and use context. FDA guidance also draws a sharp line: supplements marketed to treat, prevent, or cure depression are effectively making drug-like disease claims, and FDA has warned companies against depression-treatment claims for supplements.</p>
+<p>Verdict: coffee may be modestly protective, but the claim “coffee reduces depression” is not proven. I would treat two cups/day as a reasonable habit for adults who already tolerate coffee, not as a depression-prevention strategy and definitely not as a basis to buy a coffee-extract supplement. For depression symptoms, rely on evidence-based care, not a wellness-brand extrapolation from observational nutrition data.</p>
+<p>Sources: [Frontiers in Nutrition 2023 review](https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2023.1051444/full), [FDA dietary supplement Q&amp;A](https://www.fda.gov/food/information-consumers-using-dietary-supplements/questions-and-answers-dietary-supplements), [FDA warning on depression supplement claims](https://www.fda.gov/food/hfp-constituent-updates/fda-sends-warning-letters-10-companies-illegally-selling-dietary-supplements-claiming-treat), [NCBI StatPearls on caffeine](https://www.ncbi.nlm.nih.gov/books/NBK519490/).</p></div>
+</div>
+</div>
+<div class='reasons'><b>Judge notes (for the response they ranked best):</b>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three nail the core reasoning: observational design, confounding, reverse causation, relative-vs-absolute denominator, and the whole-coffee-vs-extract substitution leap, with no causal overclaiming. B wins decisively on calibration and depth: it assigns explicit posterior probabilities (20-25% causal, &lt;10% supplement, 75-80% the headline is overstated), invokes an outside-view base rate grounded in the vitamin E / beta-carotene / HRT replication graveyard, raises multiple comparisons, and names Mendelian randomization as discriminating evidence. C is strong and uniquely grounds itself in real cited literature (the 2023 review&#x27;s ~4% per cup vs the brand&#x27;s 20%, plus FDA disease-claim rules), which adds real-world usefulness, but it never quantifies its belief and its citations are unverifiable in a blind setting. A is clean, well-structured, and rhetorically sharp (&#x27;precise estimate of a biased number&#x27;) but stays qualitative and offers the least beyond the standard checklist, so it ranks third.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three correctly diagnose the observational design, separate the relative-vs-absolute risk problem (naming concrete base-rate scenarios), surface confounding and reverse causation, and flag the unjustified drink-to-extract leap plus the seller&#x27;s conflict of interest. B is strongest: it is the only one to anchor an explicit numerical prior (15-25% via the vitamin-E/beta-carotene/HRT graveyard outside view), update it to a stated 20-25% posterior, separately price the supplement under 10%, raise multiple-comparisons, and propose Mendelian randomization as a discriminating test, giving the best calibration and depth. A is tight, well-structured, and fully correct but stays qualitative with no probability estimates or base-rate history. C adds real external evidence (the 2023 meta-analysis showing ~4% per cup, far below the brand&#x27;s 20%, and FDA disease-claim guidance) which is concrete and useful, but its cited specifics are unverifiable here and it offers less explicit uncertainty quantification than B, placing it third by a narrow margin.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> B is strongest: it separates the causal claim from the product claim, enumerates five rival causes including multiple-comparisons, and uniquely supplies an outside-view base rate (the vitamin E / beta-carotene / HRT reversal graveyard) with explicit probabilities (~20-25% causal, &lt;10% supplement, 75-80% claim overstated) plus a Mendelian-randomization falsifier, giving it the best calibration and depth. A is nearly as rigorous and very clean (the &#x27;precise estimate of a biased number&#x27; point, relative-vs-absolute math, reverse causation, ingredient-substitution leap, conflict of interest) but stays qualitative on uncertainty. C reasons well and grounds itself in named external sources and FDA guidance, but leans on specific cited statistics I cannot verify (confident specificity risk), gives less quantified uncertainty, and omits the multiple-comparisons angle.</div>
+</div>
+</div>
+<div class='prob'>
+<div class='probhead'><div class='n'>Problem 1 &middot; forecast-fermi</div><div class='q'>Estimate two things, showing your reasoning and giving a calibrated number with a confidence range for each. (a) How many piano tuners work in Chicago today? (b) What is the probability that a randomly chosen current Fortune 500 CEO holds an undergraduate degree in engineering or a hard science rather than business or economics?</div></div>
+<div class='cols'>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#64748b'>Claude 4.8</span><span class='cfgtag'>no skill</span></div>
+<div class='pscore'><b>7.47/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 7.67 &middot; Cali 7.67 &middot; Bias 7.0 &middot; Dept 7.0 &middot; Usef 8.0</span></div>
+<div class='resp'><h3>Two Fermi/Bayesian Estimates</h3>
+<h4>(a) How many piano tuners work in Chicago today?</h4>
+<p><strong>Method: Fermi decomposition from demand side.</strong></p>
+<ol>
+<li><strong>Population of Chicago.</strong> The city proper is about 2.7 million; the metro area is roughly 9.4 million. Piano tuners serve a labor market by commuting radius, so the metro figure is the honest denominator. I&#x27;ll use ~9.4 million for the metro, but note the answer scales linearly if you mean city-proper only (divide by ~3.5).</li>
+</ol>
+<ol>
+<li><strong>Households.</strong> At ~2.5 people per household, ~9.4M people gives ~3.75M households.</li>
+</ol>
+<ol>
+<li><strong>Pianos.</strong> The classic estimate assumes ~1 in 20 households owns a piano. That figure is generous for the streaming era (digital keyboards displaced many acoustic pianos, and ownership has fallen for decades). I&#x27;ll use 1 in 30 as a present-day correction: ~125,000 pianos. Add institutional pianos (schools, churches, concert halls, bars, universities): institutions are few but each may own several, adding perhaps 10–20%. Call it ~140,000 pianos.</li>
+</ol>
+<ol>
+<li><strong>Tuning frequency.</strong> Manufacturers recommend twice a year; reality is far lower. Many home pianos go years untuned. A blended average of ~0.7 tunings per piano per year (heavy institutional/professional use pulls the mean up; neglected home pianos pull it down) gives ~98,000 tuning jobs per year.</li>
+</ol>
+<ol>
+<li><strong>Tuner capacity.</strong> A full-time tuner does ~3–4 tunings/day, ~5 days/week, ~48 weeks/year, but travel, sales, no-shows, and repair work cut billable jobs. Net ~700–1,000 tunings per tuner per year. Use ~850.</li>
+</ol>
+<ol>
+<li><strong>Tuners needed.</strong> 98,000 / 850 ≈ <strong>115 full-time-equivalent tuners.</strong></li>
+</ol>
+<p><strong>Adjustment for part-timers and undercounting.</strong> Many tuners work part-time or combine tuning with repair/teaching. Head-count exceeds FTE. The U.S. Bureau of Labor Statistics groups tuners under &quot;Musical Instrument Repairers and Tuners&quot; (~5,000–8,000 nationally), and Chicago metro is ~3% of U.S. population, which back-of-envelope yields ~150–240 in that broader category, of whom maybe half primarily tune pianos. These two independent paths bracket each other reasonably.</p>
+<p><strong>Calibrated estimate: ~120 piano tuners in metro Chicago.</strong></p>
+<p><strong>80% confidence range: 60 to 250.</strong> (City-proper only: roughly 40–80.)</p>
+<p>The dominant uncertainties are piano-ownership rate (could be 1 in 20 or 1 in 40) and average tuning frequency (the single largest lever). These two assumptions move the answer by more than a factor of two.</p>
+<p>---</p>
+<h4>(b) Probability a random current Fortune 500 CEO has an undergraduate degree in engineering or a hard science (vs. business/economics)</h4>
+<p><strong>Framing.</strong> This is a base-rate question. I want P(STEM undergrad | F500 CEO today), where STEM = engineering, physics, chemistry, math, computer science, biology, and similar hard sciences, explicitly excluding business, finance, economics, accounting, liberal arts, and law.</p>
+<p><strong>Evidence I&#x27;m anchoring on.</strong></p>
+<ul>
+<li>Multiple recurring analyses of Fortune 500 / S&amp;P 500 CEO backgrounds find engineering is the single most common undergraduate major, typically cited in the ~20–33% range for engineering alone. Business/economics/finance combined is the largest grouping overall, often ~30–40%.</li>
+<li>Adding the non-engineering hard sciences (physics, chemistry, math, CS, biology) to engineering plausibly adds another ~5–12 percentage points.</li>
+<li>The mix skews by sector: industrials, energy, tech, pharma, and autos favor STEM undergrads; retail, consumer, financial-services, and media CEOs skew toward business/liberal-arts degrees. The Fortune 500 is heavy in industrial/energy/healthcare firms, which props up the STEM share.</li>
+</ul>
+<p><strong>Synthesis.</strong> Engineering alone ~25%, plus other hard sciences ~7–10%, gives a central estimate around <strong>33%</strong> for the STEM-vs-business/econ framing. Many MBAs sit on top of STEM undergrad degrees, so counting the <em>undergraduate</em> field (as the question specifies) raises the STEM share relative to a &quot;highest degree&quot; framing.</p>
+<p><strong>Caveats.</strong></p>
+<ul>
+<li>Definitional sensitivity is large. If &quot;hard science&quot; excludes computer science and biology and counts only physics/chem/math, the number drops toward ~28%. If economics is treated as a quantitative science (it sometimes is), the comparison set shifts.</li>
+<li>~5–10% of CEOs lack a clearly reported or conventional 4-year major, adding noise.</li>
+<li>The question asks STEM &quot;rather than business or economics,&quot; which I read as: of all CEOs, what fraction is STEM. Some have neither (law, liberal arts, communications), so this is not a clean two-way split.</li>
+</ul>
+<p><strong>Calibrated estimate: ~33%.</strong></p>
+<p><strong>80% confidence range: 25% to 40%.</strong></p>
+<p>---</p>
+<h4>Verdict</h4>
+<ul>
+<li><strong>(a)</strong> Roughly <strong>120 piano tuners</strong> serve metro Chicago (range 60–250); about 40–80 if you mean the city proper only. Answer is driven mainly by piano-ownership rate and tuning frequency.</li>
+<li><strong>(b)</strong> About a <strong>1-in-3 chance (~33%, range 25–40%)</strong> that a random current Fortune 500 CEO holds a STEM/engineering undergraduate degree. Engineering alone is the largest single major; business/economics is the largest <em>category</em>.</li>
+</ul></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#059669'>Claude 4.8 + skill</span><span class='cfgtag'>critical-thinking</span></div>
+<div class='pscore'><b>8.73/10</b> overall &middot; 3 best-picks<br><span style='color:#6b7280'>Rigo 8.67 &middot; Cali 9.0 &middot; Bias 9.0 &middot; Dept 8.0 &middot; Usef 9.0</span></div>
+<div class='resp'><h3>Two estimates, with reasoning and calibrated ranges</h3>
+<p>Both questions are estimation under uncertainty. I will Fermi-ize each into factors I can guess, anchor on base rates where they exist, then report a central number with a range wide enough to honestly reflect what I do not know. I separate epistemic uncertainty (knowable in principle, like the true count of tuners) from the irreducible spread in my inputs.</p>
+<h4>(a) Piano tuners in Chicago</h4>
+<p><strong>Frame.</strong> &quot;Chicago&quot; is ambiguous. I take the metro area (Chicagoland, roughly 9.5M people), since tuners serve a regional market and do not stop at city limits. I also flag the city-proper reading (about 2.7M), which scales the answer down by roughly 3x.</p>
+<p><strong>Decomposition (demand side):</strong></p>
+<ul>
+<li>Metro population: ~9.5M, at ~2.5 people per household, gives ~3.8M households.</li>
+<li>Share of households with a piano that gets tuned: I anchor at ~2%. Piano ownership is higher than that historically, but most home pianos are never tuned, so the tuned-piano fraction is what matters.</li>
+<li>That yields ~76,000 home pianos. Add ~20% for institutional instruments (schools, churches, venues, studios), giving ~91,000 pianos.</li>
+<li>Tunings per piano per year: ~1 on average (serious players tune more, most homes tune less or never).</li>
+<li>Total demand: ~91,000 tunings per year.</li>
+</ul>
+<p><strong>Supply side (capacity per tuner):</strong></p>
+<ul>
+<li>~4 tunings per working day x ~240 working days = ~960 tunings per tuner per year.</li>
+<li>91,000 / 960 gives ~95 full-time-equivalent tuners.</li>
+</ul>
+<p><strong>Sensitivity (the load-bearing inputs).</strong> The answer swings most on city definition and the piano-ownership fraction:</p>
+<ul>
+<li>City proper, 1-3% ownership: ~14 to 40 tuners.</li>
+<li>Metro, 1-3% ownership: ~48 to 142 tuners.</li>
+</ul>
+<p>The piano fraction and the metro-versus-city choice each move the result by a factor of 2 to 3, so my honest band is wide.</p>
+<p><strong>Outside-view check.</strong> This is Fermi&#x27;s own canonical example, and the textbook answer has long sat around 50 to 100 for the metro. My bottom-up build agrees, which is reassuring rather than circular, since I did not back into it. Real-world counts of active professionals (the Piano Technicians Guild lists dozens of members regionally, and many practitioners are unlisted or part-time) are consistent with low-to-mid hundreds at the outside.</p>
+<p><strong>Verdict (a).</strong> Central estimate: <strong>~90 full-time-equivalent piano tuners</strong> in the Chicago metro. Calibrated 80% range: <strong>50 to 150</strong>. If &quot;Chicago&quot; means the city proper, shift to a central ~30 with a range of 15 to 50.</p>
+<h4>(b) Probability a current Fortune 500 CEO holds an undergraduate STEM degree (engineering or hard science) rather than business or economics</h4>
+<p><strong>Frame the exact question.</strong> I read &quot;engineering or a hard science&quot; as the bachelor&#x27;s major: engineering, physics, chemistry, biology, computer science, mathematics. &quot;Business or economics&quot; is the rival bucket. There is a large third bucket too: law, liberal arts, accounting (often filed under business), and others. The question asks P(STEM), not P(STEM | STEM-or-business), so I should not collapse it to a two-way split. I report the unconditional STEM share.</p>
+<p><strong>Catch the substitution.</strong> The easy version my mind reaches for is &quot;are lots of CEOs engineers?&quot; The asked version is a specific denominator: all ~500 sitting CEOs, undergraduate major only (not MBA, which is graduate and very common but irrelevant here).</p>
+<p><strong>Base rate.</strong> Surveys of large-cap CEO education are consistent on the shape:</p>
+<ul>
+<li>Business and economics undergraduate majors are the single largest group, commonly cited around 35 to 45% combined.</li>
+<li>Engineering is the standout technical major, repeatedly reported in the low-to-mid 20s percent of S&amp;P 500 / Fortune 500 CEOs.</li>
+<li>Other sciences (physics, chemistry, biology, math, CS) add a smaller slice, perhaps 5 to 10%.</li>
+</ul>
+<p><strong>Build the STEM share:</strong></p>
+<ul>
+<li>Engineering: ~20 to 23%.</li>
+<li>Other hard science / math / CS: ~6 to 9%.</li>
+<li>Combined STEM: roughly <strong>27 to 32%</strong>.</li>
+</ul>
+<p><strong>Stress-test and red-team.</strong></p>
+<ul>
+<li><em>Upward pull:</em> engineering is genuinely overrepresented among CEOs relative to the general degree population, and CS founders rising into the list push the science slice up over time.</li>
+<li><em>Downward pull:</em> many &quot;engineering&quot; claims are graduate degrees, and accounting/finance undergraduates (counted as business) are very common. If I miscount any borderline major, it tends to inflate STEM.</li>
+<li><em>Definitional risk:</em> if a grader counts economics as a &quot;hard&quot; social science or includes graduate STEM degrees, the number jumps toward 40%+. I am answering the stricter undergraduate-major reading, which keeps me near 30%.</li>
+</ul>
+<p><strong>Compare to the rival bucket.</strong> Business-plus-economics (~40%) is clearly the larger group, so the answer to &quot;STEM rather than business/econ&quot; is below even odds. STEM does not win the plurality.</p>
+<p><strong>Verdict (b).</strong> Central estimate: <strong>~30%</strong> probability a randomly chosen current Fortune 500 CEO holds an undergraduate engineering or hard-science degree. Calibrated 80% range: <strong>24% to 36%</strong>. I hold this at moderate confidence: the engineering anchor is well-attested, the residual uncertainty is mostly definitional (graduate-versus-undergraduate and where economics and accounting are filed).</p>
+<h4>Bottom-line numbers</h4>
+<p>| Question | Central estimate | 80% range |</p>
+<p>|---|---|---|</p>
+<p>| (a) Piano tuners, Chicago metro | ~90 FTE | 50 to 150 |</p>
+<p>| (a) Piano tuners, city proper | ~30 FTE | 15 to 50 |</p>
+<p>| (b) P(CEO undergrad STEM) | ~30% | 24% to 36% |</p>
+<p>The widest uncertainty in (a) is the definition of &quot;Chicago&quot; and the piano-ownership fraction; in (b) it is whether the count is restricted to the undergraduate major and how economics and accounting are classified.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#7c3aed'>GPT-5.5</span><span class='cfgtag'>xhigh reasoning</span></div>
+<div class='pscore'><b>7.33/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 7.33 &middot; Cali 7.0 &middot; Bias 6.33 &middot; Dept 8.0 &middot; Usef 8.0</span></div>
+<div class='resp'><p>Assumptions: I interpret “Chicago” as the city proper, and “work as piano tuners” as people doing paid piano tuning/technical work, including self-employed technicians. For the CEO question, I use undergraduate field only, not MBAs.</p>
+<p><strong>(a) Piano tuners in Chicago</strong></p>
+<p>Chicago has about 2.73M people and 1.16M households per Census QuickFacts. The U.S. has about 132.7M households, and one music-career source cites roughly 20M pianos nationally, with home pianos needing tuning once or twice a year but many not actually tuned that often. That raw household-share calculation gives:</p>
+<p><code>20M * 1.16M / 132.7M ≈ 175,000 pianos</code></p>
+<p>That is too high for regularly serviced pianos. Chicago has many apartments, renters, and old unused uprights, so I discount total piano ownership to maybe 100k-140k instruments and assume only 35%-50% are active enough to be tuned in a given year. That implies roughly 40k-65k home tunings annually. Add schools, churches, studios, colleges, venues, and concert pianos, which are fewer but tuned more often, and I get maybe 55k-80k tunings/year.</p>
+<p>A working tuner might do 2.5-3.5 tunings/day after travel, admin, repairs, cancellations, and part-time schedules. At 220 workdays/year, that is about 550-770 tunings per full-time equivalent. So demand implies around <code>55k-80k / 650 ≈ 85-125</code> FTE-like tuners. A BLS sanity check points the same direction: it reported 6,170 U.S. musical instrument repairers/tuners in 2023, excluding self-employed, and 360 in the Chicago metro in 2021; city proper would be a concentrated minority of that metro total.</p>
+<p><strong>Estimate:</strong> about <strong>100 piano tuners in Chicago city proper</strong>, with an <strong>80% confidence range of 60-170</strong>. If “Chicago” means the full metro area, I would raise that to roughly <strong>250-450</strong>.</p>
+<p><strong>(b) Fortune 500 CEO undergraduate engineering/hard-science probability</strong></p>
+<p>The best current-ish data I found is Crist|Kolder’s 2025 Volatility Report, covering Fortune 500 plus S&amp;P 500 companies through December 31, 2025. It reports 672 sitting CEOs, 589 with known educational backgrounds, with <strong>29% engineering</strong> and <strong>7% sciences</strong>, or <strong>36% engineering/science combined</strong>. It separately reports <strong>business or dual business at 36%</strong>, and notes economics is counted under liberal arts; economics appears as the top individual CEO major with 95 cases, or about 16% of known CEO backgrounds.</p>
+<p>That mixed Fortune 500/S&amp;P 500 sample is not exactly “current Fortune 500 only,” so I would haircut it slightly. Another Fortune-500-specific analysis found engineering at 19.2% and economics at 11.8%, but it appears less current and less complete for hard sciences. Combining the evidence, I would not use the full 36% mechanically, but I also would not go as low as 20%, because sciences, computer science, mathematics, chemistry/biology, and engineering-heavy sectors lift the STEM bucket.</p>
+<p><strong>Estimate:</strong> a randomly chosen current Fortune 500 CEO has about a <strong>34% probability</strong> of holding an undergraduate degree in engineering or a hard science, with an <strong>80% confidence range of 28%-40%</strong>. Business/economics is probably more common overall, roughly around 50%, so if conditioning only on “STEM vs business/econ,” STEM’s share is closer to <strong>40%</strong>.</p>
+<p><strong>Verdict:</strong> Chicago city proper likely has <strong>around 100 piano tuners</strong>. For Fortune 500 CEOs, the undergraduate engineering/hard-science probability is <strong>about one-third</strong>, not a majority, but high enough to be a major CEO pathway alongside business and economics.</p>
+<p>Sources: U.S. Census QuickFacts for Chicago population/households, Census Reporter for U.S. households, Berklee on U.S. pianos/tuning frequency, BLS OEWS for musical-instrument repairers/tuners, and Crist|Kolder 2025 Volatility Report.</p></div>
+</div>
+</div>
+<div class='reasons'><b>Judge notes (for the response they ranked best):</b>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> A has the sharpest epistemics: it explicitly catches the substitution trap on (b) (answering unconditional P(STEM), not P(STEM|STEM-or-business)), separates undergraduate from graduate degrees, names the load-bearing inputs in (a) with a clean sensitivity table, and even flags and rejects potential circularity in its outside-view check. B is the most empirically grounded (real BLS OEWS Chicago-metro figure and the Crist|Kolder 2025 report with the economics-under-liberal-arts nuance), but it leaves an internal contradiction unreconciled: it cites a BLS metro count of 360 for the broader repairer/tuner category yet concludes 250-450 metro piano tuners, a subset exceeding its own cited superset. C is a competent two-path Fermi with appropriate ranges and good undergrad-vs-highest-degree handling, but its BLS cross-check is hand-wavy and it surfaces fewer cognitive traps than A. All three correctly identify business/econ as the larger CEO category and converge on ~30-33% STEM, which is well-calibrated.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> A is the strongest reasoning artifact: it explicitly catches the substitution trap in (b) (P(STEM) unconditional vs P(STEM | STEM-or-business), and that the third bucket means it is not a two-way split), separates epistemic from input uncertainty, runs both city/metro readings, and ties its tightest 80% range (24-36%) to a stricter undergraduate-only definition it names as the load-bearing source of uncertainty. B is the most empirically grounded, citing Crist|Kolder 2025 (29% eng + 7% science) and BLS OEWS numbers, which is a real strength, but it leans on those figures with less scrutiny of definitional risk and surfaces fewer cognitive traps; its 34%/28-40% sits on a mixed F500/S&amp;P sample it only lightly haircuts. C reasons cleanly with two independent paths in (a) but its BLS cross-check is loose (5,000-8,000 national, then arbitrary halving), it offers no concrete data for (b), and its STEM central (~33%) drifts upward without anchoring the way A does. A wins on trap-awareness and calibration discipline; B edges C on evidence quality.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> A has the cleanest reasoning: it explicitly catches the question-substitution trap (P(STEM) unconditional vs the two-way conditional split), names the load-bearing inputs in a sensitivity table, and uses an outside-view check without circularity, with the tightest yet honest ranges. B brings the strongest empirical grounding (BLS OEWS 6,170 national/360 Chicago metro; named Crist|Kolder 2025 figures), but it has an internal inconsistency in (a) where a city-proper headline of 100 and a metro range of 250-450 sit awkwardly against its own cited metro anchor of 360, and it surfaces fewer cognitive traps. C is well-structured with the most defensible wide range (60-250) and good sector-mix reasoning, but adds the least novel evidence and stays closest to generic Fermi, so it ranks third.</div>
+</div>
+</div>
+<div class='prob'>
+<div class='probhead'><div class='n'>Problem 2 &middot; find-the-flaw</div><div class='q'>Critique this argument and find every flaw: &#x27;Remote work is clearly destroying our productivity. Ever since the company went fully remote in 2020, our revenue per employee has fallen 12%. Competitors who stayed in-office grew. Therefore we must mandate a full five-day return to office to restore productivity.&#x27;</div></div>
+<div class='cols'>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#64748b'>Claude 4.8</span><span class='cfgtag'>no skill</span></div>
+<div class='pscore'><b>8.4/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 8.67 &middot; Cali 7.67 &middot; Bias 8.67 &middot; Dept 8.33 &middot; Usef 8.67</span></div>
+<div class='resp'><h3>Critique: &quot;Remote work is destroying our productivity&quot;</h3>
+<p>The argument moves from a single correlation to a sweeping causal verdict to a costly mandate, and it leaks at every joint. Here is every flaw I can find, grouped by where the reasoning breaks.</p>
+<h4>1. The core causal leap (correlation ≠ causation)</h4>
+<p>The decisive flaw: 2020 is when the company went remote, but 2020 is also when a global pandemic, demand shocks, supply-chain disruption, inflation, labor-market upheaval, and macro recession all hit at once. Revenue per employee could have fallen for any of these reasons while remote work was neutral or even cushioning. The argument never rules out a single confounder. This is a textbook <strong>post hoc ergo propter hoc</strong> error: temporal coincidence is treated as proof of cause.</p>
+<h4>2. The metric does not measure what&#x27;s claimed</h4>
+<p>The title word is &quot;productivity,&quot; but the evidence is <strong>revenue per employee</strong>, which is not productivity. Revenue per head moves with pricing, market demand, product mix, churn, sales cycles, and especially <strong>headcount</strong>. If the company <em>grew headcount</em> during 2020 to 2025 (hiring ahead of revenue, onboarding lag, acquisitions), revenue per employee falls <em>by arithmetic</em> even if every worker produced more. Output per labor-hour, on-time delivery, defect rates, and unit costs are unmeasured. The argument equivocates between two different concepts using one number.</p>
+<h4>3. The &quot;competitors grew&quot; comparison is not a controlled experiment</h4>
+<ul>
+<li><strong>Selection / survivorship bias:</strong> the cited competitors are the ones who &quot;stayed in-office and grew.&quot; We hear nothing about in-office firms that shrank or died, or remote firms that thrived. Cherry-picking the favorable cases manufactures the pattern.</li>
+<li><strong>Not like-for-like:</strong> competitors may differ in sector, size, capital, leadership, product, and pricing power. Their growth may have nothing to do with their office policy.</li>
+<li><strong>No baseline:</strong> a 12% <em>decline</em> is reported against an unstated starting point and unstated time window. Was the trend already falling before 2020? Is 12% over five years even outside normal variance? One data point is not a trend.</li>
+</ul>
+<h4>4. The remedy doesn&#x27;t follow even if the diagnosis were right</h4>
+<ul>
+<li><strong>Non sequitur on dosage:</strong> even granting that some remote work hurt output, nothing shows the cure is a <em>full five-day</em> return. The argument never considers hybrid (2 to 3 days), better async tooling, or targeted fixes. It jumps straight to the maximal intervention.</li>
+<li><strong>No cost-benefit:</strong> mandating five days back carries real costs the argument ignores entirely: attrition of high performers, narrowed hiring pool, reduced morale, real-estate expense, and the competitive risk that rivals offer flexibility. A &quot;restore productivity&quot; claim that omits the downside of the fix is incomplete.</li>
+<li><strong>Reversibility assumed:</strong> it presumes that re-imposing the office returns the world to 2019 conditions. The market, workforce expectations, and the company have all changed; you can&#x27;t reset one variable in isolation.</li>
+</ul>
+<h4>5. Hidden assumptions and rhetorical tells</h4>
+<ul>
+<li><strong>&quot;Clearly&quot;</strong> does heavy unearned work; the conclusion is asserted before it&#x27;s argued (begging the question).</li>
+<li><strong>False dichotomy:</strong> the only options presented are &quot;fully remote&quot; vs. &quot;full five-day office,&quot; ignoring the entire hybrid middle.</li>
+<li><strong>Single-cause fallacy:</strong> revenue per employee has many drivers; the argument pins it on one.</li>
+<li><strong>Regression to the mean and reverse causation</strong> are unaddressed: perhaps the firm went remote <em>because</em> it was already struggling, or struggling units were the ones who went remote.</li>
+</ul>
+<h4>What would actually be needed</h4>
+<p>A credible case would: define and measure productivity directly (output per FTE-hour, throughput, quality); decompose the revenue-per-employee change into headcount vs. revenue effects; compare against a matched control set of similar firms across <em>both</em> policies; isolate the 2020 macro shock; and run a bounded pilot (e.g., hybrid vs. remote teams) before any company-wide mandate.</p>
+<h4>Verdict</h4>
+<p>The argument is <strong>unsound</strong>. It rests on a single uncontrolled correlation, conflates revenue per employee with productivity, cherry-picks competitors, ignores the pandemic confounder, and leaps to the most expensive remedy without cost-benefit analysis or intermediate options. The evidence presented cannot support a five-day RTO mandate. Before acting, the company should measure productivity directly, control for headcount and macro effects, and pilot a hybrid model. Reject the conclusion as stated; treat the revenue decline as a question to investigate, not a settled case against remote work.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#059669'>Claude 4.8 + skill</span><span class='cfgtag'>critical-thinking</span></div>
+<div class='pscore'><b>9.07/10</b> overall &middot; 3 best-picks<br><span style='color:#6b7280'>Rigo 9.0 &middot; Cali 9.0 &middot; Bias 9.0 &middot; Dept 9.33 &middot; Usef 9.0</span></div>
+<div class='resp'><h3>Critique: &quot;Remote work is destroying our productivity, so mandate five-day RTO&quot;</h3>
+<h4>The argument, mapped</h4>
+<ul>
+<li><strong>Conclusion (prescriptive):</strong> mandate a full five-day return to office.</li>
+<li><strong>Stated reason 1:</strong> revenue per employee fell 12% since going fully remote in 2020.</li>
+<li><strong>Stated reason 2:</strong> in-office competitors grew.</li>
+<li><strong>Bridging claim (descriptive):</strong> remote work caused the productivity drop.</li>
+<li><strong>Hidden premises:</strong> revenue per employee measures productivity; remote work is the cause of the gap; five days in office is the fix and would reverse it; office presence had no offsetting benefits.</li>
+</ul>
+<p>The chain only holds if every hidden premise holds. Each is weak.</p>
+<h4>Flaw 1: correlation read as cause (the load-bearing error)</h4>
+<p>Two things moved together (went remote, revenue per head fell), and the argument treats sequence as proof. A correlation is consistent with five stories: remote caused the drop, the drop caused the remote choice, a third factor caused both, mutual causation, or coincidence. None is ruled out. This is also <strong>post hoc, ergo propter hoc</strong>: &quot;after going remote&quot; is not &quot;because of remote.&quot;</p>
+<h4>Flaw 2: the 2020 confound is enormous</h4>
+<p>The switch to remote happened in the exact year of a global pandemic, recession, supply shocks, and demand collapse. 2020 is the single most confounded baseline year available. Revenue per employee could fall from the macro shock, sector headwinds, customer churn, a pricing change, an acquisition that added headcount, or hiring ahead of revenue. The pandemic is a textbook <strong>third factor</strong> that plausibly drove both the remote decision and the revenue change. Attributing the whole 12% to work location requires ruling these out, and nothing here does.</p>
+<h4>Flaw 3: the metric does not measure what is claimed (measurement validity)</h4>
+<p>Revenue per employee is not productivity. It moves with headcount changes (hire 15% more people and the ratio falls even if output rises), pricing, product mix, M&amp;A, and revenue recognition timing. A company that hired aggressively, cut prices to gain share, or expanded into a lower-margin line would show this drop with productivity flat or rising. The argument needs output-per-hour or output-per-cost; it substitutes an accounting ratio. This is a <strong>semi-attached figure</strong>: one number stands in for a different claim it cannot support.</p>
+<h4>Flaw 4: the competitor comparison is selected and uncontrolled</h4>
+<p>&quot;Competitors who stayed in-office grew&quot; invites three checks. First, <strong>the denominator</strong>: out of how many in-office competitors? If we hear only about the ones that grew, that is <strong>selection bias</strong> (cherry-picking survivors). Second, <strong>compared to what among remote firms?</strong> Many fully remote firms grew over the same span; one counterexample breaks the implied rule. Third, the competitors differ on everything (sector exposure, capital, product, geography), so any difference cannot be pinned on office policy. This is correlation across non-comparable units, not a controlled test.</p>
+<h4>Flaw 5: false dilemma in the remedy</h4>
+<p>The frame offers two states: fully remote (bad) or five days in office (good). The middle is erased. Hybrid schedules (2 to 3 days), team-level choice, better async tooling, role-specific policies, and fixing whatever actually caused the revenue drop are all live options. The remedy also leaps from &quot;remote is the problem&quot; to &quot;five days, mandated for everyone&quot; with no argument that the full dose is needed over a partial one. A <strong>search-for-a-perfect-solution</strong> flavor hides here too: even if remote has costs, that alone does not make a blanket mandate the right fix.</p>
+<h4>Flaw 6: base rate and reversibility ignored</h4>
+<p>What is the base rate that an RTO mandate restores a revenue ratio? Mandates carry well-documented costs: attrition (often of the strongest, most mobile staff), rehiring and real-estate expense, and morale hits. The argument counts none of these against the upside, and assumes the 12% is fully recoverable by reversing one variable. If the drop came from macro or headcount, RTO cannot restore it and the costs land anyway.</p>
+<h4>Flaw 7: hard-to-vary failure</h4>
+<p>The explanation is too flexible. If revenue had risen under remote, the same arguer could credit &quot;talent we could only hire remotely.&quot; An account that fits either outcome explains neither. A real test would compare productivity before versus after on a stable per-output measure, control for the pandemic and headcount, look across many remote and in-office peers, and check whether teams that returned actually improved.</p>
+<h4>What would actually settle it</h4>
+<p>Output-per-FTE or per-cost (not revenue-per-head), decomposed by what changed since 2019 (not 2020); a like-for-like peer panel; an internal natural experiment (teams or offices that returned versus stayed remote); and an honest tally of mandate costs. Absent that, the diagnosis is unproven and the prescription is premature.</p>
+<h4>Verdict</h4>
+<p>The argument fails on both structure and content. Its core inference is correlation-as-cause built on the most confounded year on record, its key metric does not measure productivity, its competitor evidence is selected and uncontrolled, and its remedy is a false dilemma that ignores hybrid options and the costs of a mandate. <strong>Confidence that the argument as stated justifies a five-day mandate: very low (roughly 5 to 10%).</strong> Recommendation: do not act on this reasoning. Re-measure productivity properly, decompose the revenue change against a 2019 baseline, run or find a controlled remote-versus-office comparison, and only then weigh a policy, with hybrid on the table and mandate costs counted.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#7c3aed'>GPT-5.5</span><span class='cfgtag'>xhigh reasoning</span></div>
+<div class='pscore'><b>7.47/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 8.0 &middot; Cali 7.33 &middot; Bias 7.0 &middot; Dept 7.0 &middot; Usef 8.0</span></div>
+<div class='resp'><p>Assumption: the 12% decline is cumulative since going fully remote in 2020, not a one-year drop. If so, that is roughly a 2% annual decline in revenue per employee. That may be meaningful, but it is not automatically evidence that remote work caused it.</p>
+<p>The core flaw is causal overreach. The argument observes: remote work began, then revenue per employee fell. But “after” does not mean “because of.” 2020 also brought a pandemic, supply-chain disruption, inflation, interest-rate changes, labor-market churn, changes in customer demand, and likely internal changes in hiring, pricing, product mix, sales cycles, and management. Any of those could affect revenue per employee.</p>
+<p>Second, revenue per employee is an imperfect productivity measure. It mixes employee output with pricing power, market demand, sales effectiveness, headcount strategy, capital intensity, and product margins. A company can become operationally more productive while revenue per employee falls because it hired ahead of growth, entered a lower-price market, lost a major customer, or shifted to longer-term R&amp;D. Conversely, competitors can show higher revenue per employee because they underhired, raised prices, sold different products, or had stronger demand.</p>
+<p>Third, the competitor comparison is vague and likely confounded. “Competitors who stayed in-office grew” does not tell us whether they had the same size, market segment, product quality, capital access, geography, customer base, sales motion, or starting revenue per employee. It may also be cherry-picked: did all in-office competitors grow, or only the ones being noticed? What happened to remote competitors? What happened to hybrid competitors? Without a broader benchmark, the comparison is weak.</p>
+<p>Fourth, the argument ignores the counterfactual: what would this company’s revenue per employee have been if it had stayed in-office? Maybe it would have fallen 20% instead of 12%. Maybe remote work helped retention, widened hiring pools, reduced facilities costs, or preserved operations during disruption. The argument assumes the observed decline is the worst case caused by remote work, but it does not estimate the alternative.</p>
+<p>Fifth, the proposed remedy does not follow from the evidence. Even if remote work contributed to lower productivity, it does not prove that a full five-day office mandate is the optimal fix. The productivity issue could come from weak management practices, poor onboarding, unclear goals, bad tooling, meeting overload, insufficient mentorship, or misaligned incentives. A five-day mandate might help some collaboration-heavy teams, hurt deep-work teams, increase attrition, reduce candidate quality, and raise office costs.</p>
+<p>Sixth, it treats “remote work” as one uniform variable. Fully remote in a well-run async organization is different from emergency remote work with poor processes. Team function matters: sales, engineering, customer support, operations, and executive planning may have different optimal arrangements. A blanket mandate ignores heterogeneity.</p>
+<p>A better analysis would compare productivity trends before and after 2020 against industry benchmarks, adjust for headcount mix and macro conditions, segment by team and role, and measure concrete outputs: sales productivity, cycle times, customer retention, shipping velocity, support resolution, employee retention, and quality. The company could also run a controlled pilot: some teams return two to three days, some remain remote with improved operating practices, and outcomes are tracked for 3 to 6 months.</p>
+<p>Verdict: the argument identifies a real signal worth investigating, but it does not prove remote work is destroying productivity and does not justify a full five-day return mandate. The recommendation should be diagnosis plus targeted experiments, not a company-wide policy based on a single weak correlation.</p></div>
+</div>
+</div>
+<div class='reasons'><b>Judge notes (for the response they ranked best):</b>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three nail the load-bearing errors: post-hoc causation, revenue-per-employee as an invalid productivity proxy (with the headcount arithmetic), cherry-picked competitors, and the unjustified leap to a full five-day mandate. C edges ahead by being the most rigorous and best-calibrated: it explicitly enumerates the five causal stories a correlation permits (including reverse causation and the firm going remote BECAUSE it was struggling), names the headcount denominator effect concretely, flags the hard-to-vary/unfalsifiable structure, and ends with an explicit probability (5 to 10%) plus a concrete action plan and 2019-vs-2020 baseline correction. B is nearly as strong, with crisp fallacy labels (begging the question on &#x27;clearly&#x27;, false dichotomy, single-cause) and a good cost-benefit section, but lacks the explicit calibration C provides. A is solid and clear, opens well by flagging the cumulative-vs-annual ambiguity (~2% per year) and stresses the counterfactual, but it is less structured, names fewer fallacies explicitly, and never surfaces reverse causation or selection-denominator framing as sharply, so it lands third.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three correctly nail the load-bearing flaws (post hoc causation, revenue-per-employee as a broken productivity proxy that moves with headcount arithmetic, selection/survivorship bias in the competitor claim, false dilemma in the five-day remedy). C edges ahead by explicitly enumerating the five causal stories a correlation permits, naming the reverse-causation and hard-to-vary tests, anchoring the baseline correction to 2019 not 2020, and giving an actual calibrated confidence (roughly 5 to 10 percent) plus a concrete decompose-and-pilot path. B matches C on structure and is the cleanest write-up, naming each fallacy crisply and flagging the unstated denominator and time window, but stops just short of C&#x27;s quantified confidence and reverse-causation depth. A is solid and correctly flags the cumulative-vs-annual ambiguity (2 percent per year, a nice catch none other made) and the counterfactual framing, but is less systematic, lighter on selection bias and base rates, and offers no calibrated probability, leaving it third.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> C is strongest: it explicitly maps the argument&#x27;s hidden premises, enumerates the full five-causal-stories space for the correlation, names the headcount-arithmetic mechanism, demands a 2019 (not 2020) baseline, and gives a quantified confidence (5-10%) plus a falsifiability/hard-to-vary test, which is the most disciplined calibration of the three. B is very close and arguably equal on rigor, hitting post hoc, the revenue-per-head/headcount conflation, survivorship bias, false dichotomy, reverse causation, and a clean cost-benefit and verdict, but it stops short of C&#x27;s explicit confidence quantification and 2019-vs-2020 baseline precision. A is solid and covers causal overreach, metric weakness, confounding, the counterfactual, remedy non-sequitur, and heterogeneity, but it is less structured, names fewer fallacies by mechanism, never flags survivorship/cherry-pick as sharply, and offers no calibrated confidence, leaving it third.</div>
+</div>
+</div>
+<div class='prob'>
+<div class='probhead'><div class='n'>Problem 3 &middot; diagnose-the-system</div><div class='q'>A hospital emergency department keeps running over capacity despite hiring more nurses every year. Each new hire relieves the pressure for a few months, then wait times climb back to where they were. Leadership blames &#x27;lazy staff&#x27; and &#x27;a bad flu season.&#x27; Diagnose what is really going on, and propose the highest-leverage fix.</div></div>
+<div class='cols'>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#64748b'>Claude 4.8</span><span class='cfgtag'>no skill</span></div>
+<div class='pscore'><b>8.07/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 8.0 &middot; Cali 7.33 &middot; Bias 8.0 &middot; Dept 8.0 &middot; Usef 9.0</span></div>
+<div class='resp'><h3>Why the ED Stays Over Capacity</h3>
+<h4>The blame is misdiagnosed</h4>
+<p>&quot;Lazy staff&quot; and &quot;a bad flu season&quot; are convenient because they require no structural change. But the pattern itself rules them out. If laziness were the cause, hiring more nurses would not produce even a temporary improvement. If a flu season were the cause, the problem would recede when the season ended. Instead we see a stable signature: each hire helps for a few months, then wait times return to baseline. That is the fingerprint of a system pinned against a constraint somewhere other than ED nurse headcount.</p>
+<h4>What the pattern actually says</h4>
+<p>A metric that snaps back to the same level after every intervention is being held there by a feedback loop, not by a shortage of effort. Three mechanisms explain the relapse, and they likely operate together.</p>
+<p><strong>1. The bottleneck is downstream, not in the ED.</strong> The classic driver of ED crowding is &quot;boarding&quot;: admitted patients who cannot move to an inpatient bed because the hospital upstairs is full, so they occupy ED beds and nursing time for hours or days. When that is true, the binding constraint is inpatient bed turnover (discharge timing, post-acute placement, bed cleaning), not ED staffing. Adding ED nurses cannot fix a queue whose exit is blocked. This is a Theory-of-Constraints situation: effort added anywhere but the bottleneck produces no durable throughput gain.</p>
+<p><strong>2. Latent demand fills any slack created.</strong> When wait times briefly drop, the ED becomes a more attractive option, and patients who previously balked, left without being seen, or diverted elsewhere now come and stay. The improvement signals &quot;we have room,&quot; which pulls in the demand that erases it. This is induced demand, the same dynamic as adding a highway lane.</p>
+<p><strong>3. Attrition eats the new hires.</strong> Crowded, high-moral-injury EDs burn nurses out. New hires relieve load, conditions improve briefly, but chronic understaffing elsewhere and the grind push experienced nurses to leave, so net staffing barely rises. You are bailing a boat with a hole in it. The &quot;few months&quot; cadence matches onboarding-to-burnout timelines.</p>
+<h4>Quantifying the leverage</h4>
+<p>If, say, 25 to 35 percent of ED bed-hours are consumed by boarded admitted patients (a common range in crowded hospitals), then a third of your nursing capacity is locked up serving patients who should not be in the ED at all. Freeing that is equivalent to a large staffing increase, at near-zero hiring cost. No realistic nurse-hiring budget competes with recovering 30 percent of capacity that is currently trapped.</p>
+<h4>Highest-leverage fix</h4>
+<p><strong>Attack inpatient flow, not ED headcount.</strong> Concretely, in order of leverage:</p>
+<ol>
+<li><strong>Measure boarding directly.</strong> Track median boarding hours and the share of ED beds occupied by admitted patients. If this is high, the diagnosis is confirmed and the rest follows.</li>
+<li><strong>Smooth inpatient discharge timing.</strong> Most hospitals discharge in a late-afternoon clump, so beds open hours after the morning admission surge. Move discharges earlier (discharge-by-11am targets, day-before discharge planning, a discharge lounge for waiting patients) to align bed supply with demand.</li>
+<li><strong>Level elective surgical scheduling.</strong> Unsmoothed elective admissions are often a bigger crowding driver than emergencies. Spreading elective cases across the week frees inpatient beds predictably.</li>
+<li><strong>Full-capacity protocols and active bed management.</strong> Make boarding a whole-hospital problem (e.g., boarding patients distributed to inpatient hallways) so the upstream wards feel the constraint and own the fix.</li>
+</ol>
+<p>Hiring more ED nurses is treating the symptom at the point of pain while the wound is upstream. The durable fix is inpatient bed turnover and demand-smoothing.</p>
+<h4>Verdict</h4>
+<p>The ED is the visible queue for a downstream constraint plus an induced-demand and attrition loop. Keep enough ED staffing to be safe, but redirect the marginal dollar and management attention to inpatient discharge timing, elective-schedule leveling, and hospital-wide boarding accountability. Start by measuring boarding hours this week. If boarding is high, that is the lever, and it is far cheaper than another year of hiring that the system quietly absorbs.</p>
+<h4>Caveats</h4>
+<p>If boarding turns out to be low and the ED is genuinely understaffed against a real volume increase, the diagnosis shifts back toward staffing and retention. The measurement step decides this. The retention loop matters regardless: stabilizing the existing workforce often beats chasing replacements.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#059669'>Claude 4.8 + skill</span><span class='cfgtag'>critical-thinking</span></div>
+<div class='pscore'><b>8.87/10</b> overall &middot; 3 best-picks<br><span style='color:#6b7280'>Rigo 9.0 &middot; Cali 9.0 &middot; Bias 9.0 &middot; Dept 9.0 &middot; Usef 8.33</span></div>
+<div class='resp'><h3>Why the ED stays over capacity, and the highest-leverage fix</h3>
+<h4>Frame the real question</h4>
+<p>The leadership question is &quot;who is to blame,&quot; which is an easy substitution for the</p>
+<p>hard one: &quot;what structure makes wait times return to the same level no matter how many</p>
+<p>nurses we add?&quot; The tell is the pattern itself. A recurring behavior that reasserts a</p>
+<p>fixed setpoint after every intervention is a signature of system structure, not of</p>
+<p>individual effort or a single bad season. A bad flu season is a one-time external shock.</p>
+<p>It cannot explain a level that returns year after year. Structure produces behavior; the</p>
+<p>hand that releases the Slinky only lets out what the coil already held.</p>
+<h4>Diagnose: this is a balancing loop holding a setpoint</h4>
+<p>Map the stock and flows. The stock is &quot;patients waiting in the ED.&quot; Inflow is arrivals.</p>
+<p>Outflow is disposition (admit to a ward, discharge, or transfer). Wait time rises when</p>
+<p>the stock rises, which happens when inflow exceeds outflow.</p>
+<p>Adding nurses raises outflow capacity inside the ED. So wait times drop for a few months.</p>
+<p>Then they climb back. Two structures explain the rebound, and they likely both operate.</p>
+<ol>
+<li><strong>Drift restored by a hidden balancing loop (most likely the dominant one).</strong> The bed</li>
+</ol>
+<p>bottleneck usually sits downstream, not in the ED. Admitted patients cannot leave the</p>
+<p>ED until an inpatient bed opens (the &quot;boarding&quot; problem). The true constraint is</p>
+<p>inpatient bed turnover and discharge timing, which nurses in the ED do not touch.</p>
+<p>Whatever slack new ED nurses create gets absorbed by patients who still cannot move</p>
+<p>upstairs. The setpoint is set by the downstream constraint, so the ED returns to it.</p>
+<ol>
+<li><strong>Demand that rises to meet supply (a reinforcing response feeding the same loop).</strong></li>
+</ol>
+<p>When the ED gets faster, referral patterns, EMS routing, and patient choice shift</p>
+<p>toward it. Shorter waits attract more arrivals until waits climb back to the level</p>
+<p>that deters the marginal patient. This is the same mechanism that makes a new highway</p>
+<p>lane fill with traffic. Equilibrium re-forms at the old wait.</p>
+<p>Both are cases of &quot;policy resistance&quot;: the system has its own goals (a tolerated wait,</p>
+<p>a fixed bed supply) and pushes back on the lever you pulled. Pushing harder on ED</p>
+<p>staffing makes the resistance more expensive, not weaker.</p>
+<p>The &quot;lazy staff&quot; story fails the hard-to-vary test. It could be retold to fit any</p>
+<p>outcome and forbids no observation, so it explains nothing. It also confuses effort with</p>
+<p>result and ignores bounded rationality: staff are making reasonable choices given the</p>
+<p>information and bed availability they actually have. Put a fresh team in the same</p>
+<p>structure and you get the same waits.</p>
+<h4>Quantify the mechanism</h4>
+<p>Little&#x27;s Law makes this concrete: average number waiting equals arrival rate times</p>
+<p>average time in system (L = lambda x W). If the binding delay is boarding time waiting</p>
+<p>for an inpatient bed, then W is governed by bed turnover, and adding ED nurses changes</p>
+<p>neither lambda nor the boarding component of W. A plausible split: if boarding accounts</p>
+<p>for, say, 40 to 60 percent of total ED length of stay for admitted patients (a common</p>
+<p>range in crowded EDs), then even doubling ED nursing leaves the majority of the delay</p>
+<p>untouched. That matches the observed pattern of a small, temporary dip that fades.</p>
+<h4>The highest-leverage fix</h4>
+<p>On Meadows&#x27; leverage hierarchy, hiring more nurses is a low-leverage move (adjusting a</p>
+<p>number, point 12) aimed at the wrong stock. Higher-leverage interventions, in order:</p>
+<ul>
+<li>**Relieve the actual constraint: inpatient bed flow (the stock-and-flow plumbing,</li>
+</ul>
+<p>point 10).** Attack boarding directly. Move discharge decisions and discharge work to</p>
+<p>early morning so beds open before the afternoon arrival peak, smooth elective surgical</p>
+<p>admissions across the week instead of clustering them Monday to Wednesday (elective</p>
+<p>scheduling, not flu, is often the real upstream driver of crowding), and create a</p>
+<p>short-stay or discharge-lounge buffer so the ED is not the holding pen.</p>
+<ul>
+<li><strong>Fix the information flow and the goal (points 6 and 3).</strong> Stop measuring &quot;nurses</li>
+</ul>
+<p>hired&quot; and start measuring boarding hours and total time to inpatient bed, made</p>
+<p>visible hospital-wide in real time. You get what you measure. Set a hospital-level goal</p>
+<p>for patient flow rather than an ED-local goal for staffing, because the ED cannot solve</p>
+<p>a constraint it does not own.</p>
+<ul>
+<li><strong>Manage the demand side honestly (point 5, rules and routing).</strong> Divert low-acuity</li>
+</ul>
+<p>arrivals to urgent care or a fast-track lane so the reinforcing &quot;shorter wait attracts</p>
+<p>more&quot; loop is not fed at the same door as true emergencies.</p>
+<p>The single highest-leverage action: treat ED crowding as a whole-hospital bed-flow</p>
+<p>problem and run discharge and elective-admission scheduling to open beds ahead of demand.</p>
+<p>That moves the setpoint itself, which is the only thing that makes the gains stick.</p>
+<h4>Verdict and confidence</h4>
+<p>The ED runs over capacity because the binding constraint lives downstream (inpatient</p>
+<p>bed turnover and boarding), with demand quietly rising to refill any ED slack. Nurses</p>
+<p>relieve a non-binding constraint, so a balancing loop pulls waits back to a setpoint the</p>
+<p>ED does not control. The fix is to attack bed flow and discharge timing and to re-measure</p>
+<p>flow rather than headcount.</p>
+<p>Confidence that the cause is structural rather than staff effort or flu: high (roughly</p>
+<p>85 percent). Confidence that downstream boarding is the dominant single constraint at any</p>
+<p>given hospital: moderate (about 65 percent), since the specific bottleneck varies. The</p>
+<p>cheap diagnostic that would confirm or refute it: measure boarding hours and the share of</p>
+<p>ED length-of-stay spent waiting for an inpatient bed. If boarding is large, the diagnosis</p>
+<p>holds. If boarding is near zero and the ED genuinely lacks treatment capacity, then ED</p>
+<p>capacity is the real constraint and the staffing instinct was closer to right, though the</p>
+<p>demand-refill loop would still need managing.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#7c3aed'>GPT-5.5</span><span class='cfgtag'>xhigh reasoning</span></div>
+<div class='pscore'><b>6.6/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 7.0 &middot; Cali 6.0 &middot; Bias 6.0 &middot; Dept 7.0 &middot; Usef 7.0</span></div>
+<div class='resp'><p>Assumption: nurse staffing is real pressure, but not the binding constraint. If adding nurses reliably improves waits for a few months and then the system degrades back, the ED is likely a flow system with a recurring bottleneck downstream or upstream, not a simple labor-effort problem.</p>
+<p>The pattern points to <strong>capacity-induced demand plus bottleneck migration</strong>. In an emergency department, wait time is governed by the slowest step in the patient flow: triage, rooming, physician evaluation, diagnostics, consults, admission orders, inpatient bed availability, discharge transport, etc. If leadership hires more nurses, the ED can initially triage, room, and treat patients faster. But if admitted patients cannot move upstairs because inpatient beds are full, those patients “board” in ED beds. Then ED treatment rooms become occupied by patients who no longer need ED care. New patients cannot be roomed, waits rise again, and staff look overwhelmed.</p>
+<p>So the real issue is probably not “lazy staff.” That is a weak explanation because it does not explain the temporary improvement after hiring. Nor is “bad flu season” sufficient, unless the same pattern appears only during seasonal demand spikes. The repeated rebound suggests a structural feedback loop.</p>
+<p>A likely diagnosis:</p>
+<ol>
+<li><strong>ED throughput improves temporarily when nurses are added.</strong></li>
+</ol>
+<p>More nurses reduce one local bottleneck.</p>
+<ol>
+<li><strong>The improved ED attracts or processes more volume.</strong></li>
+</ol>
+<p>Patients who previously left, diverted, delayed care, or went elsewhere now stay. Referring clinicians may also send more patients if the ED seems more available.</p>
+<ol>
+<li><strong>Downstream capacity remains constrained.</strong></li>
+</ol>
+<p>Inpatient beds, discharge processes, diagnostic turnaround, or physician/consult availability do not expand proportionally.</p>
+<ol>
+<li><strong>Boarding consumes ED capacity.</strong></li>
+</ol>
+<p>Admitted patients sit in ED rooms, reducing effective ED capacity.</p>
+<ol>
+<li><strong>Wait times return to prior levels.</strong></li>
+</ol>
+<p>The system equilibrates around the unresolved bottleneck.</p>
+<p>Quantitatively, EDs are highly sensitive to utilization. As utilization approaches 85-90% and above, queues grow nonlinearly. A department that looks “only 10% over capacity” can see waits double or triple because variability in arrivals, acuity, diagnostics, and admissions creates queue explosions. Hiring nurses may add, say, 10% more front-end processing capacity, but if inpatient bed turnover or admission throughput remains fixed, the extra capacity just pushes patients faster into the downstream jam.</p>
+<p>The highest-leverage fix is therefore <strong>not another annual nurse-hiring cycle</strong>. It is to manage the ED as a hospital-wide flow problem and remove the true bottleneck.</p>
+<p>Recommendation: create a hospital-wide throughput command structure with one primary metric: <strong>time from ED admission decision to inpatient bed placement</strong>, plus boarding hours. Then attack boarding directly.</p>
+<p>Practical interventions:</p>
+<ul>
+<li>Move admitted patients out of the ED faster, even if that means inpatient units absorb hallway/overflow protocols instead of concentrating overflow in the ED.</li>
+<li>Improve inpatient discharge before noon, pharmacy turnaround, transport, and environmental services bed-cleaning speed.</li>
+<li>Add flexible inpatient surge capacity during predictable peaks.</li>
+<li>Separate fast-track low-acuity patients from complex admissions.</li>
+<li>Measure physician, lab, imaging, consult, and bed-management delays separately to identify the actual constraint.</li>
+<li>Stop evaluating ED performance as if it is isolated from inpatient operations.</li>
+</ul>
+<p>The uncertainty is which bottleneck dominates: inpatient beds are the classic culprit, but diagnostics, physician coverage, psychiatric placement, specialist consults, or discharge lag could also be binding. The evidence needed is a patient-flow time study by segment, especially boarding hours and bed occupancy.</p>
+<p>Verdict: this is almost certainly a <strong>systems capacity and flow failure</strong>, not a staff motivation problem. The highest-leverage fix is to reduce ED boarding by improving hospital-wide admission and discharge throughput, with leadership owning the full patient-flow chain rather than blaming the ED staff.</p></div>
+</div>
+</div>
+<div class='reasons'><b>Judge notes (for the response they ranked best):</b>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three correctly reject the &#x27;lazy staff&#x27;/flu narrative and identify downstream boarding plus induced demand as the binding constraint, but they differ in rigor and calibration. C is strongest: it grounds the mechanism in Little&#x27;s Law (correctly stated as L=lambda*W) and Meadows&#x27; leverage hierarchy, applies a falsifiability/hard-to-vary test to the blame story, and is the only one to attach explicit, well-separated confidence levels (85% structural cause, 65% boarding dominant) plus a cheap disconfirming diagnostic. A is nearly as good with a clean pattern-signature argument, a concrete leverage-ordered fix, and an honest caveat, but it omits formal quantitative tools and explicit probabilities. B reaches the same conclusion and adds a sharp queueing-theory point about nonlinear waits near 85-90% utilization, but it overclaims slightly (&#x27;almost certainly&#x27;), hedges less rigorously, and reads as a less disciplined draft with weaker structure and no quantified confidence.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three correctly reject the blame narrative and converge on downstream inpatient boarding as the binding constraint, with induced demand and a balancing-loop refill. C is strongest: it grounds the mechanism in Little&#x27;s Law and Meadows&#x27; leverage hierarchy, gives explicit numeric confidence splits (85% structural, 65% boarding-dominant) and a falsifiable cheap diagnostic, making its calibration and bias-awareness clearly best. A is close behind with a tight Theory-of-Constraints argument, a quantified capacity-recovery estimate, and an explicit attrition loop B and C underweight, plus a clean falsification caveat; its usefulness edges C with sharper sequenced actions. B is sound and covers utilization nonlinearity well but is more list-like, offers vaguer uncertainty handling, and reaches for confident phrasing (&#x27;almost certainly&#x27;) without C&#x27;s calibrated ranges.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three reach the correct flow/boarding diagnosis, but they differ in how rigorously they earn it. C is strongest: it grounds the mechanism in Little&#x27;s Law (L=lambda*W) correctly applied, names the queueing nonlinearity, gives explicit numeric confidence (85% structural, 65% boarding dominant) with a falsifiable diagnostic, and applies hard-to-vary and bounded-rationality tests to steelman/dismiss the &#x27;lazy staff&#x27; frame. A is close behind with the cleanest pattern-rules-out-blame argument, the Theory-of-Constraints framing, and a concrete quantified leverage estimate (25-35% of bed-hours), but it states ranges without attaching probabilities and is slightly less explicit about confidence. B has the same core insight and correctly invokes the 85-90% utilization queue-explosion point, but it is the loosest: it hedges with vague &#x27;almost certainly&#x27; language, offers no numeric calibration, and its alternative-bottleneck list reads as a checklist rather than a weighed analysis. All three appropriately end with the &#x27;measure boarding first&#x27; verdict, which is the decisive actionable move.</div>
+</div>
+</div>
+<div class='prob'>
+<div class='probhead'><div class='n'>Problem 4 &middot; decide-under-uncertainty</div><div class='q'>You run a 6-person startup with 9 months of cash runway. A large enterprise offers a $400k contract that would consume your entire team for 5 months building a custom feature that only that customer wants. Taking it extends your runway but freezes work on your core product and roadmap. Reason through whether to take the contract.</div></div>
+<div class='cols'>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#64748b'>Claude 4.8</span><span class='cfgtag'>no skill</span></div>
+<div class='pscore'><b>7.47/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 8.0 &middot; Cali 7.0 &middot; Bias 7.0 &middot; Dept 7.33 &middot; Usef 8.0</span></div>
+<div class='resp'><h3>Should you take the $400k custom-build contract?</h3>
+<h4>Framing the decision</h4>
+<p>The contract trades $400k and roughly 4-5 months of added runway against 5 months of frozen product development for the entire team. The instinct to grab cash when you have 9 months of runway is strong, but the real cost here is not the dollars, it is the opportunity cost of your only six builders spending the bulk of a year on work that does not compound into your product.</p>
+<p><strong>Assumptions I am making:</strong></p>
+<ul>
+<li>&quot;Consumes the entire team for 5 months&quot; means near-zero roadmap progress during that window.</li>
+<li>The $400k is gross revenue, not margin. With a 6-person team, monthly burn is plausibly $80k-120k (salaries, benefits, overhead). Call it $100k/month, so $900k total runway at 9 months.</li>
+<li>$400k therefore extends runway by roughly 4 months (from 9 to ~13), assuming the contract covers its own delivery cost and adds the surplus.</li>
+<li>The custom feature has little or no reuse value for other customers (&quot;only that customer wants&quot;).</li>
+</ul>
+<h4>The case against taking it</h4>
+<ol>
+<li><strong>You burn your scarcest resource on non-compounding work.</strong> A startup&#x27;s product and the learning that comes from shipping it are the assets that create enterprise value. Five months of frozen roadmap means competitors move, your market window narrows, and you arrive at month 13 with a stale product and the same core questions unanswered.</li>
+</ol>
+<ol>
+<li><strong>It can quietly convert you into a dev shop.</strong> The most common failure mode here is path dependency: the enterprise asks for &quot;just one more thing,&quot; the revenue feels safe, and 18 months later you are a services business with one client and no product. Custom-build contracts are how product companies sleepwalk into consulting.</li>
+</ol>
+<ol>
+<li><strong>Single-customer concentration risk.</strong> One client at 100% of attention is a hostage situation. If they slip payment, change scope, or churn, you have no diversification and a cold product.</li>
+</ol>
+<ol>
+<li><strong>The runway math is thinner than it looks.</strong> Trading 5 months of product work for ~4 months of runway is close to break-even on time, and you come out the other side without product progress. You have bought survival, not momentum.</li>
+</ol>
+<h4>The case for taking it</h4>
+<ol>
+<li><strong>9 months of runway is genuinely dangerous.</strong> If you have no near-term fundraise and no other revenue, refusing $400k can be fatal. Dead startups ship no roadmap at all.</li>
+<li><strong>Enterprise validation and a logo</strong> can de-risk future fundraising and sales, even if the feature itself is bespoke.</li>
+<li><strong>Possible roadmap overlap.</strong> If even 30-40% of the custom feature generalizes into the core product, the opportunity cost shrinks materially.</li>
+</ol>
+<h4>What changes the answer</h4>
+<ul>
+<li><strong>Fundraising state:</strong> If a round is close or your metrics are strong, decline and protect the roadmap. If fundraising is dead and this is survival, the math tips toward taking it.</li>
+<li><strong>Reusability:</strong> Push hard to reframe the build as a configurable capability that lands on your roadmap, not a one-off. That single change can flip a bad deal into a good one.</li>
+<li><strong>Team allocation:</strong> &quot;Entire team for 5 months&quot; is the worst version. Can 3 people deliver in 6-7 months while 3 hold the roadmap? Negotiate scope, timeline, and milestone payments so you are not fully frozen.</li>
+</ul>
+<h4>Verdict</h4>
+<p>Default answer: <strong>do not take it as offered.</strong> A full team freeze for a non-reusable build is a strategic mistake at 9 months of runway unless you are out of fundraising options. But rarely accept the framing as binding.</p>
+<p><strong>Recommended move:</strong> Counter-propose. Ask for (a) milestone-based payments to improve cash timing, (b) a partial team allocation that keeps 2-3 people on the core roadmap, and (c) scope that lets you ship the feature into your product (reusable, not bespoke), ideally with a design-partner discount in exchange. If they agree, the deal becomes runway plus a reference customer plus roadmap progress, which is worth doing. If they insist on the full-freeze, single-purpose version, decline unless this is the only thing standing between you and insolvency. Cash that costs you your product is the most expensive cash there is.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#059669'>Claude 4.8 + skill</span><span class='cfgtag'>critical-thinking</span></div>
+<div class='pscore'><b>9.0/10</b> overall &middot; 3 best-picks<br><span style='color:#6b7280'>Rigo 9.0 &middot; Cali 9.0 &middot; Bias 9.0 &middot; Dept 9.0 &middot; Usef 9.0</span></div>
+<div class='resp'><h3>Should we take the $400k custom contract?</h3>
+<h4>Frame the real question</h4>
+<p>The decision is prescriptive: with 9 months of runway, do I commit all 6 people for 5 months to a $400k single-customer feature that freezes the core product and roadmap?</p>
+<p>The easy question my mind wants to swap in is &quot;is $400k a lot of money for a startup that might run out of cash?&quot; Phrased that way the answer is an obvious yes, which is exactly the tell of attribute substitution. The real question is a bet about what state the company is in after the 5 months, and whether that state is better than the state I reach by declining. I am betting attention and momentum, not just choosing whether to bank cash.</p>
+<h4>Assumptions, stated up front</h4>
+<ul>
+<li>6 people, all consumed for 5 months. No partial capacity for the core product.</li>
+<li>$400k is roughly 5 months of payments. At a 6-person burn that implies somewhere near $40k to $60k/month all-in, so the contract roughly covers its own 5 months and adds a few months on top. The &quot;extends runway&quot; framing means it converts 9 months of runway into something closer to 11 to 14 months, not a transformation.</li>
+<li>The feature is genuinely single-customer (&quot;only that customer wants&quot;). I treat that as load-bearing and stress-test it below.</li>
+<li>This is a startup with a product and roadmap, so the implicit goal is product-market fit and a growth story, not a services business.</li>
+</ul>
+<h4>Base rate first (outside view)</h4>
+<p>What is this a case of? It is a venture-backed product company being offered custom services revenue that pulls the whole team off the product. The reference class is well known: startups that drift into bespoke enterprise services tend to become de facto consulting shops. The pattern recurs because the cash is real and immediate while the cost (lost roadmap, lost compounding on the product) is deferred and invisible. The base rate on &quot;one big custom contract quietly became our whole business&quot; is uncomfortably high. That outside view argues against, before I look at any specifics.</p>
+<p>The competing base rate: design-partner contracts where a real enterprise pays to shape the product are a legitimate and common path to PMF. The difference between the two reference classes is entirely whether the work generalizes. That is the hinge.</p>
+<h4>The hinge: does the feature generalize, and is the logo strategic?</h4>
+<p>The case for taking it gets strong only if one or more of these hold, and I should hunt for the disconfirming version of each:</p>
+<ol>
+<li><strong>The feature is 60 to 80% reusable.</strong> If &quot;only that customer wants it now&quot; but the underlying capability serves the roadmap, the $400k is paid R&amp;D. Selective-skeptic test: would I still call it reusable if a skeptic read the spec? If I cannot point to specific roadmap items it advances, it does not generalize.</li>
+<li><strong>The logo is a referenceable anchor customer</strong> that unlocks the next ten deals. A marquee enterprise reference can be worth more than the cash. But a logo that signed a one-off custom build is a weaker reference than one that bought the standard product.</li>
+<li><strong>The runway extension changes my fundraising position</strong> materially: it buys the months to hit a milestone that makes the next round happen. Here the math bites. 5 frozen months of roadmap to buy ~2 to 5 extra months of runway, with no core-product progress, likely leaves me weaker at raise time, not stronger. Investors fund product momentum, and I will have none to show.</li>
+</ol>
+<h4>Premortem</h4>
+<p>It is 6 months from now and this was a mistake. The most likely story: the build slipped to 7 months, the customer kept changing scope, two engineers are now the permanent maintainers of bespoke code, a competitor shipped the roadmap feature we paused, and we enter fundraising with a flat product and a services-revenue line that investors discount. The runway we bought is gone and we are now dependent on selling the next custom contract.</p>
+<p>The failure mode is not the cash. It is the freeze plus the precedent: the team learns that revenue comes from bespoke work, and that is hard to reverse (escalation of commitment to a services model).</p>
+<h4>Generate the hidden option C</h4>
+<p>The binary &quot;take all of it&quot; versus &quot;decline&quot; is a false dilemma. Real alternatives:</p>
+<ul>
+<li><strong>Scope down.</strong> Negotiate a smaller paid pilot (1 to 2 engineers, 6 to 8 weeks) that delivers the highest-value slice. Preserves most of the team on the roadmap, tests the relationship, keeps optionality.</li>
+<li><strong>Take it only if the spec is rewritten toward the roadmap.</strong> Make reusability a contract condition, not a hope.</li>
+<li><strong>Raise the price for full team exclusivity.</strong> $400k to freeze 6 people for 5 months is cheap if it truly costs me the roadmap. If they will not pay a premium that reflects that opportunity cost, the contract is underpriced for what it actually consumes.</li>
+<li><strong>Decline and use the 9 months on the product</strong>, if the roadmap is the faster path to a fundable milestone.</li>
+</ul>
+<h4>Verdict</h4>
+<p>Default to <strong>no on the deal as offered</strong>: 6 people for 5 months on a non-generalizing single-customer feature is a poor bet, because the opportunity cost (a frozen roadmap going into a fundraise) likely exceeds the modest runway gain, and it risks an irreversible drift into services. I hold this at roughly <strong>65%</strong> confidence; it is genuinely contingent on facts I would verify first.</p>
+<p><strong>Flip to yes only if</strong> the work is concretely 60%+ reusable for the roadmap, OR the logo is a referenceable anchor that opens a clear pipeline, OR the price is renegotiated upward to reflect full-team exclusivity. The strongest move is almost always <strong>option C: a scoped-down paid pilot</strong> that captures the cash and the relationship without freezing the company. Take the meeting, not the whole contract.</p>
+<p>Uncertain and worth pinning down before deciding: the exact burn-to-contract ratio (how many months it really buys), how much of the spec maps to the roadmap, and whether this customer is a credible reference. Those three numbers decide it.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#7c3aed'>GPT-5.5</span><span class='cfgtag'>xhigh reasoning</span></div>
+<div class='pscore'><b>6.73/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 7.0 &middot; Cali 7.0 &middot; Bias 5.67 &middot; Dept 6.33 &middot; Usef 7.67</span></div>
+<div class='resp'><p>Assumptions: the $400k is net cash collected during the 5 months, no major hiring is needed, and your current burn is typical for a 6-person startup: roughly $60k-$120k/month depending on salaries and overhead. That means $400k buys about 3.3 to 6.7 months of extra runway.</p>
+<p>The key comparison is not “$400k or no $400k.” It is “does buying 3-7 months justify losing 5 months of full-team product progress?”</p>
+<p>If you decline, after 5 months you have about 4 months of runway left, but your core product has advanced. If you accept, after 5 months you may have roughly 7-11 months of runway left, but the core product is mostly where it is today, possibly with added custom code and support obligations. So financially, the contract improves survival odds. Strategically, it may reduce company value if it turns the startup into a services shop.</p>
+<p>The strongest reason to take it would be if the contract creates leverage: a credible enterprise reference, proof that a painful market exists, a repeatable wedge into similar customers, or a feature that can be generalized into the roadmap. But the prompt says the feature is custom and only that customer wants it. That is a major red flag. A 6-person company spending 30 person-months on non-repeatable work is expensive, even if cash comes in. It also risks demoralizing the team, delaying learning from the broader market, and creating a large customer who now expects custom support.</p>
+<p>I would not take it as offered.</p>
+<p>I would try to restructure it. The minimum acceptable version should include most of these terms:</p>
+<ol>
+<li>Upfront or milestone-heavy payment, not net-60 after delivery.</li>
+<li>Startup retains IP and can reuse/generalize the work.</li>
+<li>Scope limited so only 1-2 people are consumed, not the whole team.</li>
+<li>Feature must map to the core roadmap or become configurable infrastructure.</li>
+<li>Customer pays a premium for roadmap disruption, likely more than $400k if they truly require the whole company for 5 months.</li>
+<li>Clear support limits after delivery.</li>
+<li>A path to a larger annual contract or referenceable case study.</li>
+</ol>
+<p>If they refuse and require the full team for a one-off build, I would decline unless the company is otherwise nearly dead or has no credible path to financing, revenue, or product traction within the current 9 months. In that emergency case, take it only as a bridge and be explicit internally that you are buying time, not validating the business.</p>
+<p>Verdict: decline the contract as proposed. Counter with a narrower, roadmap-aligned, prepaid version. Take it only if it becomes strategically reusable or if survival risk is so high that the alternative is likely failure.</p></div>
+</div>
+</div>
+<div class='reasons'><b>Judge notes (for the response they ranked best):</b>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> A is the strongest: it names the actual decision (attribute substitution tell), runs an explicit outside-view base rate with a competing reference class, isolates the true hinge (does the work generalize), does a concrete premortem, generates option C, and uniquely attaches a calibrated 65% confidence plus the three numbers that would change the answer. B covers nearly the same ground (steelmanned case-for, dev-shop path dependency, milestone counter) with solid burn math but states no probability and surfaces fewer cognitive traps explicitly. C is competent and gives the cleanest decline-versus-advance-product comparison and a tight term sheet, but it asserts more than it interrogates: thinner on counter-arguments, no premortem or base-rate framing, and the least bias-awareness work of the three.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> A is strongest: it names the actual decision-analytic traps (attribute substitution, escalation of commitment, false dilemma), runs an explicit outside-view base rate with a competing reference class, builds a premortem, and lands a calibrated verdict (65% confidence) tied to three named facts it would verify first. B covers the same terrain well with a clean case-for/case-against structure and a concrete counter-offer, but it states burn and runway figures more flatly and surfaces fewer named biases and less explicit uncertainty quantification. C reaches the correct verdict with a usable term sheet and correctly flags the single-customer red flag, but its reasoning is thinner: it asserts the runway math without much stress-testing, does little steelmanning of the take-it case, and names no cognitive traps. All three correctly identify that the runway-vs-frozen-roadmap trade is near break-even and that reusability is the hinge; A handles that denominator-and-opportunity-cost logic most rigorously.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three reach the same verdict (decline as offered, counter with a scoped/roadmap-aligned deal), so depth of reasoning decides it. A is strongest: it names the attribute-substitution trap, explicitly invokes two competing reference classes and identifies generalizability as the hinge, runs a premortem, flags escalation-of-commitment to a services model, attaches an explicit 65% confidence, and lists the three specific numbers it would verify. B is close and well-structured (clean burn math, explicit case-for/case-against, concrete counter-proposal) but does not quantify its confidence or surface its own cognitive traps as deliberately. C does the core math and reaches a sound restructured-terms list, but is the thinnest on bias-awareness and alternative reference classes and offers the least calibrated framing of its uncertainty.</div>
+</div>
+</div>
+<div class='prob'>
+<div class='probhead'><div class='n'>Problem 5 &middot; reframe-downtown</div><div class='q'>A mid-sized city&#x27;s downtown is dying: shops are closing, foot traffic has collapsed, and the obvious fixes (more parking, lower rents, a summer festival) have all been tried and failed. Generate genuinely non-obvious reframings of the problem and propose three unconventional options worth testing, with the reasoning behind each.</div></div>
+<div class='cols'>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#64748b'>Claude 4.8</span><span class='cfgtag'>no skill</span></div>
+<div class='pscore'><b>7.73/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 8.0 &middot; Cali 7.33 &middot; Bias 7.33 &middot; Dept 7.67 &middot; Usef 8.33</span></div>
+<div class='resp'><h3>Reviving a dying downtown: reframings and three options to test</h3>
+<h4>Starting assumptions</h4>
+<p>I assume a mid-sized US/Canadian city (population ~100k–400k), a downtown built before 1960, a metro area where most residents already live and shop in car-oriented strip and big-box zones, and an online retail share that has taken the easy commodity transactions away. The &quot;obvious fixes already tried&quot; tell me the real constraint is not surface friction (parking, rent, one-off events). When cheap supply-side tweaks fail repeatedly, the problem is usually structural demand, not friction.</p>
+<h4>Non-obvious reframings</h4>
+<p><strong>1. Downtown is not a retail problem; it&#x27;s a residency problem.</strong> Foot traffic is a derivative of people who are <em>already there for another reason</em>. Healthy downtowns are anchored by people who live, work, learn, or get treated there 16 hours a day. If nobody sleeps downtown, every shop is fighting to import its entire customer base by car against suburban competitors that don&#x27;t have to. Retail vacancy is the symptom; daytime/nighttime population is the cause.</p>
+<p><strong>2. The unit of competition is the wrong size.</strong> Individual shops compete against Amazon and the mall and lose. But a <em>bundle</em> (a reason to spend three hours, not buy one item) is something neither Amazon nor a strip mall can replicate. The city has been subsidizing inputs (rent, parking) instead of curating the bundle.</p>
+<p><strong>3. &quot;Dying&quot; may be a measurement artifact of the old use.</strong> Foot traffic at noon on a weekday measures a 1985 retail downtown. The relevant question is whether the <em>real estate</em> is productive, not whether shops are full. A downtown can be economically alive (housing, services, makers) while looking dead by retail-occupancy metrics.</p>
+<p><strong>4. Vacancy is a coordination failure, not a price failure.</strong> Lowering rent didn&#x27;t work because no single tenant wants to be the first one on a dead block. The binding constraint is sequencing and co-location, which a price signal cannot solve.</p>
+<h4>Three unconventional options worth testing</h4>
+<h5>Option A: Convert, don&#x27;t lease (upper-floor and ground-floor residential conversion)</h5>
+<p>Stop trying to fill ground-floor retail with retail. Use a streamlined zoning overlay plus a conversion fund to turn vacant retail and dead office floors into apartments, with ground-floor live/work units. Reasoning: this attacks reframing #1 directly. Even 300–500 new downtown residents create permanent, weatherproof, car-free demand that no festival matches. Conversions are cheaper than new builds and reuse existing stock. Test cheaply: pre-approve 3–5 pilot buildings, measure lease-up speed and the change in evening foot traffic on those blocks over 6–12 months.</p>
+<h5>Option B: Curated cluster, not scattered subsidy (&quot;anchor a single block&quot;)</h5>
+<p>Concentrate every incentive on <em>one</em> block to reach a tipping density: recruit a complementary set of tenants (a daytime anchor like a community college satellite or clinic, plus food, plus a maker/repair space) to open in the same quarter, coordinated by a single curator with a vacancy backstop. Reasoning: this attacks #2 and #4. One vibrant block beats ten half-dead ones; success is visible and copyable. Test: pick the block with best bones, fund 90 days of coordinated opening, measure dwell time and tenant survival vs. a control block.</p>
+<h5>Option C: Change the building&#x27;s job, not its hours (programmable &quot;third place&quot; anchor)</h5>
+<p>Lease a large vacant anchor as a publicly-subsidized civic/commercial hybrid: library-plus-maker-plus-coworking-plus-childcare, open 7am–10pm. Reasoning: foot traffic needs a <em>generator</em> that runs on non-discretionary visits (work, childcare, learning), which then spill into surrounding shops. This converts downtown from a destination you must choose into a place you already have to be. Test: a 12-month pop-up lease in one anchor, measuring adjacent retail sales and visit frequency.</p>
+<h4>Verdict</h4>
+<p>The strongest single bet is <strong>Option A (residential conversion)</strong>, because it changes the demand base permanently rather than renting attention for a weekend. Run it together with <strong>Option B</strong> as a fast, cheap, visible proof point on one block. Treat <strong>Option C</strong> as the demand generator that makes both work. What&#x27;s uncertain: conversion economics depend heavily on local construction costs and financing, and a single anchor closing can sink Option C. Recommendation: pilot A and B in parallel on adjacent blocks, instrument with foot-traffic and lease-up data, and scale only what the numbers confirm.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#059669'>Claude 4.8 + skill</span><span class='cfgtag'>critical-thinking</span></div>
+<div class='pscore'><b>8.8/10</b> overall &middot; 3 best-picks<br><span style='color:#6b7280'>Rigo 9.0 &middot; Cali 9.0 &middot; Bias 9.0 &middot; Dept 9.0 &middot; Usef 8.0</span></div>
+<div class='resp'><h3>Reviving a dying downtown: reframings and three options worth testing</h3>
+<h4>Framing the real question</h4>
+<p>The brief hands me a conclusion already wired in: &quot;downtown is dying, the fixes failed, find new fixes.&quot; Before I generate, I should check what easier question my mind wants to answer. The easy substitution is &quot;what marketing or amenity could pull shoppers back?&quot; That is the same class of move that already failed (parking, rents, festival). The harder and truer question: <strong>what is downtown a stock of, what are its inflows and outflows, and which feedback loop is now dominant?</strong></p>
+<p>Note the hidden premise: that downtown should be a retail-and-shopping district. That premise is doing most of the damage. The three failed fixes all assume the goal is &quot;more shoppers buying things in physical stores,&quot; and they fight a structural shift (e-commerce, remote work, big-box and online price competition) with parameter tweaks. On Meadows&#x27; leverage hierarchy, parking and rent and a festival are all leverage point 12 (numbers) and 11 (buffers): the weakest places to push. The failure was predictable, not surprising.</p>
+<h4>Non-obvious reframings</h4>
+<p><strong>1. Downtown is not a shopping problem, it is a residency and dwell-time problem.</strong> Retail is a flow that follows a stock: the number of people who have a daily reason to be downtown at varied hours. A district populated only at lunch on weekdays cannot support shops no matter the rent. The reinforcing loop ran in reverse: fewer residents and workers, fewer customers, more closures, fewer reasons to come, fewer residents. Shops are the symptom; the eroded stock is &quot;reasons to be physically present.&quot;</p>
+<p><strong>2. The vacancy is a self-reinforcing signal, not just lost income (the &quot;broken windows&quot; loop).</strong> Empty storefronts tell every potential entrant and visitor &quot;this place is failing,&quot; which suppresses entry, which produces more vacancy. The relevant variable is the <em>visible occupancy rate</em>, and it has a tipping threshold. Below it the loop runs down; above it, momentum carries.</p>
+<p><strong>3. &quot;Success to the successful&quot; has flipped against downtown.</strong> Capital, foot traffic, and attention flow to whatever is already winning (the suburban mall, Amazon, the new lifestyle center). Downtown lost the resources to compete, so it lost more. The exit Meadows names is to stop competing on the winner&#x27;s terms and change the game.</p>
+<p><strong>4. Commercial rent is a stock-limited resource priced for a market that left.</strong> Landlords hold out for old rents because lowering them locks in a lower asset valuation on the books. Vacant-but-overpriced is privately rational and collectively ruinous: bounded rationality producing a bad equilibrium. The lever is the landlord&#x27;s incentive, not the tenant&#x27;s.</p>
+<h4>Three unconventional options worth testing</h4>
+<p><strong>Option A: Convert the obsolete stock instead of refilling it (zoning and adaptive reuse).</strong></p>
+<p>Aim at leverage point 5 (rules). Rezone ground-floor commercial to allow residential, clinics, daycare, trade schools, maker space, and offices, and offer conversion permits and tax abatement for upper-floor apartments. Reasoning: this rebuilds the <em>residency</em> stock (reframe 1) that retail depends on, and it attacks reframe 4 by giving landlords a profitable alternative to holding empty. A resident base seeds a balancing demand loop for the cafes and shops that remain. Test small: a two-block pilot with a 24-month conversion window. Measure resident headcount and evening foot traffic, not store count.</p>
+<p><strong>Option B: Tax the vacancy, not the activity (reverse the incentive).</strong></p>
+<p>A graduated vacant-storefront tax that rises with months empty, paired with a low- or zero-rent fast lease for pop-ups, with revenue earmarked for facade and streetscape. Reasoning: this is a reversal (de Bono) of the usual &quot;subsidize tenants&quot; move and it targets the landlord incentive directly. It restores the missing feedback loop (reframe 2): holding a storefront empty now costs money, so the privately rational choice shifts toward filling it. Risk to red-team: landlords may pass cost to weak tenants or the tax may simply yield revenue while units stay empty, so the pop-up off-ramp must be genuinely frictionless. Test on one corridor with a sunset clause.</p>
+<p><strong>Option C: Make downtown the venue for things that cannot be done online.</strong></p>
+<p>The thing e-commerce and remote work cannot replicate is co-present, recurring, identity-anchored activity: a permanent food hall, a weekly evening market with prepared food and music, a clinic, a library-makerspace, a community college satellite, sports leagues, civic offices. Reasoning: this is the &quot;success to the successful&quot; exit (reframe 3) and Deutsch&#x27;s reach idea inverted: pick the function that has structural protection from the dominant competitor. Online wins on price and convenience for shippable goods; it loses on presence, service, and belonging. Stop competing on shippable retail.</p>
+<h4>Verdict and confidence</h4>
+<p>The high-confidence claim (roughly 80%) is diagnostic: the three failed fixes failed because they pushed weak leverage points against a structural shift, treating a residency-and-presence problem as a shopping problem. On the remedies I am less certain. <strong>Option A (conversion) is the strongest bet</strong> because it rebuilds the underlying stock and aligns landlord incentives, and adaptive-reuse precedents exist in many mid-sized cities. Option B is higher-variance and depends on execution of the pop-up off-ramp. Option C is durable but slow and needs an anchor institution to commit.</p>
+<p>Caveats I cannot resolve from the brief: the city&#x27;s actual residential demand, the landlord ownership structure (concentrated vs. fragmented changes which lever works), and the fiscal room for abatements. Run all three as bounded, instrumented pilots on separate corridors with a frozen baseline, judge them on the residency and dwell-time metrics rather than on store count, and grade the decisions on what was knowable rather than on whether any single pilot happens to land.</p></div>
+</div>
+<div class='col'>
+<div class='colhead'><span class='colname' style='color:#7c3aed'>GPT-5.5</span><span class='cfgtag'>xhigh reasoning</span></div>
+<div class='pscore'><b>7.47/10</b> overall &middot; 0 best-picks<br><span style='color:#6b7280'>Rigo 7.67 &middot; Cali 6.67 &middot; Bias 6.67 &middot; Dept 8.0 &middot; Usef 8.33</span></div>
+<div class='resp'><p>Assumption: the downtown is not “under-marketed”; it has lost its repeat-use engine. Festivals, cheaper rents, and parking help only if people already have a reason to come often. A shop district usually needs hundreds or thousands of ordinary weekly visits, not three big event days.</p>
+<p><strong>Reframing 1: downtown is not a retail problem, it is a habit problem.</strong></p>
+<p>Most dying downtowns were built around forced routines: office work, courthouse visits, banking, transit transfers, school pickups, church, errands. Retail was the parasite on those routines, not the source. If remote work, suburban services, online shopping, and safety concerns removed the routine, adding boutiques is like planting flowers in dry soil.</p>
+<p><strong>Reframing 2: the competition is not the mall; it is frictionless life.</strong></p>
+<p>People compare downtown against Amazon, drive-throughs, home delivery, suburban strip centers, and staying home. “More parking” solves only one friction. The bigger frictions are uncertainty: Will anything be open? Is it safe? Can I bring kids? Is there a restroom? Will I feel awkward if the street is empty?</p>
+<p><strong>Reframing 3: empty storefronts may be an asset, not just a symptom.</strong></p>
+<p>Vacancy creates a rare chance to test uses that normal retail rents would block: production, care, education, repair, logistics, civic services, short-term residencies, night uses, and weird hybrid formats.</p>
+<p>Three unconventional options worth testing:</p>
+<p><strong>1. Convert downtown into an “obligation district,” not an attraction district.</strong></p>
+<p>Move recurring civic and semi-civic functions into storefronts: municipal permitting, a small health clinic, community college classrooms, childcare, workforce training, library services, tax help, legal aid, school arts programs, probation check-ins, senior services. The goal is not glamour; it is repeat necessity.</p>
+<p>Reasoning: one relocated office with 80 workers might generate 200 to 400 daily trips including staff, clients, lunch, deliveries, and errands. Five such anchors could create the base foot traffic that ten boutiques cannot create by themselves. Test it for 12 months with pop-up leases in vacant spaces, then measure pedestrian counts, adjacent sales tax receipts, and vacancy changes within one block.</p>
+<p>Uncertainty: this requires institutional coordination and may face resistance from agencies that prefer purpose-built buildings.</p>
+<p><strong>2. Make downtown a live production and repair zone.</strong></p>
+<p>Instead of asking “what shops should fill the storefronts?”, ask “what activities are interesting enough to watch and useful enough to return to?” Recruit businesses that make, fix, teach, or customize things in public: bike repair, clothing alteration, small-batch food production, electronics repair, tool library, 3D printing, woodworking, instrument repair, ceramics, print shop, urban farm lab.</p>
+<p>Reasoning: ordinary retail loses to the internet. Production, repair, classes, and customization are harder to digitize. They also create visible activity even when sales are modest. A dead street looks less dead when people are working behind glass. Test with subsidized 6-month “working storefront” leases where rent relief is tied to open hours, workshops hosted, and visible street-facing production.</p>
+<p>Uncertainty: not every maker can run a storefront; the city would need an operator/curator, not just a landlord subsidy.</p>
+<p><strong>3. Create a “downtown membership utility” instead of isolated businesses.</strong></p>
+<p>Bundle downtown into one practical subscription: secure bike parking, public restrooms, coworking drop-in, package pickup, kids’ activity hours, event access, merchant credits, and evening shuttle or valet. Employers, hospitals, colleges, and apartment buildings could buy memberships in bulk.</p>
+<p>Reasoning: people avoid downtown partly because each visit feels uncertain. A membership turns downtown from a set of disconnected shops into a usable service layer. If 1,000 residents or workers paid $20/month, that is $240,000/year to fund shared amenities while steering predictable spend to local merchants. Test with one compact zone, 10 to 20 participating businesses, and a simple app/card.</p>
+<p>Uncertainty: execution matters. A weak discount program would fail. It must solve real frictions: bathrooms, safety, storage, convenience, evening mobility.</p>
+<p><strong>Verdict:</strong> stop treating downtown as a shopping district that needs promotion. Treat it as a weakened ecosystem missing recurring obligations, visible activity, and low-friction usefulness. The best first test is the obligation district, because repeat foot traffic is the upstream variable the other fixes depend on.</p></div>
+</div>
+</div>
+<div class='reasons'><b>Judge notes (for the response they ranked best):</b>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> B is the most rigorous and best-calibrated: it names the question-substitution trap up front, applies Meadows&#x27; leverage hierarchy consistently, surfaces the landlord bounded-rationality equilibrium as the real lever, attaches an explicit ~80% confidence to the diagnosis vs. lower confidence on remedies, red-teams Option B, and lists the specific unknowns (ownership concentration, fiscal room) that determine which lever works. C shares B&#x27;s residency reframe and adds genuinely non-obvious &#x27;measurement artifact&#x27; and &#x27;coordination failure&#x27; framings with control-block test designs, but quantifies uncertainty less and probes incentives less deeply. A has the most vivid reframings (habit problem, frictionless life, vacancy-as-asset) and concrete trip-count test designs, but its Fermi numbers are presented without flagging them as rough estimates and it engages least with its own cognitive traps and alternative explanations.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three correctly reframe downtown as a residency/dwell-time problem rather than retail, but B is the most rigorous: it explicitly names the substitution bias (&#x27;what easier question my mind wants to answer&#x27;), uses Meadows&#x27; leverage hierarchy to explain WHY the failed fixes were predictable rather than just asserting it, attaches an explicit ~80% confidence to its diagnosis while flagging lower certainty on remedies, and red-teams its own vacancy-tax option (landlords passing cost to weak tenants). C is close behind: tight assumptions (population range, pre-1960 stock), the sharp &#x27;measurement artifact&#x27; reframe, and the cleanest actionable verdict (run A+B in parallel, C as generator, scale on data), though it red-teams its own options less. A is solid and concrete with useful trip-count estimates, but those numbers (80 workers to 200-400 trips; 1,000 members to $240k) are asserted without sourcing or sensitivity, it surfaces fewer cognitive traps, and its &#x27;uncertainty&#x27; notes are thinner than B&#x27;s and C&#x27;s calibrated confidence statements.</div>
+<div class='r'><span style='color:#059669;font-weight:600'>Claude 4.8 + skill:</span> All three reach the same sound diagnosis (a residency/presence problem misdiagnosed as retail) and similar remedies, so differentiation is in reasoning quality. B wins on explicit metacognition (names the substitution heuristic, Meadows leverage points, broken-windows and success-to-the-successful loops, bounded-rationality equilibrium), the best calibration (~80% on diagnosis, lower on remedies, names what the brief cannot resolve like ownership concentration determining which lever works), and red-teaming its own Option B. A edges C with concrete quantified reasoning (worker-trip multipliers and membership math, each flagged as illustrative) and crisp instrumented test designs with clear metrics. C is clean and actionable with a sharp coordination-failure reframe, but it surfaces fewer cognitive traps and expresses uncertainty more thinly than B.</div>
+</div>
+</div>
+</div>

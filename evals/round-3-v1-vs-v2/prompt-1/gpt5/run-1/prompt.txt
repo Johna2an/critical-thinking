@@ -1,0 +1,4 @@
+Reason through the following problem and give your best answer. Think it through carefully: state your assumptions, quantify where you can, weigh the evidence, flag what is uncertain, and end with a concise verdict or recommendation. Aim for a thorough but focused response of roughly 400 to 700 words.
+
+PROBLEM:
+Estimate two things, showing your reasoning and giving a calibrated number with a confidence range for each. (a) How many piano tuners work in Chicago today? (b) What is the probability that a randomly chosen current Fortune 500 CEO holds an undergraduate degree in engineering or a hard science rather than business or economics?

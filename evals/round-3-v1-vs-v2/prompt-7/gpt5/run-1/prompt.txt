@@ -1,0 +1,4 @@
+Reason through the following problem and give your best answer. Think it through carefully: state your assumptions, quantify where you can, weigh the evidence, flag what is uncertain, and end with a concise verdict or recommendation. Aim for a thorough but focused response of roughly 400 to 700 words.
+
+PROBLEM:
+A startup must set its price against a larger incumbent. The team built a regression on 18 months of its own sales data that predicts revenue will jump if they cut price 15%. One advisor says trust the model; another says the incumbent will simply match the cut. Reason through how much to trust the model and what the startup should actually do.

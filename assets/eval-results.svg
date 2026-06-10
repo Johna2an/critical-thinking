@@ -1,0 +1,78 @@
+<svg width="1100" height="430" viewBox="0 0 1100 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eval results across three blind-judged rounds. Skill arms scored highest in every round.">
+  <rect width="1100" height="430" rx="10" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1100" height="5" fill="#d98c0f"/>
+
+  <!-- takeaway title -->
+  <text x="34" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1f2733">Skill arms took first place in all three blind-judged rounds</text>
+  <text x="34" y="72" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" fill="#6b7280">Mean judge score (0 to 10) &#183; three independent blind judges per problem &#183; balanced slot rotation &#183; bars start at zero</text>
+
+  <!-- ===== Panel 1: Round 1 ===== -->
+  <g transform="translate(34,108)">
+    <text x="0" y="0" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1f2733">Round 1 &#183; Reasoning</text>
+    <text x="0" y="20" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#6b7280">6 problems &#183; 18 judge passes</text>
+
+    <text x="0" y="48" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#1f2733">Claude + skill v1</text>
+    <rect x="0" y="56" width="225" height="20" fill="#d98c0f"/>
+    <text x="231" y="71" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2733">8.99</text>
+    <text x="0" y="92" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#a16207">ranked best in 18 of 18 passes</text>
+
+    <text x="0" y="118" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">Claude, no skill</text>
+    <rect x="0" y="126" width="198" height="20" fill="#9aa3b2"/>
+    <text x="204" y="141" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">7.92</text>
+
+    <text x="0" y="172" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">GPT-5.5, xhigh</text>
+    <rect x="0" y="180" width="183" height="20" fill="#b7aecf"/>
+    <text x="189" y="195" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">7.30</text>
+
+    <line x1="0" y1="210" x2="0" y2="50" stroke="#d4d7dd" stroke-width="1"/>
+  </g>
+
+  <!-- ===== Panel 2: Round 2 ===== -->
+  <g transform="translate(400,108)">
+    <text x="0" y="0" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1f2733">Round 2 &#183; Creativity</text>
+    <text x="0" y="20" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#6b7280">6 briefs &#183; 18 judge passes</text>
+
+    <text x="0" y="48" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#1f2733">Claude + skill v1</text>
+    <rect x="0" y="56" width="212" height="20" fill="#d98c0f"/>
+    <text x="218" y="71" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2733">8.48</text>
+    <text x="0" y="92" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#a16207">11 of 18 picks; lost 2 briefs to baseline</text>
+
+    <text x="0" y="118" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">Claude, no skill</text>
+    <rect x="0" y="126" width="198" height="20" fill="#9aa3b2"/>
+    <text x="204" y="141" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">7.93</text>
+
+    <text x="0" y="172" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">GPT-5.5, xhigh</text>
+    <rect x="0" y="180" width="149" height="20" fill="#b7aecf"/>
+    <text x="155" y="195" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">5.96</text>
+
+    <line x1="0" y1="210" x2="0" y2="50" stroke="#d4d7dd" stroke-width="1"/>
+  </g>
+
+  <!-- ===== Panel 3: Round 3 ===== -->
+  <g transform="translate(766,108)">
+    <text x="0" y="0" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1f2733">Round 3 &#183; v1 vs v2</text>
+    <text x="0" y="20" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#6b7280">8 problems &#183; 24 judge passes</text>
+
+    <text x="0" y="48" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#1f2733">Skill v1 (21 books)</text>
+    <rect x="0" y="56" width="223" height="20" fill="#d98c0f"/>
+    <text x="229" y="71" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2733">8.91</text>
+
+    <text x="0" y="100" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#1f2733">Skill v2 (51 books)</text>
+    <rect x="0" y="108" width="222" height="20" fill="#f0b429"/>
+    <text x="228" y="123" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2733">8.87</text>
+
+    <text x="0" y="152" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">Opus 4.8, no skill</text>
+    <rect x="0" y="160" width="196" height="20" fill="#9aa3b2"/>
+    <text x="202" y="175" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">7.83</text>
+
+    <text x="0" y="204" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">GPT-5.5, xhigh</text>
+    <rect x="0" y="212" width="183" height="20" fill="#b7aecf"/>
+    <text x="189" y="227" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4b5563">7.32</text>
+
+    <line x1="0" y1="242" x2="0" y2="50" stroke="#d4d7dd" stroke-width="1"/>
+    <text x="0" y="266" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#a16207">a tie at the top: 30 added books moved coverage, the mean held</text>
+  </g>
+
+  <!-- footer note -->
+  <text x="34" y="404" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#9aa3b2">Judges were Claude agents; family bias is an open limitation. Full transcripts, judge JSON, and caveats: docs/EVALS.md</text>
+</svg>

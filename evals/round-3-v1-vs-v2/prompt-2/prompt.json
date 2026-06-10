@@ -1,0 +1,6 @@
+{
+  "id": 2,
+  "name": "find-the-flaw",
+  "tests": "argument analysis",
+  "prompt": "Critique this argument and find every flaw: 'Remote work is clearly destroying our productivity. Ever since the company went fully remote in 2020, our revenue per employee has fallen 12%. Competitors who stayed in-office grew. Therefore we must mandate a full five-day return to office to restore productivity.'"
+}

@@ -1,0 +1,23 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor
+.vscode/
+.idea/
+
+# Local eval scratch (regenerate with the harness)
+*.log
+_gpt_runner.log
+
+# Never commit raw book text. The skill ships distilled teaching notes only.
+corpus/
+*.epub
+*.mobi
+.gstack/

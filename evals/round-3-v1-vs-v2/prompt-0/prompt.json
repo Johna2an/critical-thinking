@@ -1,0 +1,6 @@
+{
+  "id": 0,
+  "name": "trust-the-study",
+  "tests": "stats skepticism",
+  "prompt": "A new observational study (n=8,000) reports that people who drink two cups of coffee a day have a 20% lower rate of depression than non-coffee-drinkers (p<0.01). A wellness brand is citing it to sell a coffee-extract supplement. Should you believe that coffee reduces depression? Reason it through and give a verdict."
+}
