@@ -14,13 +14,25 @@
 
 [Install](#install) · [What it does](#what-it-does) · [Results](#the-numbers) · [How it works](#how-it-works) · [The story](#the-story-including-the-failures) · [Contributing](CONTRIBUTING.md)
 
+<sub>v2.0.0 · last updated June 2026 · [changelog](CHANGELOG.md)</sub>
+
 </div>
 
 ---
 
-**critical-thinking** is an open-source [Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) for Claude Code and Claude-based agents that improves reasoning, forecasting, and decision-making, measured by blind LLM-judged evals. Frontier models already know the literature of good judgment from pretraining. Left to their defaults, they hedge in prose: "this could be confounding, or reverse causation, and the evidence is uncertain." This skill converts that latent knowledge into executed behavior. With it loaded, Claude states calibrated probabilities, anchors on base rates before vivid specifics, attaches a falsifier to every verdict, names its own cognitive traps while reasoning, and runs premortems on its own recommendations.
+**critical-thinking** is an open-source [Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) for Claude Code and Claude-based agents that makes Claude reason with explicit probabilities, base rates, and falsifiers: in blind evaluations it ranked first in 18 of 18 judge passes against baseline Claude and GPT-5.5. Frontier models already know the literature of good judgment from pretraining. Left to their defaults, they hedge in prose: "this could be confounding, or reverse causation, and the evidence is uncertain." This skill converts that latent knowledge into executed behavior. With it loaded, Claude states calibrated probabilities, anchors on base rates before vivid specifics, attaches a falsifier to every verdict, names its own cognitive traps while reasoning, and runs premortems on its own recommendations.
 
 The repo ships three things most skill repos leave out: the **full eval harness** (blind, multi-arm, balanced-rotation, LLM-judged), **every raw transcript and judge file** from three eval rounds, and the **hypotheses that broke** along the way. The honest parts are the useful parts.
+
+**At a glance**
+
+| | |
+|---|---|
+| What | An Agent Skill: one operating manual (SKILL.md) + 9 reference libraries + 51 book teaching files, all markdown |
+| Headline result | 8.99 vs 7.92 (Claude baseline) vs 7.30 (GPT-5.5 xhigh) mean judge score; best in 18/18 blind passes |
+| Evidence | 3 eval rounds with full transcripts and judge JSON in [evals/](evals/) |
+| Install | Copy one folder into `~/.claude/skills/`; no build, no dependencies, no API keys |
+| License | MIT |
 
 <div align="center">
 <img src="assets/eval-results.svg" alt="Three rounds of blind-judged results: skill arms scored first in every round" width="92%"/>
@@ -76,6 +88,8 @@ That's it. The skill self-triggers on reasoning-shaped requests ("is this true",
 ## The numbers
 
 Three rounds, every arm blind-judged on anonymized responses, three independent judges per problem, balanced slot rotation. Full data, per-problem tables, and judge quotes: [docs/EVALS.md](docs/EVALS.md). Raw material: [evals/](evals/).
+
+The headline result, in one quotable sentence: in a blind evaluation with three independent judges per problem, Claude with the critical-thinking skill scored 8.99 out of 10 across six reasoning problems, against 7.92 for Claude without the skill and 7.30 for GPT-5.5 at maximum reasoning effort, ranking first in 18 of 18 judge passes.
 
 | Round | Question asked | Result |
 |---|---|---|
@@ -152,26 +166,26 @@ The contribution rule follows from the project's own history: claims ride on eva
 
 | Book | Author(s) |
 |---|---|
-| Thinking, Fast and Slow | Kahneman |
-| The Scout Mindset | Galef |
-| Superforecasting | Tetlock & Gardner |
-| The Signal and the Noise | Silver |
+| [Thinking, Fast and Slow](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) | Kahneman |
+| [The Scout Mindset](https://en.wikipedia.org/wiki/The_Scout_Mindset) | Galef |
+| [Superforecasting](https://en.wikipedia.org/wiki/Superforecasting) | Tetlock & Gardner |
+| [The Signal and the Noise](https://en.wikipedia.org/wiki/The_Signal_and_the_Noise) | Silver |
 | Thinking in Bets | Duke |
 | Asking the Right Questions | Browne & Keeley |
 | A Rulebook for Arguments | Weston |
 | Thinking from A to Z | Warburton |
-| How to Lie with Statistics | Huff |
-| Calling Bullshit | Bergstrom & West |
+| [How to Lie with Statistics](https://en.wikipedia.org/wiki/How_to_Lie_with_Statistics) | Huff |
+| [Calling Bullshit](https://en.wikipedia.org/wiki/Calling_Bullshit) | Bergstrom & West |
 | Thinking in Systems | Meadows |
-| The Demon-Haunted World | Sagan |
-| The Beginning of Infinity | Deutsch |
+| [The Demon-Haunted World](https://en.wikipedia.org/wiki/The_Demon-Haunted_World) | Sagan |
+| [The Beginning of Infinity](https://en.wikipedia.org/wiki/The_Beginning_of_Infinity) | Deutsch |
 | Nonsense on Stilts | Pigliucci |
 | Lateral Thinking | de Bono |
-| Intuition Pumps | Dennett |
-| Factfulness | Rosling |
+| [Intuition Pumps](https://en.wikipedia.org/wiki/Intuition_Pumps_and_Other_Tools_for_Thinking) | Dennett |
+| [Factfulness](https://en.wikipedia.org/wiki/Factfulness) | Rosling |
 | Rational Choice in an Uncertain World | Hastie & Dawes |
 | Judgment in Managerial Decision Making | Bazerman & Moore |
-| How to Read a Book | Adler & Van Doren |
+| [How to Read a Book](https://en.wikipedia.org/wiki/How_to_Read_a_Book) | Adler & Van Doren |
 | The Art of Doing Science and Engineering | Hamming |
 
 </details>

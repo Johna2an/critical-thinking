@@ -170,8 +170,12 @@ contribution guideline.
 ## Limitations (read before citing these numbers)
 
 1. **Claude judged Claude.** All judges were Claude agents. Self-preference
-   bias is documented in LLM-as-judge literature. The blind rotation cancels
-   position bias, and it cannot cancel family bias. The GPT-5.5 gap in
+   bias is documented in the LLM-as-judge literature: see
+   [Panickssery et al. 2024, "LLM Evaluators Recognize and Favor Their Own
+   Generations"](https://arxiv.org/abs/2404.13076) and
+   [Zheng et al. 2023, "Judging LLM-as-a-Judge with MT-Bench"](https://arxiv.org/abs/2306.05685).
+   The blind rotation cancels position bias, and it cannot cancel family
+   bias. The GPT-5.5 gap in
    particular should be treated as unvalidated until re-judged by a
    different family. Re-judging the existing blinded transcripts is the
    single highest-value contribution; everything needed is in `evals/`.
