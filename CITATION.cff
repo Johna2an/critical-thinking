@@ -4,7 +4,7 @@ title: "critical-thinking: a reasoning skill for Claude, distilled from 51 books
 type: software
 authors:
   - name: "critical-thinking contributors"
-repository-code: "https://github.com/OWNER/critical-thinking"
+repository-code: "https://github.com/Johna2an/critical-thinking"
 license: MIT
 keywords:
   - claude

@@ -4,7 +4,7 @@
 
 # critical-thinking
 
-**A reasoning skill for Claude, distilled from 51 books on judgment, with the blind eval harness and every transcript that shaped it.**
+**A Claude Code skill distilled from 51 books on judgment, blind-evaled against GPT-5.5, with the full eval harness and every transcript that shaped it.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-1f2733?style=flat-square)](LICENSE)
 [![Books distilled](https://img.shields.io/badge/books_distilled-51-d98c0f?style=flat-square)](#the-library)
@@ -18,7 +18,7 @@
 
 ---
 
-Frontier models already know the literature of good judgment from pretraining. Left to their defaults, they hedge in prose: "this could be confounding, or reverse causation, and the evidence is uncertain." This skill converts that latent knowledge into executed behavior. With it loaded, Claude states calibrated probabilities, anchors on base rates before vivid specifics, attaches a falsifier to every verdict, names its own cognitive traps while reasoning, and runs premortems on its own recommendations.
+**critical-thinking** is an open-source [Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) for Claude Code and Claude-based agents that improves reasoning, forecasting, and decision-making, measured by blind LLM-judged evals. Frontier models already know the literature of good judgment from pretraining. Left to their defaults, they hedge in prose: "this could be confounding, or reverse causation, and the evidence is uncertain." This skill converts that latent knowledge into executed behavior. With it loaded, Claude states calibrated probabilities, anchors on base rates before vivid specifics, attaches a falsifier to every verdict, names its own cognitive traps while reasoning, and runs premortems on its own recommendations.
 
 The repo ships three things most skill repos leave out: the **full eval harness** (blind, multi-arm, balanced-rotation, LLM-judged), **every raw transcript and judge file** from three eval rounds, and the **hypotheses that broke** along the way. The honest parts are the useful parts.
 
@@ -60,14 +60,14 @@ The skill is a folder of markdown. No build, no dependencies.
 **Claude Code (macOS / Linux):**
 
 ```bash
-git clone https://github.com/OWNER/critical-thinking.git
+git clone https://github.com/Johna2an/critical-thinking.git
 cp -r critical-thinking/skill ~/.claude/skills/critical-thinking
 ```
 
 **Claude Code (Windows, PowerShell):**
 
 ```powershell
-git clone https://github.com/OWNER/critical-thinking.git
+git clone https://github.com/Johna2an/critical-thinking.git
 Copy-Item -Recurse critical-thinking\skill "$env:USERPROFILE\.claude\skills\critical-thinking"
 ```
 
@@ -197,6 +197,29 @@ The Act of Creation (Koestler) · Six Thinking Hats (de Bono) · A Whack on the 
 </details>
 
 The reference files are original prose: each book's ideas and methods restated as directives, written from scratch, with no reproduced text. Raw book text never enters this repo. If you are an author or publisher with a concern about a teaching file, open an issue and we will address it directly.
+
+## FAQ
+
+**What is the critical-thinking skill?**
+An open-source Agent Skill for Claude Code: a folder of markdown (an operating manual plus reference libraries) that loads into Claude's context and changes how it reasons. It was distilled from 51 books on judgment, decision-making, forecasting, systems thinking, creativity, and the philosophy of science.
+
+**How is this different from telling Claude to "think carefully"?**
+The skill replaces vague instruction with named, executable moves: state a calibrated probability, anchor on a base rate before case specifics, attach a falsifier to every verdict, run a premortem. In blind evals, those specific behaviors produced the entire scoring gap over a "reason carefully" baseline prompt that both arms shared.
+
+**How much does it improve Claude's reasoning?**
+On a 6-problem reasoning battery scored 0 to 10 by three blind judges per problem, Claude with the skill scored 8.99 against 7.92 without it and 7.30 for GPT-5.5 at xhigh reasoning effort, taking first place in 18 of 18 judge passes. Read [docs/EVALS.md](docs/EVALS.md) for the limitations before quoting these numbers, starting with the fact that the judges were Claude agents.
+
+**Does it work with ChatGPT, GPT, Gemini, or local models?**
+Untested, and testing it is [roadmap item 3](docs/ROADMAP.md). SKILL.md is plain markdown with no Claude-specific machinery, so it can be pasted into any system prompt. If the behavioral shifts transfer, this becomes a portable reasoning protocol; results from other models are a welcome contribution.
+
+**Is it free?**
+Yes. MIT license, no build step, no dependencies, no API keys. Copy one folder into `~/.claude/skills/`.
+
+**Where does the skill's knowledge come from? Is book text included?**
+Every reference file is original prose: each book's methods restated as directives, written from scratch. The repo distributes no book text, and raw sources are excluded by `.gitignore` pattern.
+
+**Can I add a book or change a directive?**
+Yes, and the bar is empirical: state the hypothesis, run the relevant eval round before and after, ship the diff with the data. [CONTRIBUTING.md](CONTRIBUTING.md) has the loop, plus the seven open problems where help is most wanted.
 
 ## License
 
