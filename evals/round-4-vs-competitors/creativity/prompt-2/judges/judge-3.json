@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 8,
+      "diversity": 8,
+      "boldness": 8,
+      "craft": 9,
+      "generativity": 8
+    },
+    "B": {
+      "originality": 7,
+      "diversity": 8,
+      "boldness": 7,
+      "craft": 7,
+      "generativity": 7
+    },
+    "C": {
+      "originality": 7,
+      "diversity": 8,
+      "boldness": 6,
+      "craft": 8,
+      "generativity": 7
+    },
+    "D": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 9,
+      "generativity": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "A",
+    "B",
+    "C"
+  ],
+  "best": "D",
+  "reasoning": "All four share the same skeleton (property-right easement, secret-keeping vault, negative-space media slot, plus a ritual/utility play), so differentiation comes down to the one or two models that break the pattern. D wins decisively on its Anti-Spectrum model: silence as a measurable null sold to machines (anechoic calibration references, dead-air honesty timestamps, silence-as-watermark for deepfake provenance) is the single most non-obvious idea across all four packets, and its self-stated facet taxonomy (physical/contractual/negative-space/null-in-datastream/ritual) makes its diversity explicit and genuinely orthogonal. A is a close second with the strongest prose craft and a sharp original fifth model (the Phantom Answer counterfactual anti-consultant billing against disasters that did not happen), but its other four are more conventional. B distinguishes itself with the Carbon Credit ocean-noise model (severing silence from any human ear via ESG markets) and the Forgetting Engine, earning solid diversity, though its writing is flatter and a few entries feel safe. C is the most self-aware and cleanly argued (it openly names the obvious plays it skipped and labels mechanism/need per item), but its models are the most predictable of the set, with the Damping Utility and Witness being competent rather than risky, so it ranks last despite high readability. The decisive axis is boldness and originality: D reaches a buyer no other answer imagines (an algorithm needing a trustworthy zero), which is why it takes the top slot."
+}

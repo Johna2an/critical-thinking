@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 9,
+      "generativity": 9
+    },
+    "B": {
+      "originality": 7,
+      "diversity": 7,
+      "boldness": 7,
+      "craft": 8,
+      "generativity": 7
+    },
+    "C": {
+      "originality": 7,
+      "diversity": 8,
+      "boldness": 6,
+      "craft": 8,
+      "generativity": 8
+    },
+    "D": {
+      "originality": 6,
+      "diversity": 6,
+      "boldness": 6,
+      "craft": 9,
+      "generativity": 6
+    }
+  },
+  "ranking": [
+    "A",
+    "C",
+    "B",
+    "D"
+  ],
+  "best": "A",
+  "reasoning": "Slot A wins on the two dimensions that matter most for this prompt, originality and diversity: its five concepts spread across genuinely independent axes (anonymous self-confession, a survivorship-bias lie that pulls the floor out, a real-time stress-testing prediction market, a literally rotting collection you must feed, and a non-building crisis-interception service), and the Compost Heap and Off-Ramp are ideas no other slot reaches. The Off-Ramp is also the boldest single move on the table, abandoning the museum's defining premise of a building you visit. Slot C ranks second on the strength of its self-aware first-principles spine (each concept negates a different \"atom\" of museum-ness) and the distinct grief register of the Mortuary, though three of its five converge on tropes shared with B and D. Slot B is competent and the Calibration Casino is sharp, but its Confessional Furnace and Decompression Chamber are near-duplicates of ideas A and C render more vividly. Slot D has the highest prose craft (toe tags, coroner protocols, cadavers) yet ranks last because four of its five concepts are the convergent cluster (autopsy, near-misses, confessional, fail-factory, the self-failing museum) that B and C also land, making it the least original set despite the finest finish."
+}

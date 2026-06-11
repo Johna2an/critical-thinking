@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "B": {
+      "rigor": 6,
+      "calibration": 5,
+      "bias_awareness": 5,
+      "depth": 7,
+      "usefulness": 8
+    },
+    "C": {
+      "rigor": 8,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 8,
+      "usefulness": 9
+    },
+    "D": {
+      "rigor": 7,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 8,
+      "usefulness": 8
+    }
+  },
+  "ranking": [
+    "A",
+    "C",
+    "D",
+    "B"
+  ],
+  "best": "A",
+  "reasoning": "All four reach the same sound verdict (decline as structured, counter-offer into a bounded bet), so discrimination comes from rigor, calibration, and bias-handling. Slot A wins decisively: it is the only response that carries explicit, internally consistent runway math through to a survival-relevant conclusion ($60k/mo burn, $400k minus ~$300k team cost = ~$100k true net plus ~$300k deferred spend), names the outside-view/base-rate move and the vivid-detail trap it guards against, applies fragility/barbell and a premortem, lists concrete falsifiers, and is the only one to attach a justified confidence (~70%) tied to the specific facts it lacks. Slot C is a close second with strong assumptions, the sharp \"30 person-months\" reframe, a correct sunk-cost check, and specific repricing, but gives no explicit probability and leaks a local-file-path footer. Slot D is solid and well-balanced (attribute-substitution and shifting-the-burden named, three diagnostics), but leaves burn as a \"$X/month\" placeholder and offers no calibrated confidence. Slot B is the weakest: good structure and a clear services-trap loop, but it never computes burn, hedges quantification (\"close to break-even\"), names fewer biases, and provides no explicit confidence, making it the least rigorous and least calibrated of the four."
+}

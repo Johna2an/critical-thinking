@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 7,
+      "diversity": 7,
+      "boldness": 7,
+      "craft": 9,
+      "generativity": 7
+    },
+    "B": {
+      "originality": 5,
+      "diversity": 6,
+      "boldness": 5,
+      "craft": 7,
+      "generativity": 6
+    },
+    "C": {
+      "originality": 8,
+      "diversity": 8,
+      "boldness": 8,
+      "craft": 8,
+      "generativity": 8
+    },
+    "D": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 8,
+      "generativity": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "C",
+    "A",
+    "B"
+  ],
+  "best": "D",
+  "reasoning": "D wins because it attacks the meaning of \"representing a day\" rather than just rotating the sensory channel: the Ant Almanac hands reading to a non-human swarm with no single \"now,\" the Vanishing Scent Map represents time by subtraction/erasure instead of accumulation, and the Skin Ledger makes the day private and offset per body. Its five axes (reader vs read, add vs subtract, shared vs private, continuous vs discrete, human vs non-human) are the most genuinely orthogonal, which lifts diversity, boldness, and generativity. C is a close second with the most non-obvious reframings of its peers (the borrowed-heartbeat clock, a room that clusters and scatters its furniture, light with mass), each tied to a broken assumption. A has the most vivid, controlled prose and one strong bold pick in the Indifferent Tide that de-centers humans entirely, but several of its entries are evocative versions of expected ideas. B is the most competent yet conventional set: most entries are gradients you slide along, and only the Waking Aviary and Collapsing Garden take real conceptual risk, so it ranks last."
+}

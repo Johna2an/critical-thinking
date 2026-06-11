@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 9,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "B": {
+      "rigor": 8,
+      "calibration": 5,
+      "bias_awareness": 7,
+      "depth": 8,
+      "usefulness": 8
+    },
+    "C": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "D": {
+      "rigor": 8,
+      "calibration": 7,
+      "bias_awareness": 7,
+      "depth": 8,
+      "usefulness": 8
+    }
+  },
+  "ranking": [
+    "C",
+    "A",
+    "D",
+    "B"
+  ],
+  "best": "C",
+  "reasoning": "All four correctly identify the core flaws (post hoc causation, the confounded 2020 year, the undecomposed revenue/employee ratio, survivorship bias in the competitor comparison, false-dichotomy remedy) and reach the same sound verdict, so discrimination comes from calibration, bias breadth, and second-order depth. C wins decisively: it is the only response that states an explicit calibrated probability (\"well under 30%\" that remote is the primary cause), names the widest set of biases (post hoc, selection/survivorship, resulting, regression to the mean), and adds genuinely advanced moves, a pre-stated falsifier and a premortem on the mandate. A is a close second with the strongest unique contribution, a red-team scenario where a five-day mandate backfires and worsens the very metric cited, plus the cleanest structure, but it offers no numeric confidence. D earns third on a sharp suggestion to use real within-firm output metrics rather than the financial ratio and a stated low confidence, edging out B, which is thorough and well-organized but the most conventional, with no explicit calibration and fewer distinct biases named."
+}

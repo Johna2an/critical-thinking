@@ -1,0 +1,22 @@
+Framework applied (not named to the reader): lateral-thinking + first-principles, from D:\Claude\skill-audit\quarantine\wanikua-thinking-skills\.claude\commands\lateral-thinking.md and \first-principles.md.
+
+First-principles move: the goal is "help an adult support a child's growth"; the grid of grades is just one method, and it bundles four hidden assumptions worth splitting apart — the audience is a parent, the unit is a subject, the verdict is comparative, and the school is the author. Each version below breaks a different one of these.
+
+FIVE VERSIONS
+
+1. THE LONGITUDINAL SELF (audience = the future student)
+A sealed time-capsule report addressed not to the parent but to the child five years older. Instead of "B+ in math," it records trajectory and turning points: "This was the term you stopped raising your hand, then started again in April." It is written in second person, archived, and reissued to the student at 18 as a narrative of who they were becoming. The school measures change-over-time and inflection moments, never a snapshot rank — the data only makes sense as a sequence, so a single term is unreadable in isolation, by design.
+
+2. THE EVIDENCE WALL (audience = the child, now; verdict = self-assembled)
+There is no card. The "report" is a curated physical/digital exhibition the student builds themselves: the three things they made they are proudest of, one thing they abandoned and why, and a single artifact a peer chose for them. The teacher's only contribution is two questions written on the wall, not answers. It measures what the child can defend in front of others, borrowing from a thesis defense and a gallery opening rather than an assessment — authorship moves from school to student, which is the assumption being broken.
+
+3. THE WEATHER REPORT (audience = parent; unit = the nervous system, not the subject)
+A card that reports the child's internal climate instead of academic output: energy, anxiety, curiosity, friendship-weather, sleep-debt, and "where attention actually went this month." Subjects appear only as terrain the weather passed over. The premise is that grades measure the residue of a state the school never reports, so this inverts the figure and ground — the mood is the headline and the grade is the footnote. It reads like a forecast ("high curiosity, scattered focus, a front of social stress moving in") and treats a child as an ecosystem to be understood, not a performance to be scored.
+
+4. THE DEBT & DIVIDEND LEDGER (audience = the child as their own steward; frame = compounding, not ranking)
+Borrowing the entry-point of a financial statement, this report tracks two columns no grade captures: assets compounding quietly (a habit, a skill getting deeper) and debts accruing silently (an avoided fear, a gap widening). It refuses any single number and instead shows what is appreciating versus what is being deferred to "future you." A 95% in a subject the child already mastered is logged as a low-yield holding; a hard-won 60% in something new is logged as a high-growth position. It measures direction of compounding, making the comparison purely against the child's own past balance sheet.
+
+5. THE NEGATIVE-SPACE REPORT (audience = the school itself; subject = the institution, not the child)
+The card is flipped to grade the environment, not the student. Each line reads: "Here is what this school failed to offer this child this term" — the question never asked, the talent that found no outlet, the boredom we caused, the support we didn't staff. The student's name appears once; the rest is the institution's own report card on how well it fit this specific human. It measures institutional fit as the variable and treats the child as the fixed constant the school must serve — a full inversion of who is being evaluated.
+
+STRANGEST / RISKIEST: Version 5, The Negative-Space Report. It is institutionally radical because it hands parents documented evidence of the school's own shortfalls, which most schools would never sanction. It might still work because it relocates accountability to the party that can actually change the system, converts the report card from a judgment of a powerless child into a feedback loop on a powerful institution, and would be a ferociously honest recruiting and improvement tool for any school brave enough to publish it.

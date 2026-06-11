@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 9,
+      "calibration": 6,
+      "bias_awareness": 7,
+      "depth": 8,
+      "usefulness": 9
+    },
+    "B": {
+      "rigor": 8,
+      "calibration": 5,
+      "bias_awareness": 6,
+      "depth": 8,
+      "usefulness": 8
+    },
+    "C": {
+      "rigor": 9,
+      "calibration": 7,
+      "bias_awareness": 8,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "D": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "C",
+    "A",
+    "B"
+  ],
+  "best": "D",
+  "reasoning": "All four nail the same correct core diagnosis (exit block/boarding as the binding constraint, a balancing loop with delay plus shifting-the-burden, induced demand refilling capacity), so discrimination comes from calibration, bias self-awareness, and falsification rigor. D wins decisively because it is the only response with genuinely decomposed, well-justified confidence: high on the structural diagnosis but an explicit 70-75% on exit block specifically, paired with a clean falsifiers section (segment ED LOS vs hire dates, correlate inpatient census, check LWBS/diversion) and the richest bias toolkit (attribute substitution, the Senge staff-swap test, hard-to-vary critique, and a denominator/\"out of what?\" check), all mapped to numbered Meadows leverage points. C is a close second with excellent hard-to-vary epistemics, four cheap diagnostic metrics, and a concrete refutation condition, but its confidence stays qualitative. A is strong on its data-tagged Five-Whys and counterfactual test yet offers only qualitative uncertainty and slightly thinner second-order analysis. B is clear and actionable with the best induced-demand analogy and burnout/cost second-order effects, but it is the lightest on explicit falsifiers and calibration, so it ranks last in a tight field."
+}

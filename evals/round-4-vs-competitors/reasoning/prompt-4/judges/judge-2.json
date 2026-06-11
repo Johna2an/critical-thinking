@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "B": {
+      "rigor": 6,
+      "calibration": 5,
+      "bias_awareness": 5,
+      "depth": 7,
+      "usefulness": 8
+    },
+    "C": {
+      "rigor": 8,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 9,
+      "usefulness": 7
+    },
+    "D": {
+      "rigor": 6,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 8,
+      "usefulness": 7
+    }
+  },
+  "ranking": [
+    "A",
+    "C",
+    "D",
+    "B"
+  ],
+  "best": "A",
+  "reasoning": "All four converge on the same sound verdict (decline as structured, counter-offer to ring-fence the team, secure reusability/IP, front-load payment), so discrimination comes from rigor, calibration, and bias-handling. A wins decisively: it is the only response with an explicit, justified confidence (~70%) tied to the specific missing facts that would move it, it leads with an explicit outside-view base rate for the reference class, adds a fragility/barbell check and clean concrete burn math (~$540k runway, ~$100k true net cash plus $300k deferred), and lists falsifiers and a premortem. C is second: its opportunity-cost quantification (30 person-months, $13k/person-month repricing toward ~$600k) and named biases (sunk-cost, \"compared to what,\" cobra-farming) are the sharpest on mechanism, though it gives no probability and leaks a noisy \"Relevant files applied\" line that is useless to the asker. D is third: strong on systems archetypes (shifting-the-burden) and naming attribute-substitution, but it ships an unfilled \"$X/month\" placeholder in the runway math, which reads as unfinished and weakens rigor. B is last: well-organized with a good three-order analysis and detailed premortem, but it is the least quantified, names the fewest biases/own-traps, and offers no explicit confidence."
+}

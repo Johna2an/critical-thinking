@@ -1,0 +1,6 @@
+{
+  "id": 4,
+  "name": "decide-under-uncertainty",
+  "skill_ref": "forecasting-and-decisions.md",
+  "prompt": "You run a 6-person startup with 9 months of cash runway. A large enterprise offers a $400k contract that would consume your entire team for 5 months building a custom feature that only that customer wants. Taking it extends your runway but freezes work on your core product and roadmap. Reason through whether to take the contract."
+}

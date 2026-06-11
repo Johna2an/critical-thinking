@@ -1,0 +1,27 @@
+Five radically different concepts for a museum devoted to failure — each built on a different theory of what the visitor should feel or learn, with its own spatial logic.
+
+---
+
+**1. THE AUTOPSY THEATER**
+*Theory: failure is a forensic object, and understanding requires dissection, not sympathy.*
+The building is a working morgue for dead projects. Visitors don a lab coat and are assigned a single "cadaver" — the Ford Edsel, Theranos, a collapsed bridge, a friendship — laid out on a steel slab under surgical lights. You don't read about why it died; you cut, peeling back layers (the marketing skin, the financials, the org chart, the founding lie) with provided instruments, following a coroner's protocol until you've written the cause of death on a toe tag in your own hand. The spatial logic is radial: cold dissection bays around a central pathology lab where the day's findings are aggregated into an ever-growing wall of cross-sections. You leave clinical, a little chilled, fluent in the *anatomy* of collapse rather than its emotion.
+
+**2. THE HALL OF NEAR MISSES**
+*Theory: the most instructive failures are the ones that almost didn't happen — survivorship bias made walkable.*
+Every successful thing has a graveyard of the nearly identical attempts that died for reasons of timing, luck, or a coin-flip decision. This museum exhibits success and its doppelgangers side by side: Facebook beside Friendster beside SixDegrees, penicillin beside the mold cultures three labs threw out the week before. The layout is a forking corridor — at each junction you physically choose left or right and the walls show you which path led to the statue and which to the unmarked grave, with the punchline that the difference was almost never merit. Visitors emerge unsettled about their own successes, having felt in their feet how thin the membrane is between triumph and oblivion.
+
+**3. THE CONFESSIONAL ARCHIVE (a museum with no objects)**
+*Theory: failure is only real when it's yours; you cannot learn it from someone else's wreckage.*
+There are no exhibits, no artifacts, no plaques — the building is an empty hush of soundproofed booths, like a cross between a sauna and a recording studio. You enter alone and the only thing on display is what you bring: you speak your own failure into the dark, and the archive plays back to you, anonymized and reshuffled, a stranger's confession that rhymes with yours. The spatial logic is centripetal and private — you spiral inward through ever-smaller, ever-quieter rooms toward a single chamber where the accumulated whispered failures of every prior visitor form a low, oceanic murmur. You leave having *contributed* rather than consumed, lighter, and aware you were never the only one.
+
+**4. THE FACTORY THAT FAILS ON PURPOSE**
+*Theory: failure isn't a noun to study, it's a verb to practice — and the only honest museum makes you do it, live.*
+This is a working workshop, not an exhibit hall. Every station hands you an impossible-on-purpose task — balance this unbalanceable structure, pitch this doomed idea to a panel paid to reject you, attempt a magic trick guaranteed to flop in front of strangers — and tracks your failures on a leaderboard where the *highest* failure count wins the prize. The layout is a loud, churning loop of try-fail-retry pods with no exit until you've logged a minimum number of public flops. The point is somatic inoculation: you walk out with calluses, having physically rehearsed being bad at things in front of others until the sting dulls. Feeling, not knowledge, is the deliverable — desensitization to shame.
+
+**5. THE MUSEUM THAT IS ITSELF FAILING**
+*Theory: a museum about failure that succeeds is a lie; integrity requires the institution to enact its own subject.*
+The exhibit is the building's own visible decay and dysfunction. Wall text contradicts itself; the audio guide is confidently wrong and labeled as such; rooms are half-built, over budget, behind schedule, with the project management documents framed beside the unfinished drywall. Curators publicly argue about what the museum is for, and visitor complaints are mounted as the newest acquisitions. The layout has no logic — it's deliberately disorienting, with dead-end galleries and a gift shop that sells nothing that works — so that the visitor's frustration *is* the exhibit. You learn that failure is not a thing institutions display from a safe distance; you learn it by being trapped inside one that refuses to pretend otherwise, and you can't tell where the satire ends and the genuine incompetence begins.
+
+---
+
+**Strangest / riskiest: #5, The Museum That Is Itself Failing.** It deliberately courts the worst outcome — a visitor who just thinks the place is badly run and leaves angry, missing the conceit entirely. But it might work because it's the only concept that closes the loop between subject and form: every other museum *talks about* failure from a position of curated success, which quietly contradicts the thesis. By making the institution metabolize its own subject, it's the only one that can't be accused of hypocrisy — and the ambient confusion of "is this on purpose?" is exactly the lived texture of real failure, which never announces itself as a lesson.

@@ -1,0 +1,18 @@
+Five reimagined report cards, each breaking a different load-bearing assumption of the grid-of-grades (who authors it, who it is about, what unit of time it measures, what it is for, and what medium it speaks in):
+
+**1. The Wake (assumption broken: the child is the subject)**
+The card is not about the student at all. It is a report on what the student left in their wake this term: the three classmates who learned something because of them, the question they asked that derailed a lesson productively, the kid who stopped eating alone because of them. The school becomes the instrument being measured by the child's effect on it, inverting the gaze. A child who tests poorly but raises the floor for everyone around them suddenly has the longest entry, and the social fabric of the class becomes the thing the report optimizes for.
+
+**2. The Open Bench (assumption broken: the school authors it)**
+There is no grader. The card is a public ledger the child fills in themselves and then submits to three witnesses of their own choosing (a peer, an adult who is not a teacher, and one person from outside the school) who each counter-sign or contest a single claim. Authority moves from the institution to a small jury the child assembles, so the document doubles as evidence of whether the child can find honest witnesses and survive their disagreement. The downstream effect is that learning to seek real feedback becomes the actual skill being trained, not the grade.
+
+**3. The Sediment Core (assumption broken: the present term is the unit)**
+Like a geologist's core sample, the card shows nothing about this term in isolation. It only renders change against the child's own past layers: the fear that dissolved, the habit that calcified, the curiosity that first appeared in year two and is still load-bearing now. A flat term reads as flat regardless of absolute marks, and a struggling child climbing out of a hole outranks a coasting top scorer, which kills the reward for staying comfortably ahead.
+
+**4. The Confidence Map (assumption broken: ranking is the purpose, and that the card should reassure)**
+The document plots every claim of skill against the child's own stated certainty, and only the gap is scored. Confidently wrong is the worst territory on the map; tentatively right and honestly-unsure are rewarded; smug mastery is flagged as fragile. It measures calibration rather than achievement, so the dangerous student is no longer the failing one but the one who does not know what they do not know, and over years it trains intellectual honesty into a reflex.
+
+**5. The Artifact (assumption broken: the medium is text and numbers at all)**
+There is no written report. Each term the child must hand the family one physical or made thing that could only exist because of what they learned: a working circuit, a repaired chair, a recorded argument with a teacher they won, a meal cooked from a chemistry unit. The school issues nothing; it only sets the constraint that the thing be undeniable and new. The grid disappears entirely because the proof is the object, and a parent can hold whether the year was real.
+
+**Strangest / riskiest:** The Wake. Measuring a child purely by their effect on others is the most likely to be gamed, to punish quiet kids, and to feel invasive, yet it might still work because it is the only version that makes the classroom itself the thing schools optimize, and it surfaces exactly the contribution that grades render invisible and parents most want to know.

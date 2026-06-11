@@ -1,0 +1,24 @@
+Five reinventions of the chair, each breaking a different assumption about what a chair is or what sitting is for. (Applied first-principles decomposition: a chair holds a body against gravity, at a height and angle, for a duration, for a job. Each version attacks a different one of those primitives plus its hidden assumption. Cross-checked for divergence so these are not five styles of one chair.)
+
+1. THE SETTLE
+Assumption broken: that a chair is a rigid pre-made object you sit *onto*. The Settle is a vat of a phase-change material (think non-Newtonian gel inside a tensile skin) with no fixed shape at all. You lean into empty space and the material flows, hardens around your exact load, and holds, then forgets the shape the instant you leave. There is no "the chair" between uses, only a puddle. It is hired for the job of perfect ergonomic fit for a body that nobody measured. What makes it distinct: it deletes form as a permanent property. The other four are all objects; this one is a behavior.
+
+2. THE COMMONS PERCH
+Assumption broken: that a chair seats one owner. The Commons Perch is a single continuous waist-high rail-and-saddle ring that runs through a public space, sloped and contoured so dozens of strangers half-perch on it shoulder to shoulder, none fully seated, none owning a spot. It is engineered for the *social* job a chair usually kills: a chair fixes you in place and ends mingling, but the Perch keeps everyone at a leaving-soon, talk-to-anyone posture. Distinct because it attacks ownership and the one-body boundary, where the Settle attacks form. Sitting here is a verb done *together*, deliberately too comfortable to leave standing and too unsettled to nest.
+
+3. THE TITHE
+Assumption broken: that the seat is the product you pay for. The Tithe is given away free; what it sells is you. Pressure-mapping fabric reads your spine load, fidget rate, and how long you last, and streams a posture and stress signature that the maker resells to insurers, physios, and your own employer. The "chair" is a data-harvesting surface wearing the costume of furniture. It is hired for the job of *sitting comfortably*, and quietly does a second job nobody asked for. Distinct because every other version here is honest about being a place to rest; this one's real function is hidden underneath the cushion, which is exactly why it might ship: free chairs win, and the business model lives in the telemetry.
+
+4. THE OPPONENT
+Assumption broken: that sitting is rest, that a chair should let your muscles switch off. The Opponent does the reverse. It is a self-balancing stool that never stops subtly destabilizing you, a powered wobble tuned just past your reflexes, so every minute seated is low-grade core and balance training. Eight hours in it leaves you stronger, not stiffer. It treats the chair as the largest unused exercise window in modern life and hires sitting to do the job of a gym you never go to. Distinct because the other four still serve rest or convening; this one redefines the *purpose* of sitting from recovery to load.
+
+5. THE NEGATIVE CHAIR
+Assumption broken: that a chair is an object in the room at all. The Negative Chair is nothing you can point to. The floor heaves into a contoured rise, a wall folds out a ledge, the ground itself remembers a body and offers support exactly where weight lands, then flattens back. There is no furniture to buy, store, or trip over, only architecture that grows a seat on demand and reabsorbs it. It is hired for the job of "somewhere to sit" without the cost of owning a thing that sits empty 90% of the day. Distinct because it dissolves the category: the other four are still recognizably *a chair*; this one removes the noun and leaves only the function, sitting as a temporary property of a room.
+
+STRANGEST / RISKIEST: The Tithe. A chair whose true product is your body's data is the version most likely to feel like a violation and get banned in workplaces. But it might still work precisely because free beats paid: people accept surveillance for convenience constantly (free email, free maps, smart speakers), and "a genuinely great ergonomic chair, at no cost" is a strong enough hook that the hidden telemetry business model could fund the whole thing. Its risk and its viability come from the same fact, that the value is extracted somewhere other than the seat.
+
+Files read for this task (all absolute paths):
+- D:\Claude\skill-audit\quarantine\cc-thinking-skills\skills\thinking-model-router\SKILL.md
+- D:\Claude\skill-audit\quarantine\cc-thinking-skills\skills\thinking-first-principles\SKILL.md
+- D:\Claude\skill-audit\quarantine\cc-thinking-skills\skills\thinking-jobs-to-be-done\SKILL.md
+- D:\Claude\skill-audit\quarantine\cc-thinking-skills\skills\thinking-inversion\SKILL.md

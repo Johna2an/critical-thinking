@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 9,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "B": {
+      "rigor": 8,
+      "calibration": 5,
+      "bias_awareness": 6,
+      "depth": 7,
+      "usefulness": 8
+    },
+    "C": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "D": {
+      "rigor": 9,
+      "calibration": 7,
+      "bias_awareness": 7,
+      "depth": 8,
+      "usefulness": 8
+    }
+  },
+  "ranking": [
+    "C",
+    "A",
+    "D",
+    "B"
+  ],
+  "best": "C",
+  "reasoning": "All four correctly hit the core flaws (post hoc/confounding, undecomposed revenue-per-employee ratio, survivorship-biased competitor cherry-pick, false-dichotomy remedy, ignored attrition costs), so they cluster high on basic rigor and usefulness; the separation comes from calibration and bias awareness. C wins decisively: it is the only response that quantifies confidence twice (primary-cause probability \"well under 30%,\" best-fix probability \"lower still\"), names the widest set of distinct biases including resulting and regression to the mean, and adds genuine epistemic discipline with a pre-registered falsifier and a premortem on the mandate. A is a very close second with the sharpest second-order insight (a 5-day mandate could drive revenue/employee further down via top-performer attrition, the cure worsening the cited metric) and explicit naming of motivated reasoning, but it offers only a qualitative \"Weak\" verdict. D is strong and crisp, with the cleanest counterfactual test, the full 2x2, an irreversibility point, and real output-metric alternatives, but it surfaces fewer distinct biases and only a vague \"low\" confidence. B is thorough and well-structured with the best cost-benefit pilot framing, yet it is the most conventional: no quantified confidence, no falsifier, and fewer named biases, making it the least differentiated of an excellent field."
+}

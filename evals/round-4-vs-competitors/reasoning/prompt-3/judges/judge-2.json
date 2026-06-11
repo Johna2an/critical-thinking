@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 8,
+      "calibration": 7,
+      "bias_awareness": 7,
+      "depth": 7,
+      "usefulness": 8
+    },
+    "B": {
+      "rigor": 7,
+      "calibration": 6,
+      "bias_awareness": 6,
+      "depth": 7,
+      "usefulness": 7
+    },
+    "C": {
+      "rigor": 9,
+      "calibration": 8,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "D": {
+      "rigor": 9,
+      "calibration": 10,
+      "bias_awareness": 9,
+      "depth": 10,
+      "usefulness": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "C",
+    "A",
+    "B"
+  ],
+  "best": "D",
+  "reasoning": "All four nail the core diagnosis (downstream exit block/boarding, balancing loop with delay, shifting-the-burden, induced demand), so discrimination comes from calibration, bias-awareness, and depth of verification. D wins: it gives the only explicit, well-split confidence (structural diagnosis high; exit-block-specific 70-75%, cheaply testable), names attribute substitution and the Senge swap test, supplies a clean falsifier section (what would change its mind), a denominator check decomposing ED LOS into segments, elective-surgery smoothing, and numbered Meadows leverage points; its only blemish is mild teleology (\"the ED wants to survive\"). C is a very close second with the tightest diagnostic checklist (four numbers with thresholds), sharp hard-to-vary/substitution reasoning, and the \"surface the mental model as a testable claim\" move, but it lacks D's explicit probability calibration. A is clean, robust-to-uncertainty, and has a well-structured Five-Whys verification plan, but is less deep and offers no quantified confidence. B has the strongest second-order-effects prose (burnout/retention spiral, mental-model hardening) but the thinnest verification rigor and vaguest confidence, placing it last."
+}

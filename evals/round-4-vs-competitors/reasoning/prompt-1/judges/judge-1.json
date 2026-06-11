@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 7,
+      "calibration": 8,
+      "bias_awareness": 6,
+      "depth": 7,
+      "usefulness": 8
+    },
+    "B": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 8,
+      "depth": 8,
+      "usefulness": 9
+    },
+    "C": {
+      "rigor": 5,
+      "calibration": 6,
+      "bias_awareness": 5,
+      "depth": 5,
+      "usefulness": 6
+    },
+    "D": {
+      "rigor": 8,
+      "calibration": 8,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 8
+    }
+  },
+  "ranking": [
+    "D",
+    "B",
+    "A",
+    "C"
+  ],
+  "best": "D",
+  "reasoning": "D and B are the two strongest, both pairing the bottom-up demand chain with a quantified independent BLS top-down cross-check and explicitly handling the city-vs-metro fork. D wins on depth and bias awareness: it is the only answer that names multiple specific traps (anchoring on the textbook figure, survivorship, confirmation/salience from famous engineer-CEOs), runs two numerically-grounded cross-checks (BLS plus Piano Technicians Guild), and frames (b) as an explicit Bayesian partition with a defensible ~28% (range 22-35%). B is a very close second, with the most honest reconciliation of its two methods (noting they disagree 2-3x and shading toward the lower blend to land near the classic ~50 city figure) and crisp calibration, though it names fewer biases. A is solid and well-calibrated but only gestures at the top-down BLS count without computing it, weakening its cross-check. C is weakest: it overstates engineering alone as ~32% to inflate STEM to 38-40% (above the survey literature), does no numeric external cross-check, and ignores the metro definition in its verdict."
+}

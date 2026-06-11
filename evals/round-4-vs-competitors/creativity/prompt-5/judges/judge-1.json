@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 10,
+      "generativity": 9
+    },
+    "B": {
+      "originality": 8,
+      "diversity": 9,
+      "boldness": 8,
+      "craft": 9,
+      "generativity": 8
+    },
+    "C": {
+      "originality": 8,
+      "diversity": 8,
+      "boldness": 7,
+      "craft": 7,
+      "generativity": 8
+    },
+    "D": {
+      "originality": 6,
+      "diversity": 6,
+      "boldness": 6,
+      "craft": 5,
+      "generativity": 6
+    }
+  },
+  "ranking": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "best": "A",
+  "reasoning": "A wins on craft and originality: the Bet Slip (a prediction market that grades the adults and makes low expectations \"a losing position with a public scoreboard\") and the False-Color Scan (a wordless emotional heat map for the child) are genuinely novel, and every idea is made concrete with sample lines and earned metaphors (aviation black box, seed-packet husbandry, sculptor's negative space). B is close behind and arguably the most evenly excellent set, with sharply distinct axes (Wake, Friction Log, Portfolio of Wrongness, Constellation, Seismograph) and crisp borrowed frames, but it lands a notch below A on peak originality and vividness. C is strong, with the Confidence Map (calibration, \"confidently wrong is the worst territory\") as a standout, yet its Wake and Artifact overlap with ideas other slots render more boldly and its prose is less alive. D ranks last: it opens by naming its framework and a literal file path, which breaks the artifact frame and reads as scaffolding, and several of its five (time capsule, evidence exhibition, institution-graded card) are weaker restatements of concepts A, B, and C execute with more nerve, leaving only the Debt and Dividend Ledger as a fresh contribution."
+}

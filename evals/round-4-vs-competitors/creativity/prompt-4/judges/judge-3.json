@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 8,
+      "generativity": 9
+    },
+    "B": {
+      "originality": 7,
+      "diversity": 8,
+      "boldness": 7,
+      "craft": 8,
+      "generativity": 8
+    },
+    "C": {
+      "originality": 5,
+      "diversity": 6,
+      "boldness": 5,
+      "craft": 7,
+      "generativity": 6
+    },
+    "D": {
+      "originality": 6,
+      "diversity": 5,
+      "boldness": 6,
+      "craft": 9,
+      "generativity": 7
+    }
+  },
+  "ranking": [
+    "A",
+    "B",
+    "D",
+    "C"
+  ],
+  "best": "A",
+  "reasoning": "A wins on the dimensions that matter most for this prompt: its five concepts spread across the widest set of conceptual axes (collection-source, epistemics/truth, temporality, material impermanence, delivery-timing), and two of them take the boldest swings in the field. The Off-Ramp abandons the museum's defining feature (a building you visit) to intercept people in the 90 seconds when a lesson can still change a decision, and the Compost Heap is a building that physically cannot exist next month because it is fed and depleted by visitors. A also carries the sharpest, most argued risk justification. B is a strong runner-up: distinct theories, a fresh Calibration Casino with a public miscalibration score, and clean craft, but slightly safer overall. D has the best prose and most vivid sensory detail (the Autopsy Theater's instruments and toe tag are excellent), yet it is penalized for convergence: three of its five concepts (self-failing museum, confessional archive, survivorship/near-misses) recur in B and C, so its internal diversity is the weakest. C ranks last because its register leans conventional, the Mortuary and Confessional are familiar moves and the Reversal Hall is a common failure-became-success trope, and its appended frameworks note adds meta-commentary rather than concept value."
+}

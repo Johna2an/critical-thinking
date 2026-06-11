@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 8,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 9,
+      "generativity": 9
+    },
+    "B": {
+      "originality": 7,
+      "diversity": 8,
+      "boldness": 7,
+      "craft": 8,
+      "generativity": 7
+    },
+    "C": {
+      "originality": 7,
+      "diversity": 8,
+      "boldness": 7,
+      "craft": 8,
+      "generativity": 7
+    },
+    "D": {
+      "originality": 7,
+      "diversity": 7,
+      "boldness": 7,
+      "craft": 9,
+      "generativity": 7
+    }
+  },
+  "ranking": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "best": "A",
+  "reasoning": "All four share a common gene pool (the objectless confessional, survivorship-bias walk, the live failure-engine, the self-failing institution), so the contest turns on which slot adds genuinely new axes and pushes furthest. A wins because two of its five break the museum frame in ways the others never reach: THE COMPOST HEAP (a building physically designed to decompose, admission paid in your own artifact, antifragile by construction) and THE OFF-RAMP (abandons the building entirely to intercept people in the 90 seconds of live failure with base-rate triage). These are the boldest and most generative ideas in the whole field, and A's framing of each concept around a specific broken assumption gives it the cleanest conceptual diversity. B and C are nearly twins, both anchored by the strong recursive \"Museum That Is Failing\" plus a calibration/rigged-game floor; both are well-crafted but recycle the same three or four archetypes, capping their originality and boldness. C edges below B only slightly on coherence, and its appended frameworks note adds little. D has the highest single-concept craft (the Autopsy Theater dissection protocol is the most vivid set-piece in the set and the self-failing-museum write-up is the sharpest), but its five lean more conventional and overlap heavily with B and C, so it trails on diversity and originality despite the prose quality."
+}

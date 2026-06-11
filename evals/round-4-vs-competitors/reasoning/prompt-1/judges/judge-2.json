@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 7,
+      "calibration": 8,
+      "bias_awareness": 5,
+      "depth": 6,
+      "usefulness": 7
+    },
+    "B": {
+      "rigor": 9,
+      "calibration": 8,
+      "bias_awareness": 7,
+      "depth": 8,
+      "usefulness": 9
+    },
+    "C": {
+      "rigor": 5,
+      "calibration": 5,
+      "bias_awareness": 5,
+      "depth": 5,
+      "usefulness": 6
+    },
+    "D": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "B",
+    "A",
+    "C"
+  ],
+  "best": "D",
+  "reasoning": "D is the strongest: it runs two independent methods on (a) (Fermi demand chain plus a BLS top-down), reconciles their convergence in the low hundreds, and explicitly names and guards against anchoring on the textbook answer, survivorship bias, and confirmation/salience bias from famous founder-engineers; on (b) it uses an explicit Bayesian partition, lands on a well-calibrated ~28%, correctly notes business/econ is the larger bucket, and states what evidence would update it. B is a close second and is the only other answer that does a genuine BLS outside-view cross-check on (a), honestly flagging the 2-3x disagreement between the demand chain and the base rate and shading accordingly; its (b) figure (~30%) is well-grounded. A is competent and well-calibrated on (b) but treats (a) with a single demand-side chain and no top-down anchor, and is thin on explicit bias-naming. C ranks last because of a substantive rigor error: it claims engineering undergrad alone is \"low-to-mid 30s percent (~32%),\" overstating the well-documented ~20-25% and inflating its (b) estimate to ~38%, and it only gestures at the BLS cross-check without computing it. The decisive separators are the BLS outside-view cross-check (present in D and B, absent or merely mentioned in A and C) and the accuracy of the engineering-undergrad base rate (C overstates it)."
+}

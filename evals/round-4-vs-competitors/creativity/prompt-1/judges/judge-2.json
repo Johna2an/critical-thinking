@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 8,
+      "diversity": 8,
+      "boldness": 7,
+      "craft": 9,
+      "generativity": 7
+    },
+    "B": {
+      "originality": 6,
+      "diversity": 6,
+      "boldness": 6,
+      "craft": 7,
+      "generativity": 6
+    },
+    "C": {
+      "originality": 8,
+      "diversity": 7,
+      "boldness": 7,
+      "craft": 8,
+      "generativity": 8
+    },
+    "D": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 9,
+      "generativity": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "A",
+    "C",
+    "B"
+  ],
+  "best": "D",
+  "reasoning": "D wins on every axis: its five mechanics sit on genuinely separate conceptual axes (a wandering portable \"down\" in WICK, a vestibular duel in KEEL, momentum-banking in CLOT, propellant-as-consumable-ground in LICHEN, and a hardening lattice of frozen straight-line shots in SUTURE), and SUTURE in particular is the single most original and generative idea in the set, discovering that deleting the arc yields a geometry sport rather than a ballistics one. D also reasons hardest about actual playability, using the KEEL spectator problem to propose a head-up-display solution. A is a close second with the best prose craft and a standout bluffing-about-invisible-mass concept (SUMP) plus the socially-constructed-surface axis (SHROUD), but its axes overlap D's without exceeding them. C edges out B on the strength of PARALLAX, a truly novel perception-based sport built on the loss of a shared reference frame, though QUORUM and CAROM retread collective-balance and billiards ideas. B is the most competent but also the safest: ECHO is conventional ricochet-dodgeball and SECOND SKIN is a familiar rotating-shell trope, so it lands last despite clean execution."
+}

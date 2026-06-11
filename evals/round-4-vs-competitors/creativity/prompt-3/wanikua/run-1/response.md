@@ -1,0 +1,18 @@
+Five ways to represent the passage of a single day, each on a different sense and a different conceptual logic:
+
+**1. The Tide Loaf (taste + accumulation)**
+A single round of bread you tear from once an hour. The dough is baked in concentric rings seeded with different ingredients, so the flavor of the piece in your mouth tells the hour: bright lemon-and-salt at the rim for dawn, dense honey and butter through the warm middle of the day, smoke and bitter cocoa at the dark center for night. Time is something you eat your way into, and the day ends when you reach the last, almost-burnt core. Distinct because the medium is consumed and destroyed in the reading: the only way to know the hour is to remove it forever.
+
+**2. The Thermal Wall (temperature + spatial gradient)**
+A waist-high clay wall you walk the length of, blindfolded, palm dragging along its surface. The wall is plumbed with water that runs cold at the start, climbs to skin-warm, peaks at a near-uncomfortable heat, then cools again to the far end. A day is a distance you traverse with your hand, reading the hour as the temperature under your fingers rather than any number. Distinct because it makes time a place you physically move through, sensed only through the skin, with no light, sound, or scent involved.
+
+**3. Drift (motion + a single floating object)**
+One cork bob set adrift at one end of a long, slow, engineered water channel whose current speeds and slackens by design. Where the cork sits in the channel is the hour; you read the day by glancing at its position, the way you'd glance at a face you can't see ticking. It loiters in the dead pools of midday and races through the narrows of dawn and dusk, so the day has a felt rhythm of rush and stall. Distinct because nothing is consumed or stored: a free body's position in a moving medium is the entire instrument, and it resets when someone carries the cork back.
+
+**4. The Waking Aviary (sound + biological recurrence)**
+A room of different living creatures, each wired by instinct to voice at its own hour: crickets that quit at first light, a specific bird that only sings mid-morning, the deep afternoon drone of bees, the evening frog, the night moth tapping glass. You know the time by which species owns the air right now, the way villagers once knew the hour by which church and which trade was loud. Distinct because the "instrument" is a chorus of independent agents, not one scale, so the day is a relay of voices handing off, never a gradient you slide along.
+
+**5. The Collapsing Garden (texture + structural decay)**
+A hand-built sculpture of stacked materials chosen to fail on schedule: a frost crust that gives way as it thaws at dawn, a tower of damp sand that slumps as it dries through midday, a salt bridge that dissolves under afternoon humidity, a wax arch that sags as the room warms, a wick of ice at the top that is gone by night. You read the hour by running your fingers over what has already fallen and what still stands. Distinct because it encodes the day as one-way structural collapse: a system that only ever loses integrity, so the time is legible from the ruins, and once it has fully fallen the day cannot be re-read or run backward.
+
+**Strangest / riskiest: The Collapsing Garden.** It is the only one with no operator and no steady source driving it; it is a built thing engineered to destroy itself in exactly twenty-four hours, which makes it absurdly hard to tune and fragile to weather. It might still work because real days are irreversible too, and a clock you can never rewind, that you read by touching its wreckage, captures the one-way truth of time more honestly than any dial that politely returns to where it started.

@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 8,
+      "calibration": 5,
+      "bias_awareness": 7,
+      "depth": 7,
+      "usefulness": 8
+    },
+    "B": {
+      "rigor": 8,
+      "calibration": 4,
+      "bias_awareness": 6,
+      "depth": 8,
+      "usefulness": 7
+    },
+    "C": {
+      "rigor": 9,
+      "calibration": 6,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "D": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "C",
+    "A",
+    "B"
+  ],
+  "best": "D",
+  "reasoning": "All four reach the same correct structural diagnosis (downstream exit block/boarding, hiring as a shifting-the-burden symptomatic fix), so differentiation turns on calibration, self-bias-naming, and depth. D wins decisively on calibration: it is the only response giving explicit split confidence (structural diagnosis high; exit-block-specifically moderate at 70-75%), pairs it with a dedicated falsifiers section, names attribute substitution plus the Senge swap-test and hard-to-vary criterion, cites Meadows leverage points by number, and adds the non-obvious elective-surgery-smoothing lever. C is a very close second, matching D on bias-awareness and depth (substitution, \"you get what you measure,\" elective smoothing, full-capacity protocol) but offering no numeric confidence. A is rigorous and well-structured with a tight Five-Whys verification plan and a useful \"fix is robust to which constraint it is\" insight, but it is thinner on second-order effects and gives no probabilities. B has the strongest second-order analysis (veteran burnout, hardening mental models) yet trails on quantified confidence and on naming its own cognitive traps, placing it last in a tight field."
+}

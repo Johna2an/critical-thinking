@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "reinvent-the-chair",
+    "prompt": "Reinvent the chair in five genuinely different ways. Each version should challenge a different assumption about what a chair is or what sitting is for. Do not give five styles of the same chair."
+  },
+  {
+    "id": 1,
+    "name": "zero-gravity-sport",
+    "prompt": "Invent five sports that could only exist in zero gravity, each built around a different core mechanic that gravity normally provides on Earth (falling, balance, weight, ground, the arc of a thrown object). Make each genuinely playable, not an existing sport that happens to float."
+  },
+  {
+    "id": 2,
+    "name": "company-that-sells-silence",
+    "prompt": "Propose five fundamentally different business models for a company whose only product is silence. Each model should monetize silence through a different mechanism and serve a different human need."
+  },
+  {
+    "id": 3,
+    "name": "represent-a-day",
+    "prompt": "Design five completely different ways to represent the passage of a single day, without using a clock, digits, or a calendar. Each should rely on a different sense or medium (smell, temperature, texture, sound, taste, motion, and so on)."
+  },
+  {
+    "id": 4,
+    "name": "museum-of-failure",
+    "prompt": "Imagine five radically different concepts for a museum devoted to failure. Each concept should embody a different theory of what a visitor should feel or learn, with its own spatial layout and curatorial logic."
+  },
+  {
+    "id": 5,
+    "name": "reinvent-the-report-card",
+    "prompt": "Reimagine the school report card in five genuinely different forms, each based on a different philosophy of what is worth measuring and who the audience really is. Escape the grid-of-grades frame entirely."
+  }
+]

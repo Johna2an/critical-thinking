@@ -1,0 +1,20 @@
+Five ways to represent the passage of a single day, each on a different sensory medium, each breaking a different assumption:
+
+**1. THE BREAD CLOCK (taste + fermentation)**
+A single sourdough starter is the whole instrument. At dawn it's poured as thin, sweet, milky batter you drink; by mid-morning it has soured and thickened to a tangy gel; at noon it's a sharp, gassy, almost alcoholic paste; by dusk it has over-fermented into something vinegary and biting that you spit out. You read the hour by how much the yeast has eaten. The day isn't measured against the body, the day is something living that ages on its own schedule and you taste the stage it's in. Breaks the assumption that the timekeeper must be inert.
+
+**2. WEIGHT-OF-LIGHT BLANKET (temperature + pressure on skin, eyes closed)**
+A person lies blindfolded under a smart blanket that does nothing but change temperature and how heavily it presses down. Pre-dawn it's cold and almost weightless, a thin sheet. As the "sun" climbs it grows warmer and heavier, pressing into the chest at noon like full sunlight has mass. Evening cools and lifts, midnight is freezing and feather-light again. You feel the day as a thing that leans on you and then releases, sensed entirely through the skin with no image at all. Breaks the assumption that a day is something you watch rather than something that watches and weighs on you.
+
+**3. THE ROOM THAT MOVES ITS FURNITURE (motion + spatial rearrangement)**
+An empty room is the clock; the objects in it migrate across the floor over 24 hours, driven by slow hidden tracks. At dawn the chair, lamp, and rug are all clustered against the east wall, huddled. Through the day they fan out and spread to the far corners, reaching maximum spread and maximum distance from each other at noon, then slowly drift back and re-cluster against the west wall by night. You tell the time by walking in and reading how scattered or gathered the room is. Breaks the assumption that time is shown by one indicator moving, instead the whole environment loosens and re-tightens like a breath.
+
+**4. THE SCENT TIDE (smell, released as a moving front)**
+A long hallway is seeded so that a wall of smell sweeps down its length exactly once per day, like a slow weather front you can walk into. Dawn smells of cut grass and cold stone near the entrance; that band moves down the corridor as hours pass, trailed by midday's hot dust and citrus, then afternoon's warm resin and skin, then evening's woodsmoke and earth at the far end. To know the hour you find where in the hall the "now" smell currently sits. The day is literally a place you can stand in, ahead of it or behind it. Breaks the assumption that time happens to you where you are, here you can outrun the morning or wait for the night to arrive.
+
+**5. THE INHERITED HEARTBEAT (sound, but borrowed from a stranger's biology)**
+A speaker plays the live, anonymized heart rate of one real human somewhere on Earth, sonified as a slow drum. You hear the day pass through someone else's physiology: the sluggish 50-beat thud of their deep sleep, the sudden spike of their alarm and morning rush, the jittery climb of an argument or a coffee at noon, the long calm plateau of their evening, the deceleration back into sleep. You never see a number; you infer the time of day from the shape of a life being lived. Breaks the assumption that the clock should be impersonal and the same for everyone, this one is one specific beating heart and it's not yours.
+
+---
+
+**Strangest / riskiest: #5, The Inherited Heartbeat.** It's the only one that hands the measurement of YOUR day to a stranger's body, so it can lie, jet-lag, or fall asleep at noon, which destroys precision. It might still work because a day was never really about precision; it's about the felt arc of waking, exertion, and rest, and a single human heart traces that arc more honestly than any dial. The "error" (someone else's offset rhythm) becomes the most human feature of the instrument.

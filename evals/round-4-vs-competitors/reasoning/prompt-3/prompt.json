@@ -1,0 +1,6 @@
+{
+  "id": 3,
+  "name": "diagnose-the-system",
+  "skill_ref": "systems-science-and-creativity.md",
+  "prompt": "A hospital emergency department keeps running over capacity despite hiring more nurses every year. Each new hire relieves the pressure for a few months, then wait times climb back to where they were. Leadership blames 'lazy staff' and 'a bad flu season.' Diagnose what is really going on, and propose the highest-leverage fix."
+}

@@ -1,0 +1,22 @@
+Five concepts for a Museum of Failure, each breaking a different fixed assumption about what a museum is and does.
+
+---
+
+**1. THE CONFESSIONAL**
+*Assumption broken: that you come to study other people's failures.* There are almost no exhibits. You enter alone, are handed a card, and walk a descending spiral of dim soundproof booths, each one prompting you to record one of your own failures into a microphone (a marriage, a company, a betrayal, a wasted decade). The recordings are anonymized and become the museum's only collection: every visitor hears, through their booth wall, the unedited confessions of strangers who came before. You leave learning that failure is the most common human substance and the loneliest secret, simultaneously. The curatorial logic is that the museum has no permanent collection except the one you and the other visitors deposit by being there.
+
+**2. THE SURVIVORSHIP WING**
+*Assumption broken: that a museum tells the truth.* This museum is a deliberate, gorgeous lie, and the lie is the lesson. Floor one is a triumphant hall of unicorn startups, hit records, and won wars, beautifully lit, the standard hero-story of success. Then a single unmarked door drops you into the basement: the identical products, scripts, and battle plans of the thousands who used the exact same method and died, stacked in industrial shelving to the ceiling, unlit, uncatalogued, most of them indistinguishable from the winners upstairs. You feel the vertigo of realizing the upstairs gallery was built only because the survivors got to write the wall text. It teaches survivorship bias by making you complicit in it before it pulls the floor out.
+
+**3. THE LIVING LABORATORY**
+*Assumption broken: that the failures on display are finished and in the past.* Nothing here is historical. It is a working failure-engine: bridges, drug molecules, evacuation plans, and AI models are stress-tested to destruction in real time in front of you, all day, every day. Visitors place small bets on which prototype on the floor will break next and how, then watch it happen, so the building is half museum and half prediction market. The point you carry out is visceral rather than reverent: failure is a process you run on purpose to find the edge of the possible, not a tombstone you visit. The layout is a factory floor with seating, not galleries with vitrines.
+
+**4. THE COMPOST HEAP**
+*Assumption broken: that a museum preserves things.* This museum is designed to rot, and admission requires you to feed it. You bring one artifact of your own failure (the rejection letter, the failed product, the dead relationship's ring) and surrender it at the door; in exchange you may take any decayed object a previous visitor left. The collection is in permanent decomposition, objects breaking down, getting taken away, getting replaced, so the building you visit this month physically cannot exist next month. The lesson lives in the impermanence itself: nothing is kept, failure is metabolized into the next person's starting material rather than enshrined, and the museum's antifragile trick is that it is fed by exactly the thing it is about.
+
+**5. THE OFF-RAMP**
+*Assumption broken: that a museum is a place you go, look, and leave unchanged.* This is not a building at all. It is a distributed service that intercepts you at the live moment of failing: a one-tap line you call from the parking lot after you are fired, a kiosk in the bankruptcy court hallway, a card slipped under the door of the hospital room after the diagnosis. A trained "docent" walks you through the reference class ("here are the base rates, here is what the thousand people before you who stood exactly here did next, here is what worked"). The exhibit is the timing: it reaches you in the ninety seconds when the lesson can still change the next decision, then disappears. The curatorial logic is triage, not display.
+
+---
+
+**Strangest/riskiest: #5, The Off-Ramp** — it abandons the museum's defining feature, a building you visit, and bets everything on intercepting people mid-crisis, which risks feeling intrusive or exploitative. It might still work because failure's lesson is almost worthless in a calm gallery years later and almost priceless in the first minutes, and a "museum" that delivers base rates exactly when a person is about to make their next decision is the only version that could measurably change an outcome rather than just being looked at.

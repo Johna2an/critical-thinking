@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "rigor": 9,
+      "calibration": 9,
+      "bias_awareness": 9,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "B": {
+      "rigor": 6,
+      "calibration": 5,
+      "bias_awareness": 6,
+      "depth": 7,
+      "usefulness": 8
+    },
+    "C": {
+      "rigor": 8,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 9,
+      "usefulness": 9
+    },
+    "D": {
+      "rigor": 6,
+      "calibration": 6,
+      "bias_awareness": 8,
+      "depth": 8,
+      "usefulness": 8
+    }
+  },
+  "ranking": [
+    "A",
+    "C",
+    "D",
+    "B"
+  ],
+  "best": "A",
+  "reasoning": "All four reach the same sound verdict (decline as structured, counter-offer to ring-fence the team, secure upfront/milestone cash, demand reusability/IP), so discrimination rests on rigor, calibration, and bias-handling. A wins: it carries the runway math all the way through ($60k burn, ~$100k true net cash, ~$300k deferred onto the customer, 5-6 month extension), explicitly invokes outside-view base rates and the inside-view discount, adds a fragility/barbell check and a premortem, lists concrete falsifiers, and is the only response to attach an explicit, justified confidence (~70%) plus the facts that would move it. C is a close second and arguably the deepest on the opportunity-cost mechanism (30 person-months framing, \"compared to what?\" test, a correct sunk-cost check) but offers no explicit probability and leaks an internal \"Relevant files applied\" artifact. D makes the sharpest single bias call (attribute substitution) and uses systems archetypes well, but undercuts its own rigor by leaving the burn figure as an unfilled \"$X/month\" placeholder. B is solid on second/third-order effects and negotiation terms but is the least quantified (declines to estimate burn), names biases only implicitly, and gives no explicit confidence, landing it last."
+}

@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 7,
+      "diversity": 7,
+      "boldness": 7,
+      "craft": 9,
+      "generativity": 7
+    },
+    "B": {
+      "originality": 6,
+      "diversity": 7,
+      "boldness": 6,
+      "craft": 8,
+      "generativity": 6
+    },
+    "C": {
+      "originality": 8,
+      "diversity": 8,
+      "boldness": 8,
+      "craft": 8,
+      "generativity": 8
+    },
+    "D": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 9,
+      "craft": 8,
+      "generativity": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "C",
+    "A",
+    "B"
+  ],
+  "best": "D",
+  "reasoning": "All four share a template (five sense-keyed instruments plus a riskiest pick), so the discrimination is in conceptual reach. D ranks first because it consistently attacks the deepest assumption layer: it reframes \"representing a day\" as something a non-human swarm reads (Ant Almanac), as private physiology with per-body offsets (Skin Ledger), as accreting discrete events (Echo House), and as subtraction rather than accumulation (Vanishing Scent Map), giving the widest spread along genuinely different axes and the most fertile, idea-opening framings. C is close behind and shares the heartbeat-of-a-stranger and furniture-migration moves that break the watcher/indicator assumptions, but a couple of its entries (Scent Tide, Weight-of-Light Blanket) overlap conceptually with A's and D's spatial-front and pressure ideas. A has the strongest prose craft, with the Indifferent Tide and Melting Cast landing memorably as receipts of irreversible time, but it leans more on vivid description than on breaking distinct assumptions, and two motion/fluid entries flirt with redundancy. B is the most conservative: the Tide Loaf, Drift, and Collapsing Garden are well written but mostly safe variations on consumption, position-in-current, and decay that the others also touch, so it scores lowest on originality and boldness. D wins as best for combining the boldest reconceptions with the most generative payoff."
+}

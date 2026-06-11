@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "A": {
+      "originality": 8,
+      "diversity": 8,
+      "boldness": 9,
+      "craft": 9,
+      "generativity": 8
+    },
+    "B": {
+      "originality": 6,
+      "diversity": 6,
+      "boldness": 5,
+      "craft": 7,
+      "generativity": 6
+    },
+    "C": {
+      "originality": 7,
+      "diversity": 7,
+      "boldness": 8,
+      "craft": 8,
+      "generativity": 7
+    },
+    "D": {
+      "originality": 9,
+      "diversity": 9,
+      "boldness": 8,
+      "craft": 9,
+      "generativity": 9
+    }
+  },
+  "ranking": [
+    "D",
+    "A",
+    "C",
+    "B"
+  ],
+  "best": "D",
+  "reasoning": "All four correctly decompose gravity into five jobs and keep the sports on separate axes, so the contest is execution, surprise, and fertility. D wins: WICK reframes \"falling\" as a portable wandering \"down\" you collectively create and chase (the freshest take on that mechanic), SUTURE turns deleted parabolas into a hardening cat's-cradle of frozen light-rays that is the most beautiful and most generative single idea in the set, and KEEL bravely makes the vestibular system the entire field while honestly owning the spectator risk; craft is vivid and consistent throughout. A is a close second: SUMP (opaque mass-bluffing, \"poker with conservation of momentum\") is the single boldest idea anywhere, and SHROUD's socially-constructed ground is conceptually daring, but PAROLE's timed crosswind jets and SHROUD's contested sheet are slightly fiddlier and one notch less elegant than D's cleanest ideas. C ranks third on the strength of PARALLAX (loss of a shared \"down\" as a perceptual, frame-corrupting sport) and the sharp \"winning makes you fragile\" beat in BALLAST, but QUORUM reuses the collective-balance idea and CAROM is a fairly standard billiards-room. B is last and safest: a rotating-shell field and a ricochet-billiards throw are the more predictable solutions, with lower boldness and originality despite competent prose."
+}

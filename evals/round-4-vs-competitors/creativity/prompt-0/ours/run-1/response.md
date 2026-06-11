@@ -1,0 +1,18 @@
+Five reinventions of the chair, each breaking a different hidden assumption about what a chair is or what sitting is for.
+
+**1. The Negative Chair (assumption broken: a chair is an object that exists)**
+There is no chair. The "chair" is a shaped pocket of warm, dense air held in place by a quiet ring of upward airflow from the floor, the way an air-hockey puck floats, but inverted to cradle a body. You walk to a spot, the floor senses your weight and posture, and the air firms into a seat under you and softens the instant you stand. The room ships with zero furniture; the chair is a behavior the floor performs on demand, so a thousand seats and none exist at the same time.
+
+**2. The Parasite Chair (assumption broken: a chair is separate furniture you go to)**
+The chair stops being a thing in the room and becomes a thing on your body, a thin exoskeletal frame worn like suspenders that locks at the knees and hips when you lean back, turning any spot, a wall, an elevator, a queue, a hillside, into a seat. You never look for a chair because you are always already wearing one; sitting becomes a posture you enter rather than a place you travel to. It inverts the whole logic of furniture: instead of distributing chairs through space and making bodies come to them, it distributes one chair per body and lets it roam.
+
+**3. The Metabolic Chair (assumption broken: sitting is for rest, and resting is good for you)**
+This chair is designed to be slightly, deliberately unrestful: a seat tuned so that holding still costs the body small effort, gently engaging the core and circulation the way a horse-rider's seat or a wobble-board does. It treats the eight-hour sit as the actual disease and reframes the chair as a piece of exercise equipment disguised as repose, harvesting the energy of your fidgeting to charge your devices. Comfort is no longer the goal; the chair earns its keep by making stillness a low-grade workout, so the longer you sit the healthier you get.
+
+**4. The Commons Chair (assumption broken: a chair seats one private body)**
+A single continuous landscape of foam ridges and saddles, owned by no one, that seats fifteen strangers at once and only works when several people sit on it together, because each person's weight tensions the surface that holds the next. Sitting alone, it sags and dumps you; sitting full, it becomes firm and fair, so the chair physically requires company and quietly negotiates how close you let strangers sit. It moves the chair out of the category of personal property and into the category of shared infrastructure, like a park bench bred with a trust exercise.
+
+**5. The Mortal Chair (assumption broken: a chair is permanent, inert, and the same tomorrow)**
+The chair is grown, not made: a living mycelium-and-grass seat that you cultivate from a brick, that slowly molds to exactly your body over weeks the way a baseball glove or a saddle does, and that you must feed and water or it dies and composts back to soil. It ages, scars, remembers the shape of the person who sat in it, and eventually has to be replaced by growing a new one from a cutting of the old. A chair stops being a manufactured constant you replace when bored and becomes a small organism you keep alive, which means losing one feels less like discarding furniture and more like the end of a pet.
+
+**Strangest / riskiest:** The Mortal Chair, because asking people to feed and bury their furniture sounds absurd and high-maintenance. It might still work because humans already over-attach to objects that wear in to them (jeans, instruments, cast-iron pans, gloves), and a chair that visibly carries the imprint of your own body and your years could command the loyalty no replaceable mass-produced seat ever earns.

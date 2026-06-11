@@ -1,0 +1,22 @@
+Five reimaginings of the school report card, each breaking a different assumption about what to measure and who is actually reading.
+
+---
+
+**1. THE FLIGHT RECORDER**
+The report card stops summarizing the child and starts auditing the system around them. Audience: the school itself, not the parent. It records what the institution did to this student, not what the student did. Sample lines: "Times this child was the last picked: 14. Times a teacher learned something new about them: 2. Hours of their attention we successfully held vs. lost: 61/180." A grade is never assigned to the kid, only to the conditions the school created. It treats every failing student as a sensor reading on a malfunctioning building, the way an aviation black box treats a crash as a fact about the aircraft, not the passengers. The implicit threat and gift: the school is the one being graded, in the child's handwriting.
+
+**2. THE SEED PACKET**
+Forget the past tense entirely. This card carries zero record of what happened and instead reads like the back of a seed packet: growing conditions, expected bloom time, what this particular variety needs that others don't, common mistakes that kill it. Audience: the *next* teacher, three years from now, who has never met the child. "Full sun in small groups, wilts under cold-calling. Slow germinator in math, do not assume dormant. Over-watered by praise. Companion-plants well with anxious kids, they calm each other." It refuses the snapshot in favor of a husbandry manual, treating a person as a living thing with a climate, not a transcript with a number.
+
+**3. THE FALSE-COLOR SCAN**
+A report card with no words and no letters at all, only a single generated image, the way an MRI or an infrared satellite pass renders an invisible interior as color. The child's year becomes a heat map: where curiosity ran hot, where shame pooled cold, the texture of their friendships, the shape of the days they dreaded. Audience: the child, who cannot yet articulate their own inner weather but can *recognize* it instantly when shown. There is nothing to rank, compare, or sign, only a portrait of an interior that says "this is what your year actually felt like from the inside, and someone saw it." It bets that a person learns more from being accurately mirrored than from being scored.
+
+**4. THE BET SLIP**
+The card is a market. Every adult who knows the child, plus the child, plus the school, writes down a falsifiable prediction with a date and stakes their credibility on it: "I bet Maya will run something by 25. I bet Theo's reading clicks by March, here is the specific sign I'll watch for." Audience: the future itself, the only judge that pays out. At year's end you don't grade the kid, you settle the bets and grade the *predictors*, exposing which adults actually understand this child and which were projecting. It converts assessment from a verdict handed down into a wager the grown-ups have to put their own names on, and it makes "low expectations" a losing position with a public scoreboard.
+
+**5. THE NEGATIVE SPACE CARD**
+A report composed entirely of what is missing, deliberately, like a sculptor describing the marble removed rather than the figure left. It lists the questions this child asked that no curriculum had an answer for, the assignments where the rubric clearly couldn't see what they did, the standardized boxes that left them blank because the box was the wrong shape. Audience: the curriculum designers and the test-makers, served as a quiet indictment. "We could not measure: the forty minutes she spent helping a classmate instead of finishing. The drawing in the margin that solved the problem a different way. The thing he understood so deeply he stopped raising his hand." It grades the instrument's blind spots by mapping exactly where a child overflowed it.
+
+---
+
+**Strangest / riskiest: #3, The False-Color Scan.** It throws out language, accountability, and any actionable data, and asks a parent to accept a wordless emotional image as a "report" on their child's year. It might still work because the thing report cards have always failed to transmit is the only thing the child actually carries home: how the year *felt*. A picture you recognize in your gut bypasses every defensive reading of a letter grade, and a kid who sees their hidden interior rendered accurately, by an adult who bothered to look, may remember that one image longer than any GPA.
