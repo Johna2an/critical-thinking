@@ -52,6 +52,8 @@ A deterministic, length-normalized scorecard (regex and lexicon, no LLM judge): 
 
 ### 3. Cost, the context tax
 
+<div align="center"><img src="banners/banner_cost.svg" alt="Cost to operate per answer across 15 conditions" width="92%"/></div>
+
 Every condition wrote a roughly 370-word answer, so output cost is near-constant. The entire cost difference is the **context tax**: the tokens a skill loads before it answers.
 
 | Condition | Load (tokens) | Operate / answer | $ / answer | Judged quality |
@@ -64,6 +66,12 @@ Every condition wrote a roughly 370-word answer, so output cost is near-constant
 | baseline | 0 | 696 | $0.044 | 7.57 |
 
 Full 15-row tables and a USD-vs-tokens frontier are in [INDEX_EXPANDED.html](INDEX_EXPANDED.html). Pricing: Claude Fable 5, $10/$50 per M input/output tokens. With prompt-caching the load amortizes, and ours' $0.193 drops to about $0.065/answer on repeated use.
+
+### Value: judged quality per 1,000 tokens
+
+<div align="center"><img src="banners/banner_value.svg" alt="Judged quality per 1000 tokens across 15 conditions" width="92%"/></div>
+
+Dividing judged quality by tokens spent puts the free prompt arms and the featherweight skills on top and this skill near the bottom: its quality is top-cluster, but its load makes each answer expensive.
 
 ## What we changed because of this
 

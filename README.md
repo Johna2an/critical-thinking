@@ -113,7 +113,27 @@ Widening the field from three arms to fifteen, and counting the tokens, surfaced
 - **Where this skill stands alone is objective rigor.** It is **#1 of 15** on the deterministic markers, and its falsifier presence (5.0 vs 2.5 or less for everything else) is the one length-independent place no other condition reaches: it reliably names what would change its mind.
 - **It is the most expensive condition to run** (about 14k tokens of context load), so lighter options that score as well dominate it on the quality-vs-cost frontier.
 
-That feedback is the V2 work list: trim the context tax, keep the falsifier discipline, and fold a self-critique pass into the skill itself. The cheapest thing on the board is also the best, so the skill should simply absorb it. Full three-track dashboard, all 15 conditions, and raw data: **[evals/round-5-telemetry-index/](evals/round-5-telemetry-index/)**.
+That feedback is the V2 work list: trim the context tax, keep the falsifier discipline, and fold a self-critique pass into the skill itself. The cheapest thing on the board is also the best, so the skill should simply absorb it.
+
+The rest of the picture, all from the same run:
+
+<div align="center">
+
+**Judged reasoning quality, 15 conditions** (ours #3, a top-cluster near-tie)
+<img src="evals/round-5-telemetry-index/banners/banner_leaderboard.svg" alt="Judged reasoning quality leaderboard across 15 conditions; self-critique first, ours third" width="100%"/>
+
+**Objective rigor markers** (ours #1, falsifier presence double the next best)
+<img src="evals/round-5-telemetry-index/banners/banner_objective.svg" alt="Objective rigor scorecard across 15 conditions; ours first" width="100%"/>
+
+**Cost to operate** (the context tax, not the answer, is the cost)
+<img src="evals/round-5-telemetry-index/banners/banner_cost.svg" alt="Cost to operate per answer across 15 conditions; ours loads the most context" width="100%"/>
+
+**Value: judged quality per 1,000 tokens** (the cheap options win; ours near the bottom)
+<img src="evals/round-5-telemetry-index/banners/banner_value.svg" alt="Judged quality per 1000 tokens across 15 conditions; free prompts and light skills lead" width="100%"/>
+
+</div>
+
+Full interactive three-track dashboard, both token and USD cost frontiers, all 15 conditions, and the raw data: **[evals/round-5-telemetry-index/](evals/round-5-telemetry-index/)**.
 
 ## How it works
 
