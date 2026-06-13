@@ -35,7 +35,7 @@ The repo ships three things most skill repos leave out: the **full eval harness*
 | License | MIT |
 
 <div align="center">
-<img src="assets/eval-results.svg" alt="Three rounds of blind-judged results: skill arms scored first in every round" width="92%"/>
+<img src="assets/eval-results.svg" alt="Five blind-judged rounds: ours scored near 8 to 9 throughout; first against baseline and rivals in rounds 1 to 4, and #3 of 19 in the round-5 open field" width="92%"/>
 </div>
 
 ## What it does
