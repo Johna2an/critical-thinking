@@ -46,7 +46,7 @@ const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'
   const onfr=new Set(fr.map(p=>p.c));
   for(const p of pts){const r=8+Math.sqrt(cost[p.c].load)/26;b+=`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="${r}" fill="${COL[p.c]}" fill-opacity="${onfr.has(p.c)?0.92:0.4}" stroke="#fff" stroke-width="2"/>`;}
   // label key points: self-critique, ours, balanced, cc-thinking, baseline, first-principles
-  const lab={'self-critique':[10,-14],'ours':[14,-2],'balanced':[-8,-16],'cc-thinking':[10,14],'first-principles':[8,16],'baseline':[-6,18],'skills-for-humanity':[12,4]};
+  const lab={'kdense-sci-critical':[6,-13],'self-critique':[8,-13],'ours':[14,-2],'balanced':[-10,-15],'cc-thinking':[10,14],'first-principles':[8,16],'baseline':[-6,18]};
   for(const c of Object.keys(lab)){const[dx,dy]=lab[c];b+=`<text x="${X(cost[c].operate)+dx}" y="${Y(jq(c))+dy}" font-size="13.5" fill="#1a1a1a" font-weight="700" font-family="Helvetica,Arial,sans-serif">${SHORT[c]}</text>`;}
   // legend / annotation panel right
   const lx=W-padR+24;
