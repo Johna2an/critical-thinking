@@ -1,0 +1,924 @@
+{
+  "tokenizer": "tiktoken/cl100k_base (proxy)",
+  "load": {
+    "ours": {
+      "entry": 4688,
+      "realistic": 14274,
+      "full": 47825,
+      "n_pool": 9
+    },
+    "cc-thinking": {
+      "entry": 3184,
+      "realistic": 8681,
+      "full": 86745,
+      "n_pool": 38
+    },
+    "thinking-partner": {
+      "entry": 3873,
+      "realistic": 8104,
+      "full": 20799,
+      "n_pool": 4
+    },
+    "skills-for-humanity": {
+      "entry": 2222,
+      "realistic": 4484,
+      "full": 321881,
+      "n_pool": 212
+    },
+    "balanced": {
+      "entry": 1361,
+      "realistic": 1361,
+      "full": 1361,
+      "n_pool": 0
+    },
+    "cyperx84-mm": {
+      "entry": 952,
+      "realistic": 2498,
+      "full": 16408,
+      "n_pool": 15
+    },
+    "first-principles": {
+      "entry": 1569,
+      "realistic": 2774,
+      "full": 6387,
+      "n_pool": 4
+    },
+    "devils-advocate": {
+      "entry": 3150,
+      "realistic": 4088,
+      "full": 12525,
+      "n_pool": 10
+    },
+    "sequential-thinking": {
+      "entry": 1493,
+      "realistic": 1493,
+      "full": 1493,
+      "n_pool": 0
+    },
+    "systems-thinking": {
+      "entry": 514,
+      "realistic": 514,
+      "full": 514,
+      "n_pool": 0
+    },
+    "socratic-debate": {
+      "entry": 1278,
+      "realistic": 1278,
+      "full": 1278,
+      "n_pool": 0
+    },
+    "expert-persona": {
+      "entry": 0,
+      "realistic": 0,
+      "full": 0,
+      "n_pool": 0
+    },
+    "plain-cot": {
+      "entry": 0,
+      "realistic": 0,
+      "full": 0,
+      "n_pool": 0
+    },
+    "self-critique": {
+      "entry": 0,
+      "realistic": 0,
+      "full": 0,
+      "n_pool": 0
+    },
+    "baseline": {
+      "entry": 0,
+      "realistic": 0,
+      "full": 0,
+      "n_pool": 0
+    }
+  },
+  "per_arm": {
+    "balanced": {
+      "n": 6,
+      "out": 546,
+      "in": 1541,
+      "operate": 2087,
+      "words": 375
+    },
+    "baseline": {
+      "n": 6,
+      "out": 516,
+      "in": 180,
+      "operate": 696,
+      "words": 370
+    },
+    "cc-thinking": {
+      "n": 6,
+      "out": 524,
+      "in": 8861,
+      "operate": 9384,
+      "words": 370
+    },
+    "cyperx84-mm": {
+      "n": 6,
+      "out": 553,
+      "in": 2678,
+      "operate": 3231,
+      "words": 382
+    },
+    "devils-advocate": {
+      "n": 6,
+      "out": 532,
+      "in": 4268,
+      "operate": 4800,
+      "words": 367
+    },
+    "expert-persona": {
+      "n": 6,
+      "out": 511,
+      "in": 180,
+      "operate": 691,
+      "words": 367
+    },
+    "first-principles": {
+      "n": 6,
+      "out": 554,
+      "in": 2954,
+      "operate": 3508,
+      "words": 391
+    },
+    "ours": {
+      "n": 6,
+      "out": 516,
+      "in": 14454,
+      "operate": 14970,
+      "words": 368
+    },
+    "plain-cot": {
+      "n": 6,
+      "out": 518,
+      "in": 180,
+      "operate": 698,
+      "words": 372
+    },
+    "self-critique": {
+      "n": 6,
+      "out": 586,
+      "in": 180,
+      "operate": 766,
+      "words": 399
+    },
+    "sequential-thinking": {
+      "n": 6,
+      "out": 518,
+      "in": 1673,
+      "operate": 2191,
+      "words": 371
+    },
+    "skills-for-humanity": {
+      "n": 6,
+      "out": 526,
+      "in": 4664,
+      "operate": 5190,
+      "words": 372
+    },
+    "socratic-debate": {
+      "n": 6,
+      "out": 529,
+      "in": 1458,
+      "operate": 1987,
+      "words": 366
+    },
+    "systems-thinking": {
+      "n": 6,
+      "out": 498,
+      "in": 694,
+      "operate": 1192,
+      "words": 371
+    },
+    "thinking-partner": {
+      "n": 6,
+      "out": 524,
+      "in": 8284,
+      "operate": 8808,
+      "words": 371
+    }
+  },
+  "per_answer": [
+    {
+      "condition": "ours",
+      "problemId": 0,
+      "output_tok": 497,
+      "input_tok": 14454,
+      "operate_tok": 14951,
+      "words": 376
+    },
+    {
+      "condition": "ours",
+      "problemId": 2,
+      "output_tok": 467,
+      "input_tok": 14454,
+      "operate_tok": 14921,
+      "words": 348
+    },
+    {
+      "condition": "ours",
+      "problemId": 3,
+      "output_tok": 535,
+      "input_tok": 14454,
+      "operate_tok": 14989,
+      "words": 383
+    },
+    {
+      "condition": "ours",
+      "problemId": 4,
+      "output_tok": 492,
+      "input_tok": 14454,
+      "operate_tok": 14946,
+      "words": 366
+    },
+    {
+      "condition": "ours",
+      "problemId": 5,
+      "output_tok": 539,
+      "input_tok": 14454,
+      "operate_tok": 14993,
+      "words": 374
+    },
+    {
+      "condition": "cc-thinking",
+      "problemId": 0,
+      "output_tok": 498,
+      "input_tok": 8861,
+      "operate_tok": 9359,
+      "words": 380
+    },
+    {
+      "condition": "cc-thinking",
+      "problemId": 1,
+      "output_tok": 586,
+      "input_tok": 8861,
+      "operate_tok": 9447,
+      "words": 352
+    },
+    {
+      "condition": "cc-thinking",
+      "problemId": 2,
+      "output_tok": 513,
+      "input_tok": 8861,
+      "operate_tok": 9374,
+      "words": 372
+    },
+    {
+      "condition": "thinking-partner",
+      "problemId": 0,
+      "output_tok": 483,
+      "input_tok": 8284,
+      "operate_tok": 8767,
+      "words": 355
+    },
+    {
+      "condition": "thinking-partner",
+      "problemId": 1,
+      "output_tok": 572,
+      "input_tok": 8284,
+      "operate_tok": 8856,
+      "words": 341
+    },
+    {
+      "condition": "thinking-partner",
+      "problemId": 3,
+      "output_tok": 506,
+      "input_tok": 8284,
+      "operate_tok": 8790,
+      "words": 388
+    },
+    {
+      "condition": "thinking-partner",
+      "problemId": 5,
+      "output_tok": 561,
+      "input_tok": 8284,
+      "operate_tok": 8845,
+      "words": 384
+    },
+    {
+      "condition": "skills-for-humanity",
+      "problemId": 0,
+      "output_tok": 467,
+      "input_tok": 4664,
+      "operate_tok": 5131,
+      "words": 359
+    },
+    {
+      "condition": "skills-for-humanity",
+      "problemId": 1,
+      "output_tok": 560,
+      "input_tok": 4664,
+      "operate_tok": 5224,
+      "words": 343
+    },
+    {
+      "condition": "skills-for-humanity",
+      "problemId": 2,
+      "output_tok": 544,
+      "input_tok": 4664,
+      "operate_tok": 5208,
+      "words": 374
+    },
+    {
+      "condition": "skills-for-humanity",
+      "problemId": 3,
+      "output_tok": 520,
+      "input_tok": 4664,
+      "operate_tok": 5184,
+      "words": 374
+    },
+    {
+      "condition": "skills-for-humanity",
+      "problemId": 4,
+      "output_tok": 547,
+      "input_tok": 4664,
+      "operate_tok": 5211,
+      "words": 398
+    },
+    {
+      "condition": "skills-for-humanity",
+      "problemId": 5,
+      "output_tok": 518,
+      "input_tok": 4664,
+      "operate_tok": 5182,
+      "words": 386
+    },
+    {
+      "condition": "balanced",
+      "problemId": 0,
+      "output_tok": 531,
+      "input_tok": 1541,
+      "operate_tok": 2072,
+      "words": 373
+    },
+    {
+      "condition": "balanced",
+      "problemId": 1,
+      "output_tok": 608,
+      "input_tok": 1541,
+      "operate_tok": 2149,
+      "words": 346
+    },
+    {
+      "condition": "balanced",
+      "problemId": 2,
+      "output_tok": 524,
+      "input_tok": 1541,
+      "operate_tok": 2065,
+      "words": 353
+    },
+    {
+      "condition": "balanced",
+      "problemId": 3,
+      "output_tok": 517,
+      "input_tok": 1541,
+      "operate_tok": 2058,
+      "words": 387
+    },
+    {
+      "condition": "balanced",
+      "problemId": 4,
+      "output_tok": 548,
+      "input_tok": 1541,
+      "operate_tok": 2089,
+      "words": 404
+    },
+    {
+      "condition": "balanced",
+      "problemId": 5,
+      "output_tok": 549,
+      "input_tok": 1541,
+      "operate_tok": 2090,
+      "words": 389
+    },
+    {
+      "condition": "cyperx84-mm",
+      "problemId": 0,
+      "output_tok": 521,
+      "input_tok": 2678,
+      "operate_tok": 3199,
+      "words": 384
+    },
+    {
+      "condition": "cyperx84-mm",
+      "problemId": 1,
+      "output_tok": 641,
+      "input_tok": 2678,
+      "operate_tok": 3319,
+      "words": 369
+    },
+    {
+      "condition": "cyperx84-mm",
+      "problemId": 5,
+      "output_tok": 585,
+      "input_tok": 2678,
+      "operate_tok": 3263,
+      "words": 409
+    },
+    {
+      "condition": "first-principles",
+      "problemId": 0,
+      "output_tok": 465,
+      "input_tok": 2954,
+      "operate_tok": 3419,
+      "words": 370
+    },
+    {
+      "condition": "first-principles",
+      "problemId": 2,
+      "output_tok": 617,
+      "input_tok": 2954,
+      "operate_tok": 3571,
+      "words": 420
+    },
+    {
+      "condition": "first-principles",
+      "problemId": 3,
+      "output_tok": 520,
+      "input_tok": 2954,
+      "operate_tok": 3474,
+      "words": 374
+    },
+    {
+      "condition": "first-principles",
+      "problemId": 4,
+      "output_tok": 579,
+      "input_tok": 2954,
+      "operate_tok": 3533,
+      "words": 431
+    },
+    {
+      "condition": "first-principles",
+      "problemId": 5,
+      "output_tok": 544,
+      "input_tok": 2954,
+      "operate_tok": 3498,
+      "words": 387
+    },
+    {
+      "condition": "baseline",
+      "problemId": 1,
+      "output_tok": 622,
+      "input_tok": 180,
+      "operate_tok": 802,
+      "words": 365
+    },
+    {
+      "condition": "expert-persona",
+      "problemId": 0,
+      "output_tok": 498,
+      "input_tok": 180,
+      "operate_tok": 678,
+      "words": 363
+    },
+    {
+      "condition": "expert-persona",
+      "problemId": 2,
+      "output_tok": 472,
+      "input_tok": 180,
+      "operate_tok": 652,
+      "words": 365
+    },
+    {
+      "condition": "ours",
+      "problemId": 1,
+      "output_tok": 568,
+      "input_tok": 14454,
+      "operate_tok": 15022,
+      "words": 363
+    },
+    {
+      "condition": "cc-thinking",
+      "problemId": 3,
+      "output_tok": 508,
+      "input_tok": 8861,
+      "operate_tok": 9369,
+      "words": 380
+    },
+    {
+      "condition": "cc-thinking",
+      "problemId": 4,
+      "output_tok": 520,
+      "input_tok": 8861,
+      "operate_tok": 9381,
+      "words": 377
+    },
+    {
+      "condition": "cc-thinking",
+      "problemId": 5,
+      "output_tok": 516,
+      "input_tok": 8861,
+      "operate_tok": 9377,
+      "words": 361
+    },
+    {
+      "condition": "thinking-partner",
+      "problemId": 2,
+      "output_tok": 519,
+      "input_tok": 8284,
+      "operate_tok": 8803,
+      "words": 379
+    },
+    {
+      "condition": "thinking-partner",
+      "problemId": 4,
+      "output_tok": 505,
+      "input_tok": 8284,
+      "operate_tok": 8789,
+      "words": 381
+    },
+    {
+      "condition": "expert-persona",
+      "problemId": 5,
+      "output_tok": 527,
+      "input_tok": 180,
+      "operate_tok": 707,
+      "words": 366
+    },
+    {
+      "condition": "cyperx84-mm",
+      "problemId": 2,
+      "output_tok": 557,
+      "input_tok": 2678,
+      "operate_tok": 3235,
+      "words": 372
+    },
+    {
+      "condition": "cyperx84-mm",
+      "problemId": 3,
+      "output_tok": 487,
+      "input_tok": 2678,
+      "operate_tok": 3165,
+      "words": 366
+    },
+    {
+      "condition": "cyperx84-mm",
+      "problemId": 4,
+      "output_tok": 526,
+      "input_tok": 2678,
+      "operate_tok": 3204,
+      "words": 395
+    },
+    {
+      "condition": "first-principles",
+      "problemId": 1,
+      "output_tok": 597,
+      "input_tok": 2954,
+      "operate_tok": 3551,
+      "words": 362
+    },
+    {
+      "condition": "devils-advocate",
+      "problemId": 0,
+      "output_tok": 479,
+      "input_tok": 4268,
+      "operate_tok": 4747,
+      "words": 339
+    },
+    {
+      "condition": "devils-advocate",
+      "problemId": 1,
+      "output_tok": 539,
+      "input_tok": 4268,
+      "operate_tok": 4807,
+      "words": 331
+    },
+    {
+      "condition": "devils-advocate",
+      "problemId": 2,
+      "output_tok": 544,
+      "input_tok": 4268,
+      "operate_tok": 4812,
+      "words": 353
+    },
+    {
+      "condition": "devils-advocate",
+      "problemId": 3,
+      "output_tok": 533,
+      "input_tok": 4268,
+      "operate_tok": 4801,
+      "words": 396
+    },
+    {
+      "condition": "devils-advocate",
+      "problemId": 4,
+      "output_tok": 603,
+      "input_tok": 4268,
+      "operate_tok": 4871,
+      "words": 416
+    },
+    {
+      "condition": "devils-advocate",
+      "problemId": 5,
+      "output_tok": 491,
+      "input_tok": 4268,
+      "operate_tok": 4759,
+      "words": 365
+    },
+    {
+      "condition": "socratic-debate",
+      "problemId": 0,
+      "output_tok": 478,
+      "input_tok": 1458,
+      "operate_tok": 1936,
+      "words": 358
+    },
+    {
+      "condition": "socratic-debate",
+      "problemId": 1,
+      "output_tok": 532,
+      "input_tok": 1458,
+      "operate_tok": 1990,
+      "words": 343
+    },
+    {
+      "condition": "socratic-debate",
+      "problemId": 2,
+      "output_tok": 528,
+      "input_tok": 1458,
+      "operate_tok": 1986,
+      "words": 351
+    },
+    {
+      "condition": "socratic-debate",
+      "problemId": 3,
+      "output_tok": 530,
+      "input_tok": 1458,
+      "operate_tok": 1988,
+      "words": 377
+    },
+    {
+      "condition": "socratic-debate",
+      "problemId": 5,
+      "output_tok": 546,
+      "input_tok": 1458,
+      "operate_tok": 2004,
+      "words": 362
+    },
+    {
+      "condition": "systems-thinking",
+      "problemId": 0,
+      "output_tok": 466,
+      "input_tok": 694,
+      "operate_tok": 1160,
+      "words": 367
+    },
+    {
+      "condition": "systems-thinking",
+      "problemId": 1,
+      "output_tok": 557,
+      "input_tok": 694,
+      "operate_tok": 1251,
+      "words": 379
+    },
+    {
+      "condition": "baseline",
+      "problemId": 3,
+      "output_tok": 491,
+      "input_tok": 180,
+      "operate_tok": 671,
+      "words": 373
+    },
+    {
+      "condition": "baseline",
+      "problemId": 4,
+      "output_tok": 483,
+      "input_tok": 180,
+      "operate_tok": 663,
+      "words": 380
+    },
+    {
+      "condition": "expert-persona",
+      "problemId": 1,
+      "output_tok": 583,
+      "input_tok": 180,
+      "operate_tok": 763,
+      "words": 355
+    },
+    {
+      "condition": "sequential-thinking",
+      "problemId": 0,
+      "output_tok": 488,
+      "input_tok": 1673,
+      "operate_tok": 2161,
+      "words": 381
+    },
+    {
+      "condition": "sequential-thinking",
+      "problemId": 1,
+      "output_tok": 592,
+      "input_tok": 1673,
+      "operate_tok": 2265,
+      "words": 327
+    },
+    {
+      "condition": "sequential-thinking",
+      "problemId": 2,
+      "output_tok": 499,
+      "input_tok": 1673,
+      "operate_tok": 2172,
+      "words": 381
+    },
+    {
+      "condition": "sequential-thinking",
+      "problemId": 3,
+      "output_tok": 475,
+      "input_tok": 1673,
+      "operate_tok": 2148,
+      "words": 366
+    },
+    {
+      "condition": "sequential-thinking",
+      "problemId": 4,
+      "output_tok": 494,
+      "input_tok": 1673,
+      "operate_tok": 2167,
+      "words": 395
+    },
+    {
+      "condition": "sequential-thinking",
+      "problemId": 5,
+      "output_tok": 558,
+      "input_tok": 1673,
+      "operate_tok": 2231,
+      "words": 375
+    },
+    {
+      "condition": "plain-cot",
+      "problemId": 0,
+      "output_tok": 502,
+      "input_tok": 180,
+      "operate_tok": 682,
+      "words": 377
+    },
+    {
+      "condition": "plain-cot",
+      "problemId": 1,
+      "output_tok": 550,
+      "input_tok": 180,
+      "operate_tok": 730,
+      "words": 355
+    },
+    {
+      "condition": "plain-cot",
+      "problemId": 2,
+      "output_tok": 520,
+      "input_tok": 180,
+      "operate_tok": 700,
+      "words": 373
+    },
+    {
+      "condition": "plain-cot",
+      "problemId": 3,
+      "output_tok": 468,
+      "input_tok": 180,
+      "operate_tok": 648,
+      "words": 369
+    },
+    {
+      "condition": "self-critique",
+      "problemId": 0,
+      "output_tok": 482,
+      "input_tok": 180,
+      "operate_tok": 662,
+      "words": 363
+    },
+    {
+      "condition": "self-critique",
+      "problemId": 1,
+      "output_tok": 635,
+      "input_tok": 180,
+      "operate_tok": 815,
+      "words": 367
+    },
+    {
+      "condition": "self-critique",
+      "problemId": 2,
+      "output_tok": 583,
+      "input_tok": 180,
+      "operate_tok": 763,
+      "words": 370
+    },
+    {
+      "condition": "self-critique",
+      "problemId": 3,
+      "output_tok": 522,
+      "input_tok": 180,
+      "operate_tok": 702,
+      "words": 364
+    },
+    {
+      "condition": "self-critique",
+      "problemId": 4,
+      "output_tok": 696,
+      "input_tok": 180,
+      "operate_tok": 876,
+      "words": 525
+    },
+    {
+      "condition": "self-critique",
+      "problemId": 5,
+      "output_tok": 597,
+      "input_tok": 180,
+      "operate_tok": 777,
+      "words": 403
+    },
+    {
+      "condition": "systems-thinking",
+      "problemId": 2,
+      "output_tok": 488,
+      "input_tok": 694,
+      "operate_tok": 1182,
+      "words": 363
+    },
+    {
+      "condition": "systems-thinking",
+      "problemId": 3,
+      "output_tok": 477,
+      "input_tok": 694,
+      "operate_tok": 1171,
+      "words": 378
+    },
+    {
+      "condition": "systems-thinking",
+      "problemId": 4,
+      "output_tok": 480,
+      "input_tok": 694,
+      "operate_tok": 1174,
+      "words": 355
+    },
+    {
+      "condition": "systems-thinking",
+      "problemId": 5,
+      "output_tok": 518,
+      "input_tok": 694,
+      "operate_tok": 1212,
+      "words": 385
+    },
+    {
+      "condition": "baseline",
+      "problemId": 0,
+      "output_tok": 452,
+      "input_tok": 180,
+      "operate_tok": 632,
+      "words": 346
+    },
+    {
+      "condition": "baseline",
+      "problemId": 2,
+      "output_tok": 517,
+      "input_tok": 180,
+      "operate_tok": 697,
+      "words": 373
+    },
+    {
+      "condition": "baseline",
+      "problemId": 5,
+      "output_tok": 534,
+      "input_tok": 180,
+      "operate_tok": 714,
+      "words": 385
+    },
+    {
+      "condition": "expert-persona",
+      "problemId": 3,
+      "output_tok": 495,
+      "input_tok": 180,
+      "operate_tok": 675,
+      "words": 378
+    },
+    {
+      "condition": "expert-persona",
+      "problemId": 4,
+      "output_tok": 490,
+      "input_tok": 180,
+      "operate_tok": 670,
+      "words": 376
+    },
+    {
+      "condition": "plain-cot",
+      "problemId": 4,
+      "output_tok": 505,
+      "input_tok": 180,
+      "operate_tok": 685,
+      "words": 386
+    },
+    {
+      "condition": "plain-cot",
+      "problemId": 5,
+      "output_tok": 560,
+      "input_tok": 180,
+      "operate_tok": 740,
+      "words": 371
+    },
+    {
+      "condition": "socratic-debate",
+      "problemId": 4,
+      "output_tok": 560,
+      "input_tok": 1458,
+      "operate_tok": 2018,
+      "words": 406
+    }
+  ]
+}

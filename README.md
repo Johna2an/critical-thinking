@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-1f2733?style=flat-square)](LICENSE)
 [![Books distilled](https://img.shields.io/badge/books_distilled-51-d98c0f?style=flat-square)](#the-library)
 [![Reference libraries](https://img.shields.io/badge/reference_libraries-9-d98c0f?style=flat-square)](#how-it-works)
-[![Eval transcripts](https://img.shields.io/badge/eval_transcripts-3_rounds,_included-0ea5e9?style=flat-square)](evals/)
+[![Eval transcripts](https://img.shields.io/badge/eval_transcripts-5_rounds,_included-0ea5e9?style=flat-square)](evals/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-059669?style=flat-square)](CONTRIBUTING.md)
 
 [Install](#install) · [What it does](#what-it-does) · [Results](#the-numbers) · [How it works](#how-it-works) · [The story](#the-story-including-the-failures) · [Contributing](CONTRIBUTING.md)
@@ -22,15 +22,15 @@
 
 **critical-thinking** is an open-source [Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) for Claude Code and Claude-based agents that makes Claude reason with explicit probabilities, base rates, and falsifiers: in blind evaluations it ranked first in 18 of 18 judge passes against baseline Claude and GPT-5.5. Frontier models already know the literature of good judgment from pretraining. Left to their defaults, they hedge in prose: "this could be confounding, or reverse causation, and the evidence is uncertain." This skill converts that latent knowledge into executed behavior. With it loaded, Claude states calibrated probabilities, anchors on base rates before vivid specifics, attaches a falsifier to every verdict, names its own cognitive traps while reasoning, and runs premortems on its own recommendations.
 
-The repo ships three things most skill repos leave out: the **full eval harness** (blind, multi-arm, balanced-rotation, LLM-judged), **every raw transcript and judge file** from three eval rounds, and the **hypotheses that broke** along the way. The honest parts are the useful parts.
+The repo ships three things most skill repos leave out: the **full eval harness** (blind, multi-arm, balanced-rotation, LLM-judged), **every raw transcript and judge file** from five eval rounds, and the **hypotheses that broke** along the way. The honest parts are the useful parts. The newest round ([round 5](evals/round-5-telemetry-index/)) benchmarks the skill against 14 alternatives, including free prompt techniques, and prices each one in tokens.
 
 **At a glance**
 
 | | |
 |---|---|
 | What | An Agent Skill: one operating manual (SKILL.md) + 9 reference libraries + 51 book teaching files, all markdown |
-| Headline result | 8.99 vs 7.92 (Claude baseline) vs 7.30 (GPT-5.5 xhigh) mean judge score; best in 18/18 blind passes |
-| Evidence | 3 eval rounds with full transcripts and judge JSON in [evals/](evals/) |
+| Headline result | 8.99 vs 7.92 (Claude baseline) vs 7.30 (GPT-5.5 xhigh) mean judge score; best in 18/18 blind passes. In the 15-condition round 5: #3 of 15 on judged quality (a top-cluster near-tie), #1 of 15 on objective rigor |
+| Evidence | 5 eval rounds with full transcripts and judge JSON in [evals/](evals/) |
 | Install | Copy one folder into `~/.claude/skills/`; no build, no dependencies, no API keys |
 | License | MIT |
 
@@ -87,15 +87,33 @@ That's it. The skill self-triggers on reasoning-shaped requests ("is this true",
 
 ## The numbers
 
-Three rounds, every arm blind-judged on anonymized responses, three independent judges per problem, balanced slot rotation. Full data, per-problem tables, and judge quotes: [docs/EVALS.md](docs/EVALS.md). Raw material: [evals/](evals/).
+Five rounds, every arm blind-judged on anonymized responses, three independent judges per problem, balanced slot rotation. Full data, per-problem tables, and judge quotes: [docs/EVALS.md](docs/EVALS.md). Raw material: [evals/](evals/).
 
 The headline result, in one quotable sentence: in a blind evaluation with three independent judges per problem, Claude with the critical-thinking skill scored 8.99 out of 10 across six reasoning problems, against 7.92 for Claude without the skill and 7.30 for GPT-5.5 at maximum reasoning effort, ranking first in 18 of 18 judge passes.
+
+That was a three-arm test. [Round 5](evals/round-5-telemetry-index/) ran the hard version: 15 conditions, including every credible public rival skill and the free prompt techniques anyone can type, each one priced in tokens. The skill stays in the top quality cluster and leads the entire field on objective rigor. A field that now includes a one-line `self-critique` prompt is a near-tie at the top, and this skill is the most expensive condition to run. We publish that result in full, because a skill about calibration that hid its own benchmark would be a contradiction. The honest detail is below.
 
 | Round | Question asked | Result |
 |---|---|---|
 | **1 · Reasoning** (6 problems) | Does the skill change reasoning at all? | **Skill 8.99** vs base 7.92 vs GPT-5.5 7.30. Skill ranked best in **18 of 18** judge passes. Biggest gap: calibration, +1.73. |
 | **2 · Creativity** (6 briefs) | Does it help divergent work too? | **Skill 8.48** vs base 7.93 vs GPT-5.5 5.96, and the win was partial: 11/18 picks, with baseline sweeping 2 of 6 briefs. The scaffold raises the floor and can cap the ceiling. |
 | **3 · v1 vs v2** (8 problems) | Do 30 more books help? | **v1 8.91 vs v2 8.87**: a tie at the top. v2 took the most judge best-picks on the three problems where its new material supplied the winning move; v1 kept the four problems judges decided on explicit probabilities. The first 21 books had captured nearly all the headroom. |
+| **4 · vs rival skills** (12 problems) | How does it do against other skills, not just baseline? | Ours led reasoning **8.70**, ahead of cc-thinking, wanikua, and baseline; creativity a near-tie. [round-4](evals/round-4-vs-competitors/) |
+| **5 · full field + cost** (15 conditions) | Against every rival skill and free prompt techniques, priced in tokens? | **#3 of 15 on judged quality** (self-critique 8.28, balanced 7.98, **ours 7.84**), a top-cluster near-tie, and **#1 of 15 on objective rigor**. Also the heaviest context-load in the field. [round-5](evals/round-5-telemetry-index/) |
+
+### Round 5: the full field, priced (V2)
+
+<div align="center">
+<img src="evals/round-5-telemetry-index/banners/banner_frontier.svg" alt="Quality-vs-cost frontier across 15 conditions: a free self-critique prompt leads on cost-adjusted judged quality; ours sits in the top quality cluster at the highest cost" width="100%"/>
+</div>
+
+Widening the field from three arms to fifteen, and counting the tokens, surfaced three things the narrow rounds could not:
+
+- **The cheapest interventions hold the top.** A free one-line `self-critique` prompt (8.28) and the single-file `balanced` skill (7.98) match or beat every elaborate skill on judged reasoning quality. Expensive structure helps about as much as cheap structure.
+- **Where this skill stands alone is objective rigor.** It is **#1 of 15** on the deterministic markers, and its falsifier presence (5.0 vs 2.5 or less for everything else) is the one length-independent place no other condition reaches: it reliably names what would change its mind.
+- **It is the most expensive condition to run** (about 14k tokens of context load), so lighter options that score as well dominate it on the quality-vs-cost frontier.
+
+That feedback is the V2 work list: trim the context tax, keep the falsifier discipline, and fold a self-critique pass into the skill itself. The cheapest thing on the board is also the best, so the skill should simply absorb it. Full three-track dashboard, all 15 conditions, and raw data: **[evals/round-5-telemetry-index/](evals/round-5-telemetry-index/)**.
 
 ## How it works
 
@@ -125,6 +143,8 @@ The project ran as a sequence of falsifiable bets. Short version here, full vers
 
 **Bet 3: more books, better skill.** Broke on the mean, held on coverage. v2 grew the library from 21 to 51 books (9 libraries, a rebuilt generation phase). Round 3 verdict: 8.91 vs 8.87, a statistical tie, with the win profile shifted exactly to where the new books live and away from the calibration habit that scores highest everywhere. Average response length was identical (914 vs 916 words), so the cost was displaced emphasis rather than bloat. The design lesson, now a contribution rule: **enforcing core moves beats enlarging the library.**
 
+**Bet 4: the skill beats the field, and the cost is worth it.** Broke into a near-tie, and the cost lost. [Round 5](evals/round-5-telemetry-index/) widened the field to 15 conditions (every credible public rival skill plus the free prompt techniques anyone can type) and priced each in tokens. The skill landed #3 of 15 on judged quality, inside a top cluster where a free one-line self-critique prompt scored highest, and it was the most expensive condition to run by a wide margin. It did keep one thing no other condition reached: #1 on objective rigor, with a falsifier-presence score double the next best. The lesson, now driving V2: cheap structure rivals expensive structure on judged quality, so the skill should absorb a self-critique pass and shed its context-tax rather than out-build the field.
+
 ## What's in the repo
 
 ```
@@ -135,7 +155,9 @@ critical-thinking/
 │   ├── harness/            # setup, blinding, judging aggregation, report scripts
 │   ├── round-1-reasoning/  # all responses, judge JSON, verdicts, HTML report
 │   ├── round-2-creativity/
-│   └── round-3-v1-vs-v2/
+│   ├── round-3-v1-vs-v2/
+│   ├── round-4-vs-competitors/      # vs two rival skills + baseline
+│   └── round-5-telemetry-index/     # 15-condition field + cost; dashboard + banners
 ├── docs/
 │   ├── EVALS.md            # full results + honest limitations
 │   ├── HYPOTHESES.md       # the bets, what held, what broke, why

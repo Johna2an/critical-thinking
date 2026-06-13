@@ -2,6 +2,27 @@
 
 All notable changes to the skill and the eval harness.
 
+## [Unreleased]
+
+### Added
+- **Round 4 (vs rival skills)** and **Round 5 (Skill Intelligence Index)** under `evals/`.
+  Round 5 widens the field to 15 conditions (9 public rival skills, 5 prompt/reference
+  arms, and a no-skill baseline), generates equal-length answers, judges all 15 blind
+  (18 passes), and prices every condition in tokens. Ships the raw data, a three-track
+  dashboard (`INDEX_EXPANDED.html`), and editorial SVG banners.
+
+### Findings (Round 5, reasoning, n=1)
+- Judged quality: a free one-line `self-critique` prompt leads (8.28); this skill is
+  #3 of 15 (7.84), inside a top-cluster near-tie.
+- Objective rigor markers: this skill is #1 of 15, with a falsifier-presence score
+  double the next best.
+- Cost: this skill has the heaviest context-load in the field (about 14k tokens),
+  so it is dominated on the quality-vs-cost frontier.
+
+### Planned for V2 (driven by Round 5)
+- Trim the context tax; preserve the falsifier discipline; fold a built-in
+  draft/critique/revise pass into `SKILL.md`.
+
 ## [2.0.0] (2026-06)
 
 The breadth release. Built in response to Round 2 eval results, which showed
