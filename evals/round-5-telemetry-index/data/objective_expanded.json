@@ -1,5 +1,15 @@
 {
   "perArm": {
+    "argumentation-framework": {
+      "n": 6,
+      "quantification": 3.97,
+      "bias_naming": 3.4,
+      "falsifier": 1.67,
+      "actionability": 3.67,
+      "objective_composite": 3.18,
+      "hallucination": 0,
+      "factual_acc": 5
+    },
     "balanced": {
       "n": 6,
       "quantification": 6.91,
@@ -27,6 +37,16 @@
       "falsifier": 0.83,
       "actionability": 3.67,
       "objective_composite": 3.46,
+      "hallucination": 0,
+      "factual_acc": 10
+    },
+    "conducty-dialectic": {
+      "n": 6,
+      "quantification": 3.29,
+      "bias_naming": 3.61,
+      "falsifier": 0,
+      "actionability": 4.33,
+      "objective_composite": 2.81,
       "hallucination": 0,
       "factual_acc": 10
     },
@@ -67,6 +87,26 @@
       "falsifier": 0,
       "actionability": 3.33,
       "objective_composite": 2.72,
+      "hallucination": 0,
+      "factual_acc": 10
+    },
+    "gsd-critical-thinking": {
+      "n": 6,
+      "quantification": 4.61,
+      "bias_naming": 3.98,
+      "falsifier": 0.83,
+      "actionability": 5,
+      "objective_composite": 3.61,
+      "hallucination": 0,
+      "factual_acc": 10
+    },
+    "kdense-sci-critical": {
+      "n": 6,
+      "quantification": 3.86,
+      "bias_naming": 6.51,
+      "falsifier": 3.33,
+      "actionability": 3.33,
+      "objective_composite": 4.26,
       "hallucination": 0,
       "factual_acc": 10
     },
@@ -1139,6 +1179,270 @@
       "bias_naming": 0,
       "falsifier": 0,
       "actionability": 6,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 0,
+      "words": 400,
+      "quantification": 9.38,
+      "bias_naming": 4.55,
+      "falsifier": 5,
+      "actionability": 10,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 1,
+      "words": 385,
+      "quantification": 10,
+      "bias_naming": 2.36,
+      "falsifier": 0,
+      "actionability": 6,
+      "hallucination": 0,
+      "factual_acc": 10
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 2,
+      "words": 362,
+      "quantification": 3.45,
+      "bias_naming": 7.53,
+      "falsifier": 0,
+      "actionability": 8,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 3,
+      "words": 388,
+      "quantification": 1.61,
+      "bias_naming": 2.34,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 4,
+      "words": 391,
+      "quantification": 3.2,
+      "bias_naming": 4.65,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 5,
+      "words": 369,
+      "quantification": 0,
+      "bias_naming": 2.46,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 0,
+      "words": 381,
+      "quantification": 8.2,
+      "bias_naming": 7.16,
+      "falsifier": 5,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 1,
+      "words": 366,
+      "quantification": 10,
+      "bias_naming": 0,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": 10
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 2,
+      "words": 380,
+      "quantification": 1.64,
+      "bias_naming": 10,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 3,
+      "words": 368,
+      "quantification": 0,
+      "bias_naming": 2.47,
+      "falsifier": 10,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 4,
+      "words": 370,
+      "quantification": 0,
+      "bias_naming": 9.83,
+      "falsifier": 0,
+      "actionability": 6,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 5,
+      "words": 379,
+      "quantification": 3.3,
+      "bias_naming": 9.59,
+      "falsifier": 5,
+      "actionability": 6,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 0,
+      "words": 380,
+      "quantification": 6.58,
+      "bias_naming": 4.78,
+      "falsifier": 0,
+      "actionability": 8,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 1,
+      "words": 364,
+      "quantification": 10,
+      "bias_naming": 7.49,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": 10
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 2,
+      "words": 396,
+      "quantification": 3.16,
+      "bias_naming": 6.89,
+      "falsifier": 0,
+      "actionability": 6,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 3,
+      "words": 392,
+      "quantification": 0,
+      "bias_naming": 0,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 4,
+      "words": 398,
+      "quantification": 0,
+      "bias_naming": 0,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 5,
+      "words": 361,
+      "quantification": 0,
+      "bias_naming": 2.52,
+      "falsifier": 0,
+      "actionability": 6,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 0,
+      "words": 350,
+      "quantification": 8.93,
+      "bias_naming": 7.79,
+      "falsifier": 0,
+      "actionability": 6,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 1,
+      "words": 347,
+      "quantification": 10,
+      "bias_naming": 2.62,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": 5
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 2,
+      "words": 383,
+      "quantification": 4.9,
+      "bias_naming": 10,
+      "falsifier": 5,
+      "actionability": 8,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 3,
+      "words": 379,
+      "quantification": 0,
+      "bias_naming": 0,
+      "falsifier": 5,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 4,
+      "words": 369,
+      "quantification": 0,
+      "bias_naming": 0,
+      "falsifier": 0,
+      "actionability": 2,
+      "hallucination": 0,
+      "factual_acc": null
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 5,
+      "words": 373,
+      "quantification": 0,
+      "bias_naming": 0,
+      "falsifier": 0,
+      "actionability": 2,
       "hallucination": 0,
       "factual_acc": null
     }

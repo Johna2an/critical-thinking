@@ -7,8 +7,8 @@ const JQ=JSON.parse(fs.readFileSync(dir+'/expanded/judge_quality_15.json','utf8'
 const out=dir+'/expanded/banners';
 const CONDS=Object.keys(OBJ.perArm);
 const PIN=10/1e6,POUT=50/1e6;
-const COL={ours:'#2f7d4f','cc-thinking':'#b4452f','thinking-partner':'#2f5d8a','skills-for-humanity':'#7a4f9a',balanced:'#1f8a8a','cyperx84-mm':'#c77d20','first-principles':'#9a9a55','devils-advocate':'#c0556f','sequential-thinking':'#557a9a','systems-thinking':'#6f9a55','socratic-debate':'#9a5577','expert-persona':'#b0903a','plain-cot':'#9a9a9a','self-critique':'#8a6a9a',baseline:'#8a8a8a'};
-const SHORT={ours:'ours','cc-thinking':'cc-thinking','thinking-partner':'thinking-partner','skills-for-humanity':'skills-for-humanity',balanced:'balanced','cyperx84-mm':'cyperx84','first-principles':'first-principles','devils-advocate':'devils-advocate','sequential-thinking':'sequential','systems-thinking':'systems','socratic-debate':'socratic-debate','expert-persona':'expert-persona','plain-cot':'plain CoT','self-critique':'self-critique',baseline:'baseline'};
+const COL={ours:'#2f7d4f','cc-thinking':'#b4452f','thinking-partner':'#2f5d8a','skills-for-humanity':'#7a4f9a',balanced:'#1f8a8a','cyperx84-mm':'#c77d20','first-principles':'#9a9a55','devils-advocate':'#c0556f','sequential-thinking':'#557a9a','systems-thinking':'#6f9a55','socratic-debate':'#9a5577','expert-persona':'#b0903a','plain-cot':'#9a9a9a','self-critique':'#8a6a9a','gsd-critical-thinking':'#3a8f6a','kdense-sci-critical':'#6a4f9a','conducty-dialectic':'#9a7755','argumentation-framework':'#557799',baseline:'#8a8a8a'};
+const SHORT={ours:'ours','cc-thinking':'cc-thinking','thinking-partner':'thinking-partner','skills-for-humanity':'skills-for-humanity',balanced:'balanced','cyperx84-mm':'cyperx84','first-principles':'first-principles','devils-advocate':'devils-advocate','sequential-thinking':'sequential','systems-thinking':'systems','socratic-debate':'socratic-debate','expert-persona':'expert-persona','plain-cot':'plain CoT','self-critique':'self-critique','gsd-critical-thinking':'gsd-ct','kdense-sci-critical':'kdense-sci','conducty-dialectic':'conducty','argumentation-framework':'argument-fw',baseline:'baseline'};
 const jq=c=>JQ.perArm[c].composite;
 const cost={}; for(const c of CONDS){const t=TOK.per_arm[c];cost[c]={in:t.in,out:t.out,operate:t.operate,load:TOK.load[c].realistic,usd:t.in*PIN+t.out*POUT};}
 function frame(W,H,kicker,title,subtitle,body){
@@ -19,7 +19,7 @@ function frame(W,H,kicker,title,subtitle,body){
 <text x="56" y="104" font-size="34" fill="#1a1a1a" font-weight="700">${title}</text>
 <text x="56" y="134" font-size="17" fill="#6b6b6b" font-family="Helvetica,Arial,sans-serif">${subtitle}</text>
 ${body}
-<text x="56" y="${H-26}" font-size="12.5" fill="#9a8f80" font-family="Helvetica,Arial,sans-serif">Tenzor Skill Intelligence Index · 15 conditions · reasoning round · n=1 · Claude Fable 5 ($10/$50 per M tok) · cost via tiktoken cl100k proxy</text>
+<text x="56" y="${H-26}" font-size="12.5" fill="#9a8f80" font-family="Helvetica,Arial,sans-serif">Tenzor Skill Intelligence Index · 19 conditions · reasoning round · n=1 · Claude Fable 5 ($10/$50 per M tok) · cost via tiktoken cl100k proxy</text>
 </svg>`;
 }
 

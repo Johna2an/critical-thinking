@@ -7,8 +7,8 @@ const JQ=JSON.parse(fs.readFileSync(dir+'/expanded/judge_quality_15.json','utf8'
 const out=dir+'/expanded/banners'; fs.mkdirSync(out,{recursive:true});
 const CONDS=Object.keys(OBJ.perArm);
 const PIN=10/1e6,POUT=50/1e6;
-const COL={ours:'#2f7d4f','cc-thinking':'#b4452f','thinking-partner':'#2f5d8a','skills-for-humanity':'#7a4f9a',balanced:'#1f8a8a','cyperx84-mm':'#c77d20','first-principles':'#9a9a55','devils-advocate':'#c0556f','sequential-thinking':'#557a9a','systems-thinking':'#6f9a55','socratic-debate':'#9a5577','expert-persona':'#b0903a','plain-cot':'#9a9a9a','self-critique':'#8a6a9a',baseline:'#8a8a8a'};
-const SHORT={ours:'ours','cc-thinking':'cc-thinking','thinking-partner':'thinking-partner','skills-for-humanity':'skills-for-humanity',balanced:'balanced','cyperx84-mm':'cyperx84','first-principles':'first-principles','devils-advocate':'devils-advocate','sequential-thinking':'sequential','systems-thinking':'systems','socratic-debate':'socratic-debate','expert-persona':'expert-persona','plain-cot':'plain CoT','self-critique':'self-critique',baseline:'baseline'};
+const COL={ours:'#2f7d4f','cc-thinking':'#b4452f','thinking-partner':'#2f5d8a','skills-for-humanity':'#7a4f9a',balanced:'#1f8a8a','cyperx84-mm':'#c77d20','first-principles':'#9a9a55','devils-advocate':'#c0556f','sequential-thinking':'#557a9a','systems-thinking':'#6f9a55','socratic-debate':'#9a5577','expert-persona':'#b0903a','plain-cot':'#9a9a9a','self-critique':'#8a6a9a','gsd-critical-thinking':'#3a8f6a','kdense-sci-critical':'#6a4f9a','conducty-dialectic':'#9a7755','argumentation-framework':'#557799',baseline:'#8a8a8a'};
+const SHORT={ours:'ours','cc-thinking':'cc-thinking','thinking-partner':'thinking-partner','skills-for-humanity':'skills-for-humanity',balanced:'balanced','cyperx84-mm':'cyperx84','first-principles':'first-principles','devils-advocate':'devils-advocate','sequential-thinking':'sequential','systems-thinking':'systems','socratic-debate':'socratic-debate','expert-persona':'expert-persona','plain-cot':'plain CoT','self-critique':'self-critique','gsd-critical-thinking':'gsd-ct','kdense-sci-critical':'kdense-sci','conducty-dialectic':'conducty','argumentation-framework':'argument-fw',baseline:'baseline'};
 const jq=c=>JQ.perArm[c].composite, obj=c=>OBJ.perArm[c].objective_composite;
 const cost={}; for(const c of CONDS){const t=TOK.per_arm[c];cost[c]={operate:t.operate,load:TOK.load[c].realistic,usd:t.in*PIN+t.out*POUT};}
 
@@ -22,7 +22,7 @@ function frame(W,H,kicker,title,subtitle,body){
 <text x="56" y="104" font-size="34" fill="#1a1a1a" font-weight="700" font-family="Georgia,serif">${title}</text>
 <text x="56" y="134" font-size="17" fill="#6b6b6b" font-family="Helvetica,Arial,sans-serif">${subtitle}</text>
 ${body}
-<text x="56" y="${H-26}" font-size="12.5" fill="#9a8f80" font-family="Helvetica,Arial,sans-serif">Tenzor Skill Intelligence Index · 15 conditions · reasoning round · n=1 · judged by 18 blind passes · Claude Fable 5 ($10/$50 per M tok) · cost via tiktoken cl100k proxy</text>
+<text x="56" y="${H-26}" font-size="12.5" fill="#9a8f80" font-family="Helvetica,Arial,sans-serif">Tenzor Skill Intelligence Index · 19 conditions · reasoning round · n=1 · judged by 18 blind passes · Claude Fable 5 ($10/$50 per M tok) · cost via tiktoken cl100k proxy</text>
 </svg>`;
 }
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -56,9 +56,9 @@ const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'
   b+=`<text x="${lx}" y="${padT+104}" font-size="13" fill="#6b6b6b" font-family="Helvetica,Arial,sans-serif">bubble size =</text><text x="${lx}" y="${padT+122}" font-size="13" fill="#6b6b6b" font-family="Helvetica,Arial,sans-serif">context-tax load</text>`;
   b+=`<rect x="${lx}" y="${padT+150}" width="${padR-48}" height="118" rx="8" fill="#fff" stroke="#e6e1d8"/>`;
   b+=`<text x="${lx+14}" y="${padT+176}" font-size="13.5" fill="#8a6a9a" font-weight="700" font-family="Helvetica,Arial,sans-serif">self-critique wins</text>`;
-  b+=`<text x="${lx+14}" y="${padT+198}" font-size="12.5" fill="#444" font-family="Helvetica,Arial,sans-serif"><tspan x="${lx+14}" dy="0">A free one-line prompt</tspan><tspan x="${lx+14}" dy="16">tops judged quality at</tspan><tspan x="${lx+14}" dy="16">~1/20th of ours' cost.</tspan></text>`;
+  b+=`<text x="${lx+14}" y="${padT+198}" font-size="12.5" fill="#444" font-family="Helvetica,Arial,sans-serif"><tspan x="${lx+14}" dy="0">A free one-line prompt</tspan><tspan x="${lx+14}" dy="16">near-top quality at</tspan><tspan x="${lx+14}" dy="16">~1/20th of ours' cost.</tspan></text>`;
   b+=`<text x="${lx+14}" y="${padT+260}" font-size="12.5" fill="#2f7d4f" font-weight="700" font-family="Helvetica,Arial,sans-serif">ours: top-cluster, costly</text>`;
-  fs.writeFileSync(out+'/banner_frontier.svg', frame(W,H,'QUALITY VS. COST','A free prompt beats the skills on cost-adjusted quality','15 critical-thinking conditions for Claude, judged blind and priced in tokens',b));
+  fs.writeFileSync(out+'/banner_frontier.svg', frame(W,H,'QUALITY VS. COST','A free prompt beats the skills on cost-adjusted quality','19 critical-thinking conditions for Claude, judged blind and priced in tokens',b));
 })();
 
 // ---------- BANNER 2: judged-quality leaderboard ----------
@@ -75,7 +75,7 @@ const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'
     if(tag)b+=`<text x="270" y="${y+rowH/2+5}" font-size="12" fill="#9a8f80" font-family="Helvetica,Arial,sans-serif" font-style="italic">${tag}</text>`;
   });
   b+=`<text x="68" y="${H-44}" font-size="13.5" fill="#6b6b6b" font-family="Helvetica,Arial,sans-serif">Mean of 5 reasoning dimensions (rigor · calibration · bias-awareness · depth · usefulness). Field is tight (6.9–8.3, judge SD 0.3–0.9): the top cluster is a near-tie.</text>`;
-  fs.writeFileSync(out+'/banner_leaderboard.svg', frame(W,H,'JUDGED REASONING QUALITY','The cheapest interventions hold the top','ours places #3 — top cluster — and leads the field on objective rigor markers',b));
+  fs.writeFileSync(out+'/banner_leaderboard.svg', frame(W,H,'JUDGED REASONING QUALITY','The top is a near-tie; ours is in it','ours #3 of 19; a new entrant (kdense) edges the top — and leads the field on objective rigor markers',b));
 })();
 
 // ---------- BANNER 3: objective rigor (ours' real edge) ----------

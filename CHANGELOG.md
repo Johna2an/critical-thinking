@@ -6,15 +6,18 @@ All notable changes to the skill and the eval harness.
 
 ### Added
 - **Round 4 (vs rival skills)** and **Round 5 (Skill Intelligence Index)** under `evals/`.
-  Round 5 widens the field to 15 conditions (9 public rival skills, 5 prompt/reference
-  arms, and a no-skill baseline), generates equal-length answers, judges all 15 blind
+  Round 5 widens the field to 19 conditions (15 rival skills, 3 prompt techniques,
+  and a no-skill baseline), generates equal-length answers, judges all 19 blind
   (18 passes), and prices every condition in tokens. Ships the raw data, a three-track
-  dashboard (`INDEX_EXPANDED.html`), and editorial SVG banners.
+  dashboard (`INDEX_EXPANDED.html`), and editorial SVG banners. The 4 newest rival
+  skills were sourced via a search sweep of the cybos library index and security-audited
+  before inclusion.
 
 ### Findings (Round 5, reasoning, n=1)
-- Judged quality: a free one-line `self-critique` prompt leads (8.28); this skill is
-  #3 of 15 (7.84), inside a top-cluster near-tie.
-- Objective rigor markers: this skill is #1 of 15, with a falsifier-presence score
+- Judged quality: a five-way near-tie at the top. A rival skill (K-Dense
+  scientific-critical-thinking) edges first at 8.13, a free `self-critique` prompt is
+  second at 8.10, and this skill is third at 8.03 of 19.
+- Objective rigor markers: this skill is #1 of 19, with a falsifier-presence score
   double the next best.
 - Cost: this skill has the heaviest context-load in the field (about 14k tokens),
   so it is dominated on the quality-vs-cost frontier.

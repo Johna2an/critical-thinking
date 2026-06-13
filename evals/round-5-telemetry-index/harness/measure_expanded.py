@@ -5,6 +5,7 @@ try:
 except Exception:
     tok=lambda s: max(1,len((s or ""))//4); TOKENIZER="chars/4 fallback"
 Q="D:/Claude/skill-audit/quarantine"; SK="D:/Claude/critical-thinking/skill"
+NS="D:/Claude/skill-audit/telemetry-eval/expanded/newskills/"
 def rd(p):
     try: return open(p,encoding="utf-8",errors="ignore").read()
     except: return ""
@@ -26,6 +27,10 @@ CONF={
  "expert-persona": ([], [], 0.0),
  "plain-cot":     ([], [], 0.0),
  "self-critique": ([], [], 0.0),
+ "gsd-critical-thinking":   ([NS+"gsd-critical-thinking.md"], [], 0.0),
+ "kdense-sci-critical":     ([NS+"kdense-sci-critical.md"], [], 0.0),
+ "conducty-dialectic":      ([NS+"conducty-dialectic.md"], [], 0.0),
+ "argumentation-framework": ([NS+"argumentation-framework.md"], [], 0.0),
  "baseline":    ([], [], 0.0),
 }
 load={}

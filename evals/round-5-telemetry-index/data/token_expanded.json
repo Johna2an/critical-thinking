@@ -85,6 +85,30 @@
       "full": 0,
       "n_pool": 0
     },
+    "gsd-critical-thinking": {
+      "entry": 6336,
+      "realistic": 6336,
+      "full": 6336,
+      "n_pool": 0
+    },
+    "kdense-sci-critical": {
+      "entry": 4830,
+      "realistic": 4830,
+      "full": 4830,
+      "n_pool": 0
+    },
+    "conducty-dialectic": {
+      "entry": 1229,
+      "realistic": 1229,
+      "full": 1229,
+      "n_pool": 0
+    },
+    "argumentation-framework": {
+      "entry": 1136,
+      "realistic": 1136,
+      "full": 1136,
+      "n_pool": 0
+    },
     "baseline": {
       "entry": 0,
       "realistic": 0,
@@ -93,6 +117,13 @@
     }
   },
   "per_arm": {
+    "argumentation-framework": {
+      "n": 6,
+      "out": 513,
+      "in": 1316,
+      "operate": 1829,
+      "words": 367
+    },
     "balanced": {
       "n": 6,
       "out": 546,
@@ -113,6 +144,13 @@
       "in": 8861,
       "operate": 9384,
       "words": 370
+    },
+    "conducty-dialectic": {
+      "n": 6,
+      "out": 567,
+      "in": 1409,
+      "operate": 1976,
+      "words": 382
     },
     "cyperx84-mm": {
       "n": 6,
@@ -141,6 +179,20 @@
       "in": 2954,
       "operate": 3508,
       "words": 391
+    },
+    "gsd-critical-thinking": {
+      "n": 6,
+      "out": 522,
+      "in": 6516,
+      "operate": 7038,
+      "words": 382
+    },
+    "kdense-sci-critical": {
+      "n": 6,
+      "out": 530,
+      "in": 5010,
+      "operate": 5540,
+      "words": 374
     },
     "ours": {
       "n": 6,
@@ -919,6 +971,198 @@
       "input_tok": 1458,
       "operate_tok": 2018,
       "words": 406
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 0,
+      "output_tok": 551,
+      "input_tok": 6516,
+      "operate_tok": 7067,
+      "words": 400
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 1,
+      "output_tok": 586,
+      "input_tok": 6516,
+      "operate_tok": 7102,
+      "words": 385
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 2,
+      "output_tok": 502,
+      "input_tok": 6516,
+      "operate_tok": 7018,
+      "words": 362
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 3,
+      "output_tok": 517,
+      "input_tok": 6516,
+      "operate_tok": 7033,
+      "words": 388
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 4,
+      "output_tok": 501,
+      "input_tok": 6516,
+      "operate_tok": 7017,
+      "words": 391
+    },
+    {
+      "condition": "gsd-critical-thinking",
+      "problemId": 5,
+      "output_tok": 478,
+      "input_tok": 6516,
+      "operate_tok": 6994,
+      "words": 369
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 0,
+      "output_tok": 512,
+      "input_tok": 5010,
+      "operate_tok": 5522,
+      "words": 381
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 1,
+      "output_tok": 610,
+      "input_tok": 5010,
+      "operate_tok": 5620,
+      "words": 366
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 2,
+      "output_tok": 572,
+      "input_tok": 5010,
+      "operate_tok": 5582,
+      "words": 380
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 3,
+      "output_tok": 476,
+      "input_tok": 5010,
+      "operate_tok": 5486,
+      "words": 368
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 4,
+      "output_tok": 485,
+      "input_tok": 5010,
+      "operate_tok": 5495,
+      "words": 370
+    },
+    {
+      "condition": "kdense-sci-critical",
+      "problemId": 5,
+      "output_tok": 525,
+      "input_tok": 5010,
+      "operate_tok": 5535,
+      "words": 379
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 0,
+      "output_tok": 551,
+      "input_tok": 1409,
+      "operate_tok": 1960,
+      "words": 380
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 1,
+      "output_tok": 614,
+      "input_tok": 1409,
+      "operate_tok": 2023,
+      "words": 364
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 2,
+      "output_tok": 605,
+      "input_tok": 1409,
+      "operate_tok": 2014,
+      "words": 396
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 3,
+      "output_tok": 557,
+      "input_tok": 1409,
+      "operate_tok": 1966,
+      "words": 392
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 4,
+      "output_tok": 533,
+      "input_tok": 1409,
+      "operate_tok": 1942,
+      "words": 398
+    },
+    {
+      "condition": "conducty-dialectic",
+      "problemId": 5,
+      "output_tok": 540,
+      "input_tok": 1409,
+      "operate_tok": 1949,
+      "words": 361
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 0,
+      "output_tok": 469,
+      "input_tok": 1316,
+      "operate_tok": 1785,
+      "words": 350
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 1,
+      "output_tok": 551,
+      "input_tok": 1316,
+      "operate_tok": 1867,
+      "words": 347
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 2,
+      "output_tok": 531,
+      "input_tok": 1316,
+      "operate_tok": 1847,
+      "words": 383
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 3,
+      "output_tok": 500,
+      "input_tok": 1316,
+      "operate_tok": 1816,
+      "words": 379
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 4,
+      "output_tok": 502,
+      "input_tok": 1316,
+      "operate_tok": 1818,
+      "words": 369
+    },
+    {
+      "condition": "argumentation-framework",
+      "problemId": 5,
+      "output_tok": 524,
+      "input_tok": 1316,
+      "operate_tok": 1840,
+      "words": 373
     }
   ]
 }

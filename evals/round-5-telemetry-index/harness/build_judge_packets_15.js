@@ -13,7 +13,7 @@ const PROBLEMS={
  5:`A mid-sized city downtown is dying; the obvious fixes (more parking, lower rents, a summer festival) have all failed. Generate genuinely non-obvious reframings and propose three unconventional options worth testing, with reasoning.`,
 };
 const DIMS=['rigor','calibration','bias_awareness','depth','usefulness'];
-const LET='ABCDEFGHIJKLMNO'.split('');
+const LET='ABCDEFGHIJKLMNOPQRS'.split('');
 const conds=[...new Set(ans.map(a=>a.condition))].sort();  // 15, fixed order
 const keymap={};
 for(let pid=0; pid<6; pid++){

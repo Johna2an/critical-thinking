@@ -22,6 +22,10 @@ const META={
  'expert-persona':{label:'expert-persona (1-line prompt)',scope:'reference',col:'#b0903a'},
  'plain-cot':{label:'plain chain-of-thought',scope:'reference',col:'#999999'},
  'self-critique':{label:'self-critique prompt',scope:'reference',col:'#8a6a9a'},
+ 'gsd-critical-thinking':{label:'gsd critical-thinking',scope:'general',col:'#3a8f6a'},
+ 'kdense-sci-critical':{label:'kdense scientific-CT',scope:'general',col:'#6a4f9a'},
+ 'conducty-dialectic':{label:'conducty-dialectic',scope:'general',col:'#9a7755'},
+ 'argumentation-framework':{label:'argumentation-framework',scope:'narrow',col:'#557799'},
  baseline:{label:'baseline (no skill)',scope:'reference',col:'#8a8a8a'},
 };
 const short=c=>({ours:'ours','cc-thinking':'cc-think','thinking-partner':'think-ptr','skills-for-humanity':'s4h',balanced:'balanced','cyperx84-mm':'cyperx84','first-principles':'1st-prin','devils-advocate':'devils','sequential-thinking':'seq','systems-thinking':'systems','socratic-debate':'socratic','expert-persona':'expert-1ln','plain-cot':'cot','self-critique':'self-crit',baseline:'base'}[c]||c);
